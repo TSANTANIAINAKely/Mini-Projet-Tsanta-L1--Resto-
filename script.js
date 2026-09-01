@@ -1,4 +1,5 @@
-// HEADER STICKY
+// ================= HEADER STICKY =================
+
 window.addEventListener("scroll", function(){
 
     const header = document.querySelector("header");
@@ -11,7 +12,8 @@ window.addEventListener("scroll", function(){
 });
 
 
-// MENU MOBILE
+// ================= MENU MOBILE =================
+
 function toggleMenu(){
 
     const menutoogle =
@@ -27,81 +29,92 @@ function toggleMenu(){
 }
 
 
-// ENVOI DU MESSAGE CONTACT
-function sendMessage(){
+// ================= RESERVATION =================
 
-    alert("Votre message a bien été envoyé !");
-
-}
-
-
-// RESERVATION
-function reserver(){
+function faireReservation(){
 
     const nom =
-        document.getElementById("nom").value.trim();
+        document.getElementById("nomReservation").value.trim();
 
-    const date =
-        document.getElementById("date").value;
-
-    const heure =
-        document.getElementById("heure").value;
+    const nombre =
+        document.getElementById("nombrePersonnes").value;
 
     const plat =
-        document.getElementById("plat").value;
+        document.getElementById("platReservation").value;
 
-    const personnes =
-        document.getElementById("personnes").value;
+    const date =
+        document.getElementById("dateReservation").value;
 
 
-    // VERIFICATION
     if(
         nom === "" ||
-        date === "" ||
-        heure === "" ||
+        nombre === "" ||
         plat === "" ||
-        personnes === ""
+        date === ""
     ){
 
         alert(
-            "Veuillez remplir tous les champs avant de confirmer."
+            "Veuillez remplir les informations nécessaires avant de réserver."
         );
 
         return;
     }
 
 
-    // MESSAGE DE CONFIRMATION
-    const message =
-        "Merci " + nom +
-        " ! Votre réservation pour " +
-        personnes +
-        " personne(s), le " +
-        date +
-        " à " +
-        heure +
-        " pour « " +
-        plat +
-        " » a bien été enregistrée.";
+    if(Number(nombre) < 1){
+
+        alert(
+            "Le nombre de personnes doit être supérieur à 0."
+        );
+
+        return;
+    }
 
 
-    document.getElementById(
-        "messageConfirmation"
-    ).textContent = message;
+    // Afficher la fenêtre de confirmation
 
-
-    document.getElementById(
-        "confirmation"
-    ).style.display = "flex";
+    document
+        .getElementById("notification")
+        .classList.add("show");
 
 }
 
 
-// FERMER LA FENETRE
-function fermerConfirmation(){
+// ================= FERMER NOTIFICATION =================
 
-    document.getElementById(
-        "confirmation"
-    ).style.display = "none";
+function fermerNotification(){
+
+    document
+        .getElementById("notification")
+        .classList.remove("show");
 
 }
+
+
+// ================= CONTACT =================
+
+function sendMessage(){
+
+    alert(
+        "Votre message a bien été envoyé. Merci pour votre contact !"
+    );
+
+}
+
+
+// ================= FERMETURE NOTIFICATION EN CLIQUANT DEHORS =================
+
+document.addEventListener("click", function(event){
+
+    const notification =
+        document.getElementById("notification");
+
+    if(
+        event.target === notification
+    ){
+
+        fermerNotification();
+
+    }
+
+});
