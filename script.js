@@ -4,53 +4,84 @@ window.addEventListener("scroll", function () {
 
     const header = document.querySelector("header");
 
-    header.classList.toggle("sticky", window.scrollY > 50);
+    header.classList.toggle("sticky", window.scrollY > 0);
 
 });
 
 
-// ================= MOBILE MENU =================
+// ================= MENU MOBILE =================
 
 function toggleMenu() {
 
     const navbar = document.querySelector(".navbar");
-    const menutoogle = document.querySelector(".menutoogle");
 
     navbar.classList.toggle("active");
-    menutoogle.classList.toggle("active");
 
 }
 
 
-// ================= CONTACT FORM =================
+// ================= POPUP =================
 
-function submitContact(event) {
+function showPopup(title, message) {
 
-    event.preventDefault();
+    const popup = document.getElementById("popup");
 
-    const nom = document.getElementById("contactNom").value;
-    const result = document.getElementById("contactMessageResult");
+    document.getElementById("popup-title").textContent = title;
 
-    result.textContent =
-        "Merci " + nom + " ! Votre message a bien été enregistré (exemple).";
+    document.getElementById("popup-message").textContent = message;
 
-    event.target.reset();
+    popup.classList.add("show");
+
+}
+
+
+function closePopup() {
+
+    const popup = document.getElementById("popup");
+
+    popup.classList.remove("show");
 
 }
 
 
 // ================= RESERVATION =================
 
-function submitReservation(event) {
+function makeReservation(event) {
 
     event.preventDefault();
 
-    const nom = document.getElementById("nomReservation").value;
-    const result = document.getElementById("reservationMessage");
-
-    result.textContent =
-        "Merci " + nom + " ! Votre réservation a bien été enregistrée (exemple).";
+    showPopup(
+        "Réservation réussie !",
+        "Votre demande de réservation a bien été enregistrée. Ceci est une démonstration."
+    );
 
     event.target.reset();
 
 }
+
+
+// ================= CONTACT =================
+
+function sendMessage(event) {
+
+    event.preventDefault();
+
+    showPopup(
+        "Message envoyé !",
+        "Votre message a bien été enregistré. Ceci est une démonstration."
+    );
+
+    event.target.reset();
+
+}
+
+
+// ================= FERMER POPUP =================
+
+document.getElementById("popup").addEventListener("click", function (event) {
+
+    if (event.target === this) {
+        closePopup();
+    }
+
+});
