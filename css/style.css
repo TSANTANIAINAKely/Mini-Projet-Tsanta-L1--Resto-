@@ -16,13 +16,14 @@ p {
     line-height: 1.7;
 }
 
+
 /* ================= HEADER ================= */
 
 header {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px 60px;
+    padding: 20px 6%;
     width: 100%;
     z-index: 1000;
     display: flex;
@@ -45,7 +46,7 @@ header {
 .navbar {
     display: flex;
     align-items: center;
-    position: relative;
+    gap: 10px;
 }
 
 .navbar li {
@@ -55,37 +56,32 @@ header {
 .navbar li a {
     color: #fff;
     text-decoration: none;
-    margin-left: 25px;
+    margin-left: 20px;
     font-weight: 600;
-    transition: 0.3s;
 }
 
 .navbar li a:hover {
     color: #fb911f;
-    border-bottom: 2px solid #fb911f;
-    padding-bottom: 5px;
 }
 
 .btn-reserve {
-    padding: 10px 20px;
+    padding: 10px 18px;
     background: #fb911f;
     color: #fff !important;
-    margin-left: 25px;
     text-transform: uppercase;
-    text-decoration: none;
-    transition: 0.3s;
 }
 
 .btn-reserve:hover {
     background: #d87710;
 }
 
-/* ================= HEADER STICKY ================= */
+
+/* HEADER SCROLL */
 
 header.sticky {
     background: #fff;
-    padding: 10px 60px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    padding: 12px 6%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
 
 header.sticky .logo {
@@ -100,7 +96,8 @@ header.sticky .navbar li a:hover {
     color: #fb911f;
 }
 
-/* ================= BANNIERE ================= */
+
+/* ================= ACCUEIL ================= */
 
 .banniere {
     position: relative;
@@ -117,24 +114,21 @@ header.sticky .navbar li a:hover {
 }
 
 .banniere .contenu {
-    max-width: 900px;
+    max-width: 850px;
     text-align: center;
     padding: 20px;
 }
 
 .banniere .contenu h2 {
     color: #fff;
-    font-size: 3em;
-    text-transform: capitalize;
+    font-size: 3.5em;
     margin-bottom: 20px;
 }
 
 .banniere .contenu p {
     color: #fff;
-    font-size: 1.1em;
+    font-size: 1.05em;
 }
-
-/* ================= BUTTONS ================= */
 
 .btn1,
 .btn2 {
@@ -145,7 +139,7 @@ header.sticky .navbar li a:hover {
     margin-top: 25px;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     transition: 0.4s;
     margin-left: 10px;
 }
@@ -160,39 +154,15 @@ header.sticky .navbar li a:hover {
 
 .btn1:hover,
 .btn2:hover {
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 }
+
 
 /* ================= SECTIONS ================= */
 
 section {
-    padding: 100px 80px;
+    padding: 90px 7%;
 }
-
-.titre {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.titre-texte {
-    color: #000;
-    font-size: 2.2em;
-    font-weight: 400;
-    text-transform: capitalize;
-    margin-bottom: 10px;
-}
-
-.titre-texte span {
-    color: #fb911f;
-    font-size: 1.5em;
-    font-weight: 700;
-}
-
-/* ================= A PROPOS ================= */
 
 .row {
     position: relative;
@@ -203,26 +173,43 @@ section {
 }
 
 .row .col50 {
-    position: relative;
     width: 48%;
-}
-
-.row .col50 h2 {
-    margin-bottom: 20px;
 }
 
 .row .col50 img {
     width: 100%;
-    max-width: 600px;
-    height: 450px;
+    height: 430px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 10px;
 }
+
+.titre {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titre-texte {
+    color: #111;
+    font-size: 2.2em;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.titre-texte span {
+    color: #fb911f;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
 
 /* ================= MENU ================= */
 
 .menu {
-    margin-top: 0;
+    background: #fafafa;
 }
 
 .menu .contenu {
@@ -233,63 +220,54 @@ section {
 }
 
 .menu .contenu .box {
-    width: 350px;
-    margin: 20px;
+    width: 320px;
+    margin: 18px;
     background: #fff;
-    border: 10px solid #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
     transition: 0.4s;
 }
 
 .menu .contenu .box:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22);
 }
 
 .menu .contenu .box .imbox {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 250px;
     overflow: hidden;
 }
 
 .menu .contenu .box .imbox img {
-    position: relative;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
     transition: 0.5s;
 }
 
-.menu .contenu .box:hover .imbox img {
-    transform: scale(1.05);
+.menu .contenu .box:hover img {
+    transform: scale(1.06);
 }
 
 .menu .contenu .box .text {
     text-align: center;
-    padding: 12px 5px 8px;
+    padding: 18px;
 }
 
 .menu .contenu .box .text h3 {
-    color: #111;
-    font-size: 1.15em;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .menu .contenu .box .text p {
-    color: #777;
     font-size: 0.85em;
-    line-height: 1.5;
+    color: #666;
 }
 
-/* ================= EXPERT ================= */
 
-.expert {
-    margin-top: 0;
-}
+/* ================= EXPERTS ================= */
 
 .expert .contenu {
     display: flex;
@@ -299,24 +277,20 @@ section {
 }
 
 .expert .contenu .box {
-    width: 250px;
-    margin: 15px;
-    transition: 0.4s;
-}
-
-.expert .contenu .box:hover {
-    transform: translateY(-5px);
+    width: 240px;
+    margin: 18px;
 }
 
 .expert .contenu .box .imbox {
     width: 100%;
     height: 300px;
     overflow: hidden;
+    border-radius: 8px;
 }
 
 .expert .contenu .box img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -324,14 +298,15 @@ section {
     color: #111;
     font-weight: 500;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 12px;
 }
+
 
 /* ================= TEMOIGNAGES ================= */
 
 .temoignage {
     background-image:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
         url("../images/Screenshot_20240405_151224.jpg");
     background-size: cover;
     background-position: center;
@@ -345,15 +320,14 @@ section {
 .temoignage .contenu {
     display: flex;
     margin-top: 40px;
-    width: 100%;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
 }
 
 .temoignage .contenu .box {
-    width: 340px;
-    margin: 20px;
+    width: 330px;
+    margin: 18px;
     background: #fff;
     display: flex;
     justify-content: center;
@@ -361,20 +335,15 @@ section {
     flex-direction: column;
     border-radius: 15px;
     padding: 35px;
-    transition: 0.4s;
-}
-
-.temoignage .contenu .box:hover {
-    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 .temoignage .contenu .box .imbox {
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
-    position: relative;
-    margin-bottom: 20px;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .temoignage .contenu .box .imbox img {
@@ -385,50 +354,132 @@ section {
 
 .temoignage .contenu .box .text {
     text-align: center;
-    color: #666;
-    font-style: italic;
 }
 
 .temoignage .contenu .box .text p {
-    color: #666;
+    color: #555;
+    font-style: italic;
     font-size: 0.9em;
 }
 
 .temoignage .contenu .box .text h3 {
     color: #fb911f;
-    margin-top: 20px;
-    font-size: 1em;
-    font-weight: 600;
+    margin-top: 18px;
 }
+
+
+/* ================= RESERVATION ================= */
+
+.reservation {
+    background: #f8f8f8;
+}
+
+.reservation-container {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    align-items: stretch;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+.reservation-image {
+    width: 45%;
+}
+
+.reservation-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 650px;
+    object-fit: cover;
+}
+
+.reservation-form {
+    width: 55%;
+    padding: 55px;
+}
+
+.reservation-form .titre {
+    margin-bottom: 30px;
+}
+
+.inputboite {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.inputboite input,
+.inputboite textarea,
+.inputboite select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 13px;
+    color: #111;
+    outline: none;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+.inputboite textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.inputboite label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .inputboite {
+    width: 50%;
+}
+
+.reservation-form button {
+    width: 100%;
+    border: none;
+    background: #fb911f;
+    color: #fff;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.reservation-form button:hover {
+    background: #d87710;
+}
+
 
 /* ================= CONTACT ================= */
 
-.Contact {
-    background-image:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url("../images/1712067915861 - Copie.jpg");
-    background-size: cover;
-    background-position: center;
-    min-height: 700px;
+.contact {
+    background: #f3f3f3;
 }
 
-.Contact .titre-texte,
-.Contact .titre p {
-    color: #fff;
-}
-
-.Contact .titre p {
-    max-width: 850px;
+.contact-description {
+    max-width: 750px;
     text-align: center;
 }
 
 .contactform {
-    padding: 45px 40px;
+    padding: 45px;
     background: #fff;
-    box-shadow: 5px 15px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 15px 40px rgba(0,0,0,0.12);
     max-width: 550px;
-    margin: 50px auto 0;
-    border-radius: 8px;
+    margin: 45px auto 0;
+    border-radius: 10px;
 }
 
 .contactform h3 {
@@ -437,236 +488,199 @@ section {
     margin-bottom: 25px;
 }
 
-.contactform .inputboite {
-    position: relative;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.contactform .inputboite input,
-.contactform .inputboite textarea {
-    width: 100%;
-    border: 1px solid #ccc;
-    padding: 13px;
-    color: #111;
-    outline: none;
-    font-size: 16px;
-    font-weight: 300;
-    resize: none;
-    border-radius: 4px;
-}
-
-.contactform .inputboite textarea {
-    height: 130px;
-}
-
-.contactform .inputboite input:focus,
-.contactform .inputboite textarea:focus {
-    border-color: #fb911f;
-}
-
 .contactform .inputboite input[type="submit"] {
     font-size: 1em;
     font-weight: 600;
     color: #fff;
     background: #fb911f;
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 2px;
     border: none;
     cursor: pointer;
-    max-width: 150px;
-    transition: 0.4s;
+    max-width: 130px;
 }
 
 .contactform .inputboite input[type="submit"]:hover {
     background: #d87710;
 }
 
-/* ================= RESERVATION ================= */
-
-.reservation {
-    background: #f7f7f7;
-}
-
-.reservation-form {
-    max-width: 600px;
-    margin: 40px auto 0;
-    background: #fff;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-    border-radius: 8px;
-}
-
-.reservation-form .inputboite {
-    margin-bottom: 20px;
-}
-
-.reservation-form label {
-    display: block;
-    margin-bottom: 7px;
-    font-weight: 500;
-    color: #222;
-}
-
-.reservation-form input,
-.reservation-form select,
-.reservation-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    outline: none;
-    font-size: 15px;
-    border-radius: 4px;
-}
-
-.reservation-form input:focus,
-.reservation-form select:focus,
-.reservation-form textarea:focus {
-    border-color: #fb911f;
-}
-
-.reservation-form textarea {
-    height: 100px;
-    resize: none;
-}
-
-.reservation-form button {
-    width: 100%;
-    padding: 13px;
-    border: none;
-    background: #fb911f;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 4px;
-}
-
-.reservation-form button:hover {
-    background: #d87710;
-}
-
-/* ================= MESSAGE RESERVATION ================= */
-
-.message-reservation {
-    display: none;
-    position: fixed;
-    top: 90px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    padding: 18px 30px;
-    border-radius: 8px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-    z-index: 2000;
-    text-align: center;
-}
-
-.message-reservation.active {
-    display: block;
-}
-
-.message-reservation h3 {
-    color: #fb911f;
-    margin-bottom: 5px;
-}
 
 /* ================= FOOTER ================= */
 
 footer {
     background: #2a4963;
     color: #fff;
-    text-align: center;
-    padding: 30px 20px;
+    padding: 55px 7% 20px;
 }
 
-footer p {
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 35px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-box {
+    width: 30%;
+    min-width: 220px;
+}
+
+.footer-box h3 {
+    color: #fb911f;
+    margin-bottom: 15px;
+}
+
+.footer-box p {
     color: #fff;
-    margin: 5px 0;
+    font-size: 0.9em;
 }
 
-footer span {
+.footer-box a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.footer-box a:hover {
     color: #fb911f;
 }
 
-/* ================= MOBILE ================= */
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.copyright p {
+    color: #fff;
+    font-size: 0.85em;
+}
+
+
+/* ================= POPUP ================= */
+
+.popup {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 9999;
+    background: #fff;
+    width: 350px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+    border-left: 5px solid #fb911f;
+    animation: popupIn 0.4s ease;
+}
+
+.popup h3 {
+    color: #fb911f;
+    margin-bottom: 8px;
+}
+
+.popup p {
+    color: #555;
+    font-size: 0.9em;
+}
+
+.popup button {
+    margin-top: 15px;
+    padding: 8px 18px;
+    border: none;
+    background: #fb911f;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@keyframes popupIn {
+    from {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* ================= MENU MOBILE ================= */
 
 .menutoogle {
     display: none;
 }
 
+
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 991px) {
 
-    header,
-    header.sticky {
-        padding: 10px 20px;
-    }
-
-    .navbar {
-        display: none;
+    header {
+        padding: 15px 5%;
     }
 
     .menutoogle {
         display: block;
-        position: relative;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 30px;
         cursor: pointer;
+        position: relative;
+    }
+
+    .menutoogle::before,
+    .menutoogle::after,
+    .menutoogle {
+        border-radius: 3px;
+    }
+
+    .menutoogle::before,
+    .menutoogle::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 35px;
+        height: 3px;
+        background: #fff;
     }
 
     .menutoogle::before {
-        content: "☰";
-        color: #fff;
-        font-size: 30px;
-        position: absolute;
-        top: 0;
-        left: 5px;
+        top: 5px;
     }
 
-    header.sticky .menutoogle::before {
-        color: #111;
+    .menutoogle::after {
+        bottom: 5px;
     }
 
-    .menutoogle.active::before {
-        content: "✕";
+    header.sticky .menutoogle::before,
+    header.sticky .menutoogle::after {
+        background: #111;
+    }
+
+    .navbar {
+        display: none;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: #fff;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
     }
 
     .navbar.active {
-        width: 100%;
-        height: calc(100vh - 60px);
-        position: fixed;
-        top: 60px;
-        left: 0;
         display: flex;
-        justify-content: center;
-        flex-direction: column;
-        background: #fff;
-        align-items: center;
     }
 
-    .navbar.active li {
-        margin: 15px 0;
-    }
-
-    .navbar.active li a {
-        color: #111;
+    .navbar li a {
+        color: #111 !important;
         font-size: 1.2em;
-        margin-left: 0;
-    }
-
-    .navbar.active .btn-reserve {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-
-    section {
-        padding: 70px 25px;
-    }
-
-    .banniere .contenu h2 {
-        font-size: 2.3em;
+        margin: 0;
     }
 
     .row {
@@ -678,40 +692,38 @@ footer span {
         margin-bottom: 30px;
     }
 
-    .row .col50 img {
+    .reservation-container {
+        flex-direction: column;
+    }
+
+    .reservation-image,
+    .reservation-form {
         width: 100%;
+    }
+
+    .reservation-image img {
+        min-height: 350px;
         height: 350px;
     }
 
-    .menu .contenu .box {
-        width: 350px;
-        max-width: 100%;
-    }
-
-    .contactform {
-        width: 100%;
-        margin-left: 0;
+    .footer-box {
+        width: 45%;
     }
 }
 
-/* ================= SMALL PHONE ================= */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
-    header {
-        padding: 10px 15px;
+    section {
+        padding: 65px 5%;
     }
 
     .logo {
         font-size: 1.5em;
     }
 
-    section {
-        padding: 60px 15px;
-    }
-
     .banniere .contenu h2 {
-        font-size: 1.9em;
+        font-size: 2.2em;
     }
 
     .banniere .contenu p {
@@ -720,38 +732,53 @@ footer span {
 
     .btn1,
     .btn2 {
-        font-size: 0.85em;
-        padding: 10px 15px;
         margin-left: 3px;
+        padding: 10px 15px;
+        font-size: 0.85em;
     }
 
     .titre-texte {
-        font-size: 1.7em;
+        font-size: 1.8em;
     }
 
     .menu .contenu .box {
         width: 100%;
-        margin: 15px 0;
-    }
-
-    .menu .contenu .box .imbox,
-    .menu .contenu .box .imbox img {
-        height: 260px;
+        margin: 12px 0;
     }
 
     .expert .contenu .box {
-        width: 100%;
-        max-width: 280px;
+        width: 80%;
     }
 
     .temoignage .contenu .box {
         width: 100%;
-        margin: 15px 0;
-        padding: 25px;
+        margin: 12px 0;
     }
 
-    .contactform,
     .reservation-form {
         padding: 30px 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-row .inputboite {
+        width: 100%;
+    }
+
+    .contactform {
+        padding: 30px 20px;
+    }
+
+    .footer-box {
+        width: 100%;
+    }
+
+    .popup {
+        width: calc(100% - 30px);
+        right: 15px;
+        top: 15px;
     }
 }
