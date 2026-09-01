@@ -10,27 +10,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Resto - Snack</title>
+    <title>Resto-Snack</title>
 </head>
 
 <body>
 
 <!-- ================= HEADER ================= -->
-<header>
-    <a href="#" class="logo"><span>R</span>esto - <span>S</span>nack</a>
 
-    <div class="menutoogle" onclick="toggleMenu();"></div>
+<header>
+    <a href="#banniere" class="logo">
+        <span>R</span>esto - <span>S</span>nack
+    </a>
+
+    <div class="menutoogle" onclick="toggleMenu()"></div>
 
     <ul class="navbar">
-        <li><a href="#banniere" onclick="toggleMenu();">Accueil</a></li>
-        <li><a href="#apropos" onclick="toggleMenu();">À propos</a></li>
-        <li><a href="#menu" onclick="toggleMenu();">Menu</a></li>
-        <li><a href="#expert" onclick="toggleMenu();">Experts</a></li>
-        <li><a href="#temoignage" onclick="toggleMenu();">Clients</a></li>
-        <li><a href="#Contact" onclick="toggleMenu();">Contact</a></li>
+        <li><a href="#banniere" onclick="toggleMenu()">Accueil</a></li>
+        <li><a href="#apropos" onclick="toggleMenu()">A propos</a></li>
+        <li><a href="#menu" onclick="toggleMenu()">Menu</a></li>
+        <li><a href="#expert" onclick="toggleMenu()">Expert</a></li>
+        <li><a href="#temoignage" onclick="toggleMenu()">Témoignage</a></li>
+        <li><a href="#Contact" onclick="toggleMenu()">Contact</a></li>
         <li>
-            <a href="#reservation" class="btn-reserve" onclick="toggleMenu();">
-                Réservation
+            <a href="#reservation" class="btn-reserve" onclick="toggleMenu()">
+                Reservation
             </a>
         </li>
     </ul>
@@ -38,25 +41,30 @@
 
 
 <!-- ================= BANNIERE ================= -->
+
 <section class="banniere" id="banniere">
 
     <div class="contenu">
+
         <h2>Que des plats délicieux</h2>
 
         <p>
-            Bienvenue dans notre Resto - Snack.
-            Découvrez nos plats délicieux, nos boissons et nos spécialités.
-            Choisissez vos plats préférés et profitez d'une agréable expérience.
+            Bienvenue sur notre site de restauration.
+            Découvrez nos plats délicieux, choisissez vos préférés
+            et profitez d'une expérience agréable dans notre restaurant.
         </p>
 
         <a href="#menu" class="btn1">Notre Menu</a>
-        <a href="#reservation" class="btn2">Réservation</a>
+
+        <a href="#reservation" class="btn2">Reservation</a>
+
     </div>
 
 </section>
 
 
 <!-- ================= A PROPOS ================= -->
+
 <section class="apropos" id="apropos">
 
     <div class="row">
@@ -64,15 +72,18 @@
         <div class="col50">
 
             <h2 class="titre-texte">
-                <span>A</span> Propos De Nous
+                <span>A</span> propos de nous
             </h2>
 
             <p>
-                Notre Resto - Snack propose différents plats et boissons
-                préparés avec soin. Nos cuisiniers sont expérimentés et
-                donnent une grande importance à la qualité des plats.
-                Nous accueillons également nos clients fidèles dans une
-                ambiance agréable et chaleureuse.
+                Notre restaurant propose une variété de plats délicieux
+                préparés avec soin par des personnes expérimentées.
+                Nous accordons une grande importance à la qualité
+                de nos repas ainsi qu'à l'accueil de nos clients.
+                <br><br>
+                Nos clients fidèles apprécient particulièrement
+                la diversité de notre menu, la qualité de nos plats
+                et la rapidité de notre service.
             </p>
 
         </div>
@@ -80,7 +91,9 @@
         <div class="col50">
 
             <div class="img">
+
                 <img src="images/1712067915861 - Copie.jpg" alt="Restaurant">
+
             </div>
 
         </div>
@@ -91,6 +104,7 @@
 
 
 <!-- ================= MENU ================= -->
+
 <section class="menu" id="menu">
 
     <div class="titre">
@@ -100,7 +114,7 @@
         </h2>
 
         <p>
-            Découvrez quelques-unes de nos spécialités.
+            Découvrez quelques-uns de nos plats et spécialités.
         </p>
 
     </div>
@@ -112,9 +126,10 @@
             <div class="imbox">
                 <img src="images/Screenshot_20240412_083057 (9).jpg" alt="Glace">
             </div>
+
             <div class="text">
                 <h3>Special Glace</h3>
-                <p>Une glace fraîche et délicieuse pour terminer votre repas.</p>
+                <p>Une glace délicieuse et rafraîchissante.</p>
             </div>
         </div>
 
@@ -123,9 +138,10 @@
             <div class="imbox">
                 <img src="images/Screenshot_20240412_082621 (9).jpg" alt="Cocktail">
             </div>
+
             <div class="text">
                 <h3>Special Cocktail</h3>
-                <p>Une boisson fraîche et savoureuse.</p>
+                <p>Un cocktail frais et savoureux.</p>
             </div>
         </div>
 
@@ -134,9 +150,10 @@
             <div class="imbox">
                 <img src="images/Screenshot_20240412_082745 (5).jpg" alt="Fruit de mer">
             </div>
+
             <div class="text">
                 <h3>Fruit de mer</h3>
-                <p>Une spécialité préparée avec des produits de qualité.</p>
+                <p>Une spécialité préparée avec soin.</p>
             </div>
         </div>
 
@@ -145,9 +162,10 @@
             <div class="imbox">
                 <img src="images/Screenshot_20240403_165154 (5).jpg" alt="Plat">
             </div>
+
             <div class="text">
                 <h3>Special Plat</h3>
-                <p>Un plat savoureux préparé avec soin.</p>
+                <p>Un plat savoureux pour tous les goûts.</p>
             </div>
         </div>
 
@@ -156,6 +174,7 @@
             <div class="imbox">
                 <img src="images/Screenshot_20240403_165315 (4).jpg" alt="Frite">
             </div>
+
             <div class="text">
                 <h3>Special Frite</h3>
                 <p>Des frites croustillantes et délicieuses.</p>
@@ -167,9 +186,10 @@
             <div class="imbox">
                 <img src="images/1712067916840 (4).jpg" alt="Pizza">
             </div>
+
             <div class="text">
                 <h3>Special Pizza</h3>
-                <p>Une pizza chaude et généreuse.</p>
+                <p>Une pizza préparée avec des ingrédients frais.</p>
             </div>
         </div>
 
@@ -178,34 +198,32 @@
             <div class="imbox">
                 <img src="images/Screenshot_20240403_165516 (5).jpg" alt="Pizza">
             </div>
+
             <div class="text">
-                <h3>Pizza</h3>
-                <p>Une spécialité appréciée par nos clients.</p>
+                <h3>Pizza Maison</h3>
+                <p>Une pizza savoureuse et généreuse.</p>
             </div>
         </div>
 
 
         <div class="box">
             <div class="imbox">
-                <img src="images/Screenshot_20240412_082922 (7).jpg" alt="Légumes">
+                <img src="images/Screenshot_20240412_082922 (7).jpg" alt="Légume">
             </div>
+
             <div class="text">
-                <h3>Légumes verts</h3>
-                <p>Des légumes frais et savoureux.</p>
+                <h3>Légume Vert</h3>
+                <p>Des légumes frais et bien préparés.</p>
             </div>
         </div>
 
-    </div>
-
-
-    <div class="titre">
-        <a href="#reservation" class="btn1">Voir Plus</a>
     </div>
 
 </section>
 
 
 <!-- ================= EXPERTS ================= -->
+
 <section class="expert" id="expert">
 
     <div class="titre">
@@ -215,7 +233,7 @@
         </h2>
 
         <p>
-            Voici les personnes expérimentées qui préparent nos plats.
+            Découvrez notre équipe expérimentée.
         </p>
 
     </div>
@@ -224,42 +242,54 @@
     <div class="contenu">
 
         <div class="box">
+
             <div class="imbox">
                 <img src="images/Capture d'écran 2026-08-27 092514.png" alt="Chef Nicolas">
             </div>
+
             <div class="text">
                 <h3>Chef Nicolas</h3>
             </div>
+
         </div>
 
 
         <div class="box">
+
             <div class="imbox">
                 <img src="images/Capture d'écran 2026-08-27 092938.png" alt="Chef Xavier">
             </div>
+
             <div class="text">
                 <h3>Chef Xavier</h3>
             </div>
+
         </div>
 
 
         <div class="box">
+
             <div class="imbox">
                 <img src="images/Capture d'écran 2026-08-27 093620.png" alt="Chef Cécilia">
             </div>
+
             <div class="text">
                 <h3>Chef Cécilia</h3>
             </div>
+
         </div>
 
 
         <div class="box">
+
             <div class="imbox">
                 <img src="images/Capture d'écran 2026-08-27 092144.png" alt="Chef Claude">
             </div>
+
             <div class="text">
                 <h3>Chef Claude</h3>
             </div>
+
         </div>
 
     </div>
@@ -267,17 +297,18 @@
 </section>
 
 
-<!-- ================= CLIENTS ================= -->
+<!-- ================= TEMOIGNAGES ================= -->
+
 <section class="temoignage" id="temoignage">
 
     <div class="titre blanc">
 
         <h2 class="titre-texte">
-            Que Disent Nos <span>C</span>lients
+            Que disent nos <span>C</span>lients
         </h2>
 
         <p>
-            Découvrez ce que pensent nos clients fidèles.
+            Quelques témoignages de nos clients habitués.
         </p>
 
     </div>
@@ -294,9 +325,9 @@
             <div class="text">
 
                 <p>
-                    Bonjour, je m'appelle Cassandre. Je suis une cliente
-                    fidèle de ce restaurant. Les plats sont merveilleux,
-                    savoureux et délicieux grâce aux chefs expérimentés.
+                    Bonjour, je m'appelle Cassandre.
+                    Je suis l'une des clientes fidèles de ce restaurant.
+                    Les plats sont merveilleux, savoureux et délicieux.
                 </p>
 
                 <h3>Cassandre</h3>
@@ -315,9 +346,9 @@
             <div class="text">
 
                 <p>
-                    Salut, je suis Sarah. Je passe souvent mon week-end
-                    dans ce resto. La qualité des plats est bonne et
-                    le service est rapide.
+                    Salut, je suis Sarah.
+                    Je passe souvent mon week-end dans ce restaurant.
+                    La qualité des plats est bonne et le service est rapide.
                 </p>
 
                 <h3>Sarah</h3>
@@ -336,9 +367,9 @@
             <div class="text">
 
                 <p>
-                    Bonjour, je suis Gabriel. J'achète souvent mon goûter
-                    dans ce resto. L'accueil est chaleureux et les plats
-                    sont délicieux.
+                    Bonjour tout le monde, je suis Gabriel.
+                    J'achète souvent mon goûter dans ce restaurant.
+                    L'accueil est chaleureux et les plats sont délicieux.
                 </p>
 
                 <h3>Gabriel</h3>
@@ -353,6 +384,7 @@
 
 
 <!-- ================= CONTACT ================= -->
+
 <section class="Contact" id="Contact">
 
     <div class="titre noir">
@@ -370,35 +402,24 @@
     </div>
 
 
-    <div class="contact-container">
+    <div class="contactform">
 
-        <div class="contact-image">
+        <h3>Envoyer un message</h3>
 
-            <img src="images/Screenshot_20240405_151224.jpg" alt="Restaurant">
-
+        <div class="inputboite">
+            <input type="text" placeholder="Nom">
         </div>
 
+        <div class="inputboite">
+            <input type="email" placeholder="Email">
+        </div>
 
-        <div class="contactform">
+        <div class="inputboite">
+            <textarea placeholder="Message"></textarea>
+        </div>
 
-            <h3>Envoyer un message</h3>
-
-            <div class="inputboite">
-                <input type="text" placeholder="Nom">
-            </div>
-
-            <div class="inputboite">
-                <input type="email" placeholder="Email">
-            </div>
-
-            <div class="inputboite">
-                <textarea placeholder="Message"></textarea>
-            </div>
-
-            <div class="inputboite">
-                <input type="submit" value="Envoyer">
-            </div>
-
+        <div class="inputboite">
+            <input type="submit" value="Envoyer">
         </div>
 
     </div>
@@ -407,113 +428,103 @@
 
 
 <!-- ================= RESERVATION ================= -->
+
 <section class="reservation" id="reservation">
 
-    <div class="titre">
+    <div class="reservation-container">
 
-        <h2 class="titre-texte">
-            <span>R</span>éservation
-        </h2>
+        <div class="reservation-image">
 
-        <p>
-            Réservez votre table et choisissez votre plat préféré.
-        </p>
-
-    </div>
-
-
-    <div class="reservation-form">
-
-        <h3>Faire une réservation</h3>
-
-
-        <div class="inputboite">
-            <input type="text" id="nomReservation" placeholder="Votre nom">
-        </div>
-
-
-        <div class="inputboite">
-
-            <select id="platReservation">
-
-                <option value="">Choisir un plat</option>
-
-                <option value="Special Glace">
-                    Special Glace
-                </option>
-
-                <option value="Special Cocktail">
-                    Special Cocktail
-                </option>
-
-                <option value="Fruit de mer">
-                    Fruit de mer
-                </option>
-
-                <option value="Special Frite">
-                    Special Frite
-                </option>
-
-                <option value="Special Pizza">
-                    Special Pizza
-                </option>
-
-                <option value="Légumes verts">
-                    Légumes verts
-                </option>
-
-            </select>
+            <img src="images/1712067916840 (4).jpg" alt="Restaurant">
 
         </div>
 
 
-        <div class="inputboite">
+        <div class="reservationform">
 
-            <input
-                type="number"
-                id="nombrePersonnes"
-                min="1"
-                placeholder="Nombre de personnes"
-            >
+            <h2>
+                <span>R</span>éservation
+            </h2>
 
-        </div>
-
-
-        <div class="inputboite">
-
-            <input
-                type="date"
-                id="dateReservation"
-            >
-
-        </div>
+            <p>
+                Réservez votre table et choisissez votre plat préféré.
+            </p>
 
 
-        <div class="inputboite">
+            <form onsubmit="faireReservation(event)">
 
-            <input
-                type="time"
-                id="heureReservation"
-            >
-
-        </div>
+                <div class="inputboite">
+                    <input type="text" placeholder="Nom" required>
+                </div>
 
 
-        <div class="inputboite">
-
-            <textarea
-                id="messageReservation"
-                placeholder="Message ou demande spéciale"
-            ></textarea>
-
-        </div>
+                <div class="inputboite">
+                    <input type="date" required>
+                </div>
 
 
-        <div class="inputboite">
+                <div class="inputboite">
+                    <input type="time" required>
+                </div>
 
-            <button type="button" onclick="faireReservation()">
-                Réserver
-            </button>
+
+                <div class="inputboite">
+
+                    <input
+                        type="number"
+                        min="1"
+                        max="50"
+                        placeholder="Nombre de personnes"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="inputboite">
+
+                    <select required>
+
+                        <option value="">
+                            Choisir un plat
+                        </option>
+
+                        <option>Special Glace</option>
+
+                        <option>Special Cocktail</option>
+
+                        <option>Fruit de mer</option>
+
+                        <option>Special Frite</option>
+
+                        <option>Special Pizza</option>
+
+                        <option>Légume Vert</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="inputboite">
+
+                    <textarea
+                        placeholder="Message ou demande particulière"
+                    ></textarea>
+
+                </div>
+
+
+                <div class="inputboite">
+
+                    <input
+                        type="submit"
+                        value="Confirmer la réservation"
+                    >
+
+                </div>
+
+            </form>
 
         </div>
 
@@ -523,59 +534,39 @@
 
 
 <!-- ================= FOOTER ================= -->
+
 <footer>
 
     <div class="footer-content">
 
-        <h2><span>R</span>esto - <span>S</span>nack</h2>
+        <h2>
+            <span>R</span>esto - <span>S</span>nack
+        </h2>
 
         <p>
-            Des plats délicieux, une ambiance agréable et un service
-            chaleureux.
+            Merci de votre visite.
+            Nous vous souhaitons un agréable moment.
         </p>
 
         <div class="footer-links">
 
             <a href="#banniere">Accueil</a>
-            <a href="#apropos">À propos</a>
+
+            <a href="#apropos">A propos</a>
+
             <a href="#menu">Menu</a>
+
             <a href="#Contact">Contact</a>
 
         </div>
 
-    </div>
-
-
-    <div class="copyright">
-
-        <p>
-            © 2026 Resto - Snack | Projet pratique HTML, CSS & JavaScript
+        <p class="copyright">
+            © 2026 Resto-Snack — Projet pratique HTML, CSS & JavaScript
         </p>
 
     </div>
 
 </footer>
-
-
-<!-- ================= POPUP ================= -->
-<div class="popup" id="popup">
-
-    <div class="popup-box">
-
-        <div class="popup-icon">✓</div>
-
-        <h3>Réservation effectuée !</h3>
-
-        <p>
-            Merci pour votre réservation.
-            Votre demande a bien été enregistrée.
-        </p>
-
-        <button onclick="fermerPopup()">OK</button>
-
-    </div>
-
-</div>
 
 
 <script src="script.js"></script>
