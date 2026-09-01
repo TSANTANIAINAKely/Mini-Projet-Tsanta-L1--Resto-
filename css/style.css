@@ -1,98 +1,114 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
 
-p{
+p {
     font-weight: 300;
     color: #111;
 }
 
-header{
+/* ================= HEADER ================= */
+
+header {
     position: fixed;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     padding: 20px 10px;
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     transition: 0.5s;
 }
 
-.logo{
+.logo {
     color: #fff;
     font-weight: bold;
     font-size: 2em;
     text-decoration: none;
 }
-.logo span{
+
+.logo span {
     color: #fb911f;
 }
 
-.navbar{
+.navbar {
     display: flex;
     position: relative;
+    align-items: center;
 }
-.navbar li{
+
+.navbar li {
     list-style: none;
 }
-.navbar a{
+
+.navbar li a {
     color: #fff;
     text-decoration: none;
     margin-left: 30px;
     font-weight: 700;
 }
 
-
-.btn-reserve{
+.btn-reserve {
     padding: 10px 20px;
     background: #fb911f;
-    margin-top: -10px;
+    color: #fff;
+    margin-left: 30px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
-
-.btn-reserve:hover{
+.btn-reserve:hover {
     background: #d87710;
-    transition: ease-out;
 }
 
-header .navbar li a:hover{
-    color:#fb911f;
+header .navbar li a:hover {
+    color: #fb911f;
     border-bottom: 2px solid #fb911f;
 }
 
-.banniere{
+/* ================= BANNIERE ================= */
+
+.banniere {
     position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../images/Screenshot_20240402_143913_com.facebook.lite.jpg);
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("../images/Screenshot_20240402_143913_com.facebook.lite.jpg");
+
     background-size: cover;
+    background-position: center;
 }
 
-.banniere .contenu{
+.banniere .contenu {
     max-width: 70%;
     text-align: center;
 }
-.banniere .contenu h2{
+
+.banniere .contenu h2 {
     color: #fff;
     font-size: 3em;
     text-transform: capitalize;
 }
-.contenu p:nth-child(2){
-    color:#ffff;
+
+.banniere .contenu p {
+    color: #fff;
     font-size: 1.2em;
 }
 
-.btn1{
+/* ================= BUTTONS ================= */
+
+.btn1 {
     font-size: 1em;
     color: #fff;
     background: #fb911f;
@@ -105,11 +121,12 @@ header .navbar li a:hover{
     transition: 0.5s;
     margin-left: 10px;
 }
-.btn2{
+
+.btn2 {
     font-size: 1em;
     color: #fff;
     background: #2a4963;
-    padding:10px 20px;
+    padding: 10px 20px;
     display: inline-block;
     margin-top: 20px;
     text-decoration: none;
@@ -119,51 +136,18 @@ header .navbar li a:hover{
     margin-left: 10px;
 }
 
-.btn1:hover{
+.btn1:hover,
+.btn2:hover {
     letter-spacing: 4px;
 }
-section{
+
+/* ================= SECTIONS ================= */
+
+section {
     padding: 100px;
 }
-.row{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
 
-.row .col50{
-    position: relative;
-    width: 48%;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.row .col50 h2{
-    margin-bottom: 20px;
-}
-
-.titre-texte{
-    color: #000;
-    font-size: 2em;
-    font-weight: 300px;
-    text-transform: capitalize;
-}
-
-.titre-texte span{
-    color: #fb911f;
-    font-size: 1.5em;
-    font-weight: 700px;
-}
-
-.row .col50 img{
-    height: 450px;
-    width: 600px;
-    position: relative;
-}
-
-.titre{
+.titre {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -171,95 +155,148 @@ section{
     flex-direction: column;
 }
 
-.menu{
-    margin-top: -100px;
+.titre-texte {
+    color: #000;
+    font-size: 2em;
+    font-weight: 300;
+    text-transform: capitalize;
 }
 
-.menu .contenu{
+.titre-texte span {
+    color: #fb911f;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+/* ================= A PROPOS ================= */
+
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50 {
+    position: relative;
+    width: 48%;
+}
+
+.row .col50 h2 {
+    margin-bottom: 20px;
+}
+
+.row .col50 img {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ================= MENU ================= */
+
+.menu {
+    margin-top: -50px;
+}
+
+.menu .contenu {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 40px;
 }
 
-.menu .contenu .box{
+.menu .contenu .box {
     width: 350px;
     margin: 20px;
-    border: 20px solid #fff;
-    box-shadow: 20px 15px 35px rgba(0,0,0,0.8);
+    border: 15px solid #fff;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.menu .contenu .box .imbox{
+.menu .contenu .box .imbox {
     position: relative;
     width: 100%;
     height: 300px;
+    overflow: hidden;
 }
 
-.menu .contenu .box .imbox img{
-    position: relative;
-    top: 0;
-    left: 0;
+.menu .contenu .box .imbox img {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    display: block;
 }
 
-.menu .contenu .box .text{
+.menu .contenu .box .text {
     text-align: center;
-    font-weight: 300px;
     color: #111;
+    padding: 10px;
 }
 
-.menu .contenu .box .text h3{
+.menu .contenu .box .text h3 {
     font-weight: 400;
 }
 
-.expert{
-    margin-top: -100px;
+/* ================= EXPERT ================= */
+
+.expert {
+    margin-top: -50px;
 }
 
-.expert .contenu{
+.expert .contenu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 40px;
 }
 
-.expert .contenu .box{
+.expert .contenu .box {
     width: 250px;
     margin: 15px;
 }
-.expert .contenu .box img{
-    position: relative;
+
+.expert .contenu .box .imbox {
     width: 100%;
     height: 300px;
-    top: 0;
-    left: 0;
-    object-fit: cover;
+    overflow: hidden;
 }
 
-.expert .contenu .box h3{
+.expert .contenu .box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.expert .contenu .box h3 {
     color: #111;
     font-weight: 400;
     text-align: center;
+    margin-top: 10px;
 }
 
-.temoignage{
-    background-image: url(../images/Screenshot_20240405_151224.jpg);
+/* ================= TEMOIGNAGE ================= */
+
+.temoignage {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../images/Screenshot_20240405_151224.jpg");
+
     background-size: cover;
+    background-position: center;
 }
 
-.temoignage .contenu{
+.temoignage .contenu {
     display: flex;
     margin-top: 40px;
     width: 100%;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    flex-direction: row;
 }
 
-.temoignage .contenu .box{
+.temoignage .contenu .box {
     width: 340px;
     margin: 20px;
     background: #fff;
@@ -271,81 +308,83 @@ section{
     padding: 40px;
 }
 
-.temoignage .contenu .box .imbox{
+.temoignage .contenu .box .imbox {
     width: 80px;
     height: 80px;
-    border-radius: 50px;
+    border-radius: 50%;
     position: relative;
     margin-bottom: 20px;
     overflow: hidden;
 }
 
-.temoignage .contenu .box .imbox img{
-    position: relative;
+.temoignage .contenu .box .imbox img {
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
     object-fit: cover;
-    justify-content: center;
-    align-items: center;
+    display: block;
 }
 
-.temoignage .contenu .box .text{
+.temoignage .contenu .box .text {
     text-align: center;
     color: #666;
     font-style: italic;
 }
 
-.temoignage .contenu .box .text h3{
+.temoignage .contenu .box .text h3 {
     color: #fb911f;
     margin-top: 20px;
     font-size: 1em;
     font-weight: 600;
 }
 
-.blanc .titre-texte{
-    color: #fff;
-}
-
 .blanc .titre-texte,
-.blanc p{
+.blanc p {
     color: #fff;
 }
 
-.contact{
-    background-image: url(../images/1712067916721.jpg);
+/* ================= CONTACT ================= */
+
+.Contact {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("../images/1712067915861 - Copie.jpg");
+
     background-size: cover;
-    box-shadow: 2px 2px 12px rgba(0,0,0, 0.8);
+    background-position: center;
     width: 100%;
-    background-position: unset;
 }
 
-.contactform{
-    padding: 75px 50px;
+.Contact .titre-text {
+    color: #fff;
+}
+
+.Contact .titre-text span {
+    color: #fb911f;
+    font-size: 2em;
+}
+
+.contactform {
+    padding: 50px;
     background: #fff;
-    box-shadow: 5px 15px 50px rgba(0,0,0, 0.8);
+    box-shadow: 5px 15px 50px rgba(0, 0, 0, 0.4);
     max-width: 500px;
-    margin-top: 50px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 38%;
+    margin: 50px auto 0;
 }
 
-.contactform .inputboite{
-    position: relative;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.contactform h3{
+.contactform h3 {
     color: #111;
     font-size: 1.2em;
     margin-bottom: 20px;
 }
 
+.contactform .inputboite {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
 .contactform .inputboite input,
-.contactform .inputboite textarea{
+.contactform .inputboite textarea {
     width: 100%;
     border: 1px solid #555;
     padding: 10px;
@@ -354,13 +393,16 @@ section{
     font-size: 16px;
     font-weight: 300;
     resize: none;
-} 
+}
 
+.contactform .inputboite textarea {
+    height: 120px;
+}
 
-.contactform .inputboite input[type="submit"]{
+.contactform .inputboite input[type="submit"] {
     font-size: 1em;
     font-weight: 700;
-    color: #ffff;
+    color: #fff;
     background: #fb911f;
     display: inline-block;
     text-transform: uppercase;
@@ -370,173 +412,193 @@ section{
     border: none;
     transition: 0.5s;
     max-width: 120px;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.contact .titre-text span{
-    color: #fb911f;
-    font-size: 2em;
-}
-
-header.sticky{
-    background: #fff;
-    padding: 10px 10px;
-    box-shadow: 0px 5px 20px rgba(0,0,0, 0.05);
-}
-
-header.sticky .logo{
-    color: #000;
-}
-
-header.sticky .navbar li a{
-    color: #000;
-}
-
-header.sticky li a:hover{
-    color: #fb911f;
-    border-bottom: 2px solid #fb911f;
-}
-
-@media (max-width: 991px) {
-header, header .sticky{
-    padding: 10px 20px;
-}
-header.navbar li{
-    margin-left: 0px;
-}
-
-header.navbar li a{
-    text-decoration: none;
-    color: #111;
-    font-size: 1.6em;
-    font-weight: 300;
-}
-
-.navbar{
-    display: none;
-}
-section{
-    padding: 20px;
-}
-
-header.navbar .active{
-    width: 100%;
-    height: calc(100% -68px);
-    position: fixed;
-    top: 68px;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background: #ffff;
-    align-items: center;
-}
-
-.menutoogle{
-    position: relative;
-    width: 40px;
-    height: 40px;
-    background-image: url(../images/);
-    background-repeat: no-repeat;
-    background-position: center;
     cursor: pointer;
 }
 
-.menutoogle .active{
-    background-image: url();
-    background-size: 30px;
-    background-repeat: no-repeat;
-    background-position: center;
+.contactform .inputboite input[type="submit"]:hover {
+    background: #d87710;
 }
 
-header.sticky .menutoogle{
-    filter: invert(1);
-} 
-.banniere .contenu h2{
-    font-size: 2em;
+/* ================= STICKY HEADER ================= */
+
+header.sticky {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
-.row .col50 img{
-    margin-left: 18%;
+header.sticky .logo {
+    color: #000;
 }
 
-.contenu p:nth-child(2){
-    font-size: 1.2em;
-}
-.expert{
-    margin-top: 0px;
+header.sticky .navbar li a {
+    color: #000;
 }
 
-.menu{
-    margin-top: 0px;
+header.sticky .navbar li a:hover {
+    color: #fb911f;
 }
 
-.row{
-    display: flex;
-    flex-direction: column;
+/* ================= MOBILE ================= */
+
+.menutoogle {
+    display: none;
 }
 
+@media (max-width: 991px) {
 
+    header,
+    header.sticky {
+        padding: 15px 20px;
+        justify-content: space-between;
+    }
 
-.temoignage h2{
-    font-size: 2em;
-    text-align: center;
-}
-
-.temoignage p{
-text-align: center;
-}
-
-.contactform{
-    margin-left: 25px;
-}
-
-
-    .row .col50 {
-        position: relative;
+    .navbar {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
         width: 100%;
+        height: calc(100vh - 70px);
+        background: #fff;
         justify-content: center;
         align-items: center;
-        margin-bottom: 30px;
+        flex-direction: column;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar li {
+        margin: 15px 0;
+    }
+
+    .navbar li a,
+    header.sticky .navbar li a {
+        color: #111;
+        font-size: 1.4em;
+        margin-left: 0;
+    }
+
+    .btn-reserve {
+        margin: 15px 0 0;
+    }
+
+    .menutoogle {
+        display: block;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .menutoogle::before,
+    .menutoogle::after {
+        content: "";
+        position: absolute;
+        left: 7px;
+        width: 26px;
+        height: 3px;
+        background: #fff;
+        transition: 0.3s;
+    }
+
+    .menutoogle::before {
+        top: 13px;
+    }
+
+    .menutoogle::after {
+        top: 25px;
+    }
+
+    header.sticky .menutoogle::before,
+    header.sticky .menutoogle::after {
+        background: #111;
+    }
+
+    section {
+        padding: 70px 20px;
+    }
+
+    .banniere .contenu {
+        max-width: 90%;
+    }
+
+    .banniere .contenu h2 {
+        font-size: 2.2em;
     }
 
     .row {
         flex-direction: column;
     }
+
+    .row .col50 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .row .col50 img {
+        width: 100%;
+        height: auto;
+        max-height: 450px;
+    }
+
+    .menu,
+    .expert {
+        margin-top: 0;
+    }
+
+    .contactform {
+        width: 100%;
+        margin: 40px auto 0;
+    }
 }
-@media(max-width: 480px)
-{
-    .banniere .contenu h2{
-        font-size: 2.2em;
-        color: #ffff;
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 1.5em;
     }
 
-    .titre-text{
-        color: #000;
-        font-size: 2rem;
-        font-weight: 300;
-        text-transform: capitalize;
+    .banniere .contenu h2 {
+        font-size: 1.8em;
     }
 
-    .temoignage h2{
-        font-size: 1.1em;
+    .banniere .contenu p {
+        font-size: 1em;
     }
 
-    .temoignage p{
+    .titre-texte {
+        font-size: 1.6em;
         text-align: center;
     }
 
+    .menu .contenu .box {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .expert .contenu .box {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .temoignage .contenu .box {
+        width: 100%;
+        margin: 15px 0;
+        padding: 25px;
+    }
+
+    .contactform {
+        padding: 30px 20px;
+    }
+
+    .btn1,
+    .btn2 {
+        font-size: 0.9em;
+        padding: 9px 14px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
