@@ -1,4 +1,6 @@
-// ================= HEADER STICKY =================
+/* =========================
+   HEADER STICKY
+========================= */
 
 window.addEventListener("scroll", function () {
 
@@ -12,52 +14,99 @@ window.addEventListener("scroll", function () {
 });
 
 
-// ================= MENU MOBILE =================
+/* =========================
+   MENU MOBILE
+========================= */
 
 function toggleMenu() {
 
+    const menutoogle = document.querySelector(".menutoogle");
     const navbar = document.querySelector(".navbar");
 
+    menutoogle.classList.toggle("active");
     navbar.classList.toggle("active");
 
 }
 
 
-// ================= RÉSERVATION =================
+/* =========================
+   RESERVATION
+========================= */
 
-function makeReservation(event) {
+function faireReservation() {
 
-    event.preventDefault();
+    const nom = document.getElementById("nomReservation").value.trim();
+    const telephone = document.getElementById("telephoneReservation").value.trim();
+    const date = document.getElementById("dateReservation").value;
+    const heure = document.getElementById("heureReservation").value;
+    const personnes = document.getElementById("personnesReservation").value;
 
-    const confirmation = document.getElementById("confirmation");
+    /*
+       Vérification simple des champs
+    */
 
-    confirmation.classList.add("active");
+    if (
+        nom === "" ||
+        telephone === "" ||
+        date === "" ||
+        heure === "" ||
+        personnes === ""
+    ) {
 
-    // Réinitialiser le formulaire
-    event.target.reset();
+        alert("Veuillez remplir tous les champs de réservation.");
+
+        return;
+    }
+
+
+    /*
+       Affichage de la fenêtre de confirmation
+    */
+
+    const popup = document.getElementById("popup");
+
+    popup.classList.add("active");
+
+
+    /*
+       Effacer les champs après réservation
+    */
+
+    document.getElementById("nomReservation").value = "";
+    document.getElementById("telephoneReservation").value = "";
+    document.getElementById("dateReservation").value = "";
+    document.getElementById("heureReservation").value = "";
+    document.getElementById("personnesReservation").value = "";
 
 }
 
 
-// ================= FERMER LA CONFIRMATION =================
+/* =========================
+   FERMER POPUP
+========================= */
 
-function closeConfirmation() {
+function fermerPopup() {
 
-    const confirmation = document.getElementById("confirmation");
+    const popup = document.getElementById("popup");
 
-    confirmation.classList.remove("active");
-
-}
-
-
-// ================= CONTACT =================
-
-function sendMessage(event) {
-
-    event.preventDefault();
-
-    alert("Votre message a bien été envoyé. Merci pour votre contact !");
-
-    event.target.reset();
+    popup.classList.remove("active");
 
 }
+
+
+/* =========================
+   FERMER LE POPUP EN CLIQUANT
+   À L'EXTÉRIEUR
+========================= */
+
+window.addEventListener("click", function (event) {
+
+    const popup = document.getElementById("popup");
+
+    if (event.target === popup) {
+
+        popup.classList.remove("active");
+
+    }
+
+});
