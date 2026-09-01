@@ -1,633 +1,530 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resto-Snack | Restaurant</title>
 
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <title>Resto-Snack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+<!-- ================= HEADER ================= -->
+<header id="header">
 
-    <header>
+    <a href="#banniere" class="logo">
+        <span>R</span>esto<span>-</span>Snack
+    </a>
 
-        <a href="#" class="logo"><span>R</span>esto</a>
-        <a href="#" class="logo"><span>S</span>nack</a>
+    <div class="menutoogle" onclick="toggleMenu()"></div>
 
-        <div class="menutoogle" onclick="toggleMenu();"></div>
-
-        <ul class="navbar">
-
-            <li>
-                <a href="#banniere" onclick="toggleMenu();">Accueil</a>
-            </li>
-
-            <li>
-                <a href="#apropos" onclick="toggleMenu();">A propos</a>
-            </li>
-
-            <li>
-                <a href="#menu" onclick="toggleMenu();">Menu</a>
-            </li>
-
-            <li>
-                <a href="#expert" onclick="toggleMenu();">Expert</a>
-            </li>
-
-            <li>
-                <a href="#temoignage" onclick="toggleMenu();">Temoignage</a>
-            </li>
-
-            <li>
-                <a href="#Contact" onclick="toggleMenu();">Contact</a>
-            </li>
-
-            <a href="#Contact" class="btn-reserve" onclick="toggleMenu();">
-                Reservation
+    <ul class="navbar">
+        <li><a href="#banniere" onclick="toggleMenu()">Accueil</a></li>
+        <li><a href="#apropos" onclick="toggleMenu()">À propos</a></li>
+        <li><a href="#menu" onclick="toggleMenu()">Menu</a></li>
+        <li><a href="#expert" onclick="toggleMenu()">Experts</a></li>
+        <li><a href="#temoignage" onclick="toggleMenu()">Témoignages</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <li>
+            <a href="#reservation" class="btn-reserve" onclick="toggleMenu()">
+                Réservation
             </a>
+        </li>
+    </ul>
 
-        </ul>
-
-    </header>
+</header>
 
 
-    <!-- ================= BANNIERE ================= -->
+<!-- ================= ACCUEIL ================= -->
+<section class="banniere" id="banniere">
 
-    <section class="banniere" id="banniere">
+    <div class="contenu">
 
-        <div class="contenu">
+        <h2>Que des plats délicieux</h2>
 
-            <h2>Que Des Plats Délicieux</h2>
+        <p>
+            Bienvenue chez Resto-Snack, un espace dédié aux amateurs
+            de cuisine savoureuse. Découvrez notre menu, nos spécialités
+            et profitez d'une expérience agréable.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#menu" class="btn1">Notre menu</a>
+            <a href="#reservation" class="btn2">Réserver</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= À PROPOS ================= -->
+<section class="apropos" id="apropos">
+
+    <div class="row">
+
+        <div class="col50">
+
+            <h2 class="titre-texte">
+                <span>A</span> propos de nous
+            </h2>
 
             <p>
-                Bienvenue sur notre site qui est basée sur la restauration.
-                En faite, les clients peuvent choisir et commander ses besoins
-                et ses désirs en rejoignant le bouton NOTRE MENU au-dessous;
-                et ils peuvent aussi réserver les plats selon leurs préférés,
-                donc pour se faire veuillez cliquer sur le bouton RESERVATION.
+                Resto-Snack propose une sélection de plats préparés
+                avec soin. Notre objectif est d'offrir une cuisine
+                savoureuse dans une ambiance agréable et conviviale.
             </p>
 
-            <a href="#menu" class="btn1">Notre Menu</a>
-
-            <a href="#Contact" class="btn2">Reservation</a>
+            <p>
+                Notre équipe met son savoir-faire au service des clients
+                afin de proposer des repas de qualité et un service
+                chaleureux.
+            </p>
 
         </div>
 
-    </section>
+        <div class="col50">
+
+            <div class="img">
+
+                <img
+                    src="images/1712067915861 - Copie.jpg"
+                    alt="Présentation du restaurant"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- ================= A PROPOS ================= -->
+<!-- ================= MENU ================= -->
+<section class="menu" id="menu">
 
-    <section class="apropos" id="apropos">
+    <div class="titre">
 
-        <div class="row">
+        <h2 class="titre-texte">
+            Notre <span>M</span>enu
+        </h2>
 
-            <div class="col50">
+        <p>
+            Découvrez quelques-unes de nos spécialités.
+        </p>
 
-                <h2 class="titre-texte">
-                    <span>A</span> Propos De Nous
-                </h2>
+    </div>
+
+
+    <div class="contenu menu-grid">
+
+        <div class="box">
+            <div class="imbox">
+                <img src="images/Screenshot_20240412_083057 (9).jpg" alt="Glace">
+            </div>
+            <div class="text">
+                <h3>Glace spéciale</h3>
+                <p>Une douceur fraîche et savoureuse.</p>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="imbox">
+                <img src="images/Screenshot_20240412_082621 (9).jpg" alt="Cocktail">
+            </div>
+            <div class="text">
+                <h3>Cocktail spécial</h3>
+                <p>Une boisson fraîche et fruitée.</p>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="imbox">
+                <img src="images/Screenshot_20240412_082745 (5).jpg" alt="Fruit de mer">
+            </div>
+            <div class="text">
+                <h3>Fruit de mer</h3>
+                <p>Une spécialité pleine de saveurs.</p>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="imbox">
+                <img src="images/Screenshot_20240403_165154 (5).jpg" alt="Plat de fruits de mer">
+            </div>
+            <div class="text">
+                <h3>Spécialité maison</h3>
+                <p>Une préparation généreuse.</p>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="imbox">
+                <img src="images/Screenshot_20240403_165315 (4).jpg" alt="Frites">
+            </div>
+            <div class="text">
+                <h3>Frites spéciales</h3>
+                <p>Croustillantes et savoureuses.</p>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="imbox">
+                <img src="images/1712067916840 (4).jpg" alt="Pizza">
+            </div>
+            <div class="text">
+                <h3>Pizza</h3>
+                <p>Une pizza préparée avec soin.</p>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="imbox">
+                <img src="images/Screenshot_20240403_165516 (5).jpg" alt="Pizza spéciale">
+            </div>
+            <div class="text">
+                <h3>Pizza spéciale</h3>
+                <p>Une recette gourmande.</p>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="imbox">
+                <img src="images/Screenshot_20240412_082922 (7).jpg" alt="Légumes">
+            </div>
+            <div class="text">
+                <h3>Légumes verts</h3>
+                <p>Un accompagnement frais et léger.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXPERTS ================= -->
+<section class="expert" id="expert">
+
+    <div class="titre">
+
+        <h2 class="titre-texte">
+            Nos <span>E</span>xperts
+        </h2>
+
+        <p>
+            Découvrez notre équipe et son savoir-faire.
+        </p>
+
+    </div>
+
+
+    <div class="contenu expert-grid">
+
+        <div class="box">
+            <div class="imbox">
+                <img src="images/Capture d'écran 2026-08-27 092514.png" alt="Chef Nicolas">
+            </div>
+            <div class="text">
+                <h3>Chef Nicolas</h3>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="imbox">
+                <img src="images/Capture d'écran 2026-08-27 092938.png" alt="Chef Xavier">
+            </div>
+            <div class="text">
+                <h3>Chef Xavier</h3>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="imbox">
+                <img src="images/Capture d'écran 2026-08-27 093620.png" alt="Chef Cécilia">
+            </div>
+            <div class="text">
+                <h3>Chef Cécilia</h3>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="imbox">
+                <img src="images/Capture d'écran 2026-08-27 092144.png" alt="Chef Claude">
+            </div>
+            <div class="text">
+                <h3>Chef Claude</h3>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TÉMOIGNAGES ================= -->
+<section class="temoignage" id="temoignage">
+
+    <div class="titre blanc">
+
+        <h2 class="titre-texte">
+            Que disent nos <span>C</span>lients ?
+        </h2>
+
+        <p>
+            Quelques témoignages de clients satisfaits.
+        </p>
+
+    </div>
+
+
+    <div class="contenu testimonials-grid">
+
+        <div class="box">
+
+            <div class="imbox">
+                <img src="images/Capture d'écran 2026-08-27 063608.png" alt="Cliente">
+            </div>
+
+            <div class="text">
 
                 <p>
-                    D'abord, nous avons un Menu, là où les clients peuvent
-                    choisir ses nourritures;
-
-                    Ensuite, nos cuisines sont faites par des personnes
-                    bien expérimentés et qui ont déjà survécu des nombreux défis;
-
-                    De plus, il y a aussi nos clients ViP, fidèles ou les
-                    habitués qui apprécient l'expérience proposée par notre
-                    restaurant;
-
-                    Enfin, pour plus de renseignement, nous avons un contact
-                    et vous pouvez le rejoindre.
+                    Une très belle expérience. Les plats sont délicieux
+                    et le service est agréable.
                 </p>
 
-            </div>
-
-
-            <div class="col50">
-
-                <div class="img">
-
-                    <img
-                        src="./images/1712067915861 - Copie.jpg"
-                        alt="Image du restaurant">
-
-                </div>
+                <h3>Cassandre</h3>
 
             </div>
 
         </div>
 
-    </section>
 
+        <div class="box">
 
-    <!-- ================= MENU ================= -->
-
-    <section class="menu" id="menu">
-
-        <div class="titre">
-
-            <h2 class="titre-texte">
-                <span>M</span>enu
-            </h2>
-
-            <p>
-                Voici notre liste détaillée des plats servis à un repas.
-            </p>
-
-        </div>
-
-
-        <div class="contenu">
-
-
-            <!-- IMAGE 1 -->
-
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/Screenshot_20240412_083057 (9).jpg"
-                        alt="Special Glace">
-
-                </div>
-
-                <div class="text">
-
-                    <h3>Special Glace</h3>
-
-                </div>
-
+            <div class="imbox">
+                <img src="images/1712067919047 (2).jpg" alt="Cliente">
             </div>
 
+            <div class="text">
 
-            <!-- IMAGE 2 -->
+                <p>
+                    J'apprécie beaucoup la qualité des plats et
+                    l'ambiance du restaurant.
+                </p>
 
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/Screenshot_20240412_082621 (9).jpg"
-                        alt="Special Cocktail">
-
-                </div>
-
-                <div class="text">
-
-                    <h3>Special Cocktail</h3>
-
-                </div>
-
-            </div>
-
-
-            <!-- IMAGE 3 -->
-
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/Screenshot_20240412_082745 (5).jpg"
-                        alt="Special Fruit de mer">
-
-                </div>
-
-                <div class="text">
-
-                    <h3>Special Fruit de mer</h3>
-
-                </div>
-
-            </div>
-
-
-            <!-- IMAGE 4 -->
-
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/Screenshot_20240403_165154 (5).jpg"
-                        alt="Special Fruit de mer">
-
-                </div>
-
-                <div class="text">
-
-                    <h3>Special Fruit de mer</h3>
-
-                </div>
-
-            </div>
-
-
-            <!-- IMAGE 5 -->
-
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/Screenshot_20240403_165315 (4).jpg"
-                        alt="Special Frite">
-
-                </div>
-
-                <div class="text">
-
-                    <h3>Special Frite</h3>
-
-                </div>
-
-            </div>
-
-
-            <!-- IMAGE 6 -->
-
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/1712067916840 (4).jpg"
-                        alt="Special Pizza">
-
-                </div>
-
-                <div class="text">
-
-                    <h3>Special Pizza</h3>
-
-                </div>
-
-            </div>
-
-
-            <!-- IMAGE 7 -->
-
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/Screenshot_20240403_165516 (5).jpg"
-                        alt="Special Pizza">
-
-                </div>
-
-                <div class="text">
-
-                    <h3>Special Pizza</h3>
-
-                </div>
-
-            </div>
-
-
-            <!-- IMAGE 8 -->
-
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/Screenshot_20240412_082922 (7).jpg"
-                        alt="Legume vert">
-
-                </div>
-
-                <div class="text">
-
-                    <h3>Legume vert</h3>
-
-                </div>
+                <h3>Sarah</h3>
 
             </div>
 
         </div>
 
 
-        <div class="titre">
+        <div class="box">
 
-            <a href="#menu" class="btn1">
-                Voir Plus
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= EXPERT ================= -->
-
-    <section class="expert" id="expert">
-
-        <div class="titre">
-
-            <h2 class="titre-texte">
-                Nos <span>E</span>xperts
-            </h2>
-
-            <p>
-                Voici les personnes qui ont une parfaite connaissance
-                ou encore bien expérimentés sur nos cuisines.
-            </p>
-
-        </div>
-
-
-        <div class="contenu">
-
-
-            <!-- CHEF 1 -->
-
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/Capture d'écran 2026-08-27 092514.png"
-                        alt="Chef Nicolas">
-
-                </div>
-
-                <div class="text">
-
-                    <h3>Chef Nicolas</h3>
-
-                </div>
-
+            <div class="imbox">
+                <img src="images/Capture d'écran 2026-08-27 063959.png" alt="Client">
             </div>
 
+            <div class="text">
 
-            <!-- CHEF 2 -->
+                <p>
+                    L'accueil est chaleureux et les plats sont
+                    vraiment savoureux.
+                </p>
 
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/Capture d'écran 2026-08-27 092938.png"
-                        alt="Chef Xavier">
-
-                </div>
-
-                <div class="text">
-
-                    <h3>Chef Xavier</h3>
-
-                </div>
-
-            </div>
-
-
-            <!-- CHEF 3 -->
-
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/Capture d'écran 2026-08-27 093620.png"
-                        alt="Chef Cécilia">
-
-                </div>
-
-                <div class="text">
-
-                    <h3>Chef Cécilia</h3>
-
-                </div>
-
-            </div>
-
-
-            <!-- CHEF 4 -->
-
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/Capture d'écran 2026-08-27 092144.png"
-                        alt="Chef Claude">
-
-                </div>
-
-                <div class="text">
-
-                    <h3>Chef Claude</h3>
-
-                </div>
+                <h3>Gabriel</h3>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ================= TEMOIGNAGE ================= -->
+<!-- ================= RESERVATION ================= -->
+<section class="reservation" id="reservation">
 
-    <section class="temoignage" id="temoignage">
+    <div class="titre">
 
-        <div class="titre blanc">
+        <h2 class="titre-texte">
+            Faire une <span>R</span>éservation
+        </h2>
 
-            <h2 class="titre-texte">
-                Que Disent Nos <span>C</span>lients
-            </h2>
+        <p>
+            Remplissez ce formulaire pour effectuer une réservation.
+        </p>
 
-            <p>
-                Puisque notre resto avait déjà existé depuis longtemps,
-                alors on possède des clients privilégiés et habitués.
-            </p>
-
-        </div>
+    </div>
 
 
-        <div class="contenu">
+    <div class="reservationform">
 
+        <form onsubmit="submitReservation(event)">
 
-            <!-- CLIENT 1 -->
-
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/Capture d'écran 2026-08-27 063608.png"
-                        alt="Cassandre">
-
-                </div>
-
-                <div class="text">
-
-                    <p>
-                        Bonjour, je m'appelle Cassandre, j'ai 23ans,
-                        je suis l'une des clientes fidèles dans ce resto
-                        et je participe toujours sur ces nouveautés depuis
-                        2ans déjà et j'ai ressenti que ces plats sont
-                        merveilleux, savoureux et délicieux grâce à leurs
-                        chefs cuisiniers et cuisinières qui sont bien
-                        expérimentés.
-                    </p>
-
-                    <h3>Cassandre</h3>
-
-                </div>
-
+            <div class="inputboite">
+                <input type="text" id="nomReservation" placeholder="Votre nom" required>
             </div>
 
-
-            <!-- CLIENT 2 -->
-
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/1712067919047 (2).jpg"
-                        alt="Sarah">
-
-                </div>
-
-                <div class="text">
-
-                    <p>
-                        Salut, je suis Sarah, j'ai 21ans, je passe toujours
-                        mon week-end dans ce resto en mangeant mes plats
-                        préférés, la qualité de leurs plats est bonne ainsi
-                        leurs services sont rapides, ses clients sont aussi
-                        accueillis chaleureusement, sur ce resto l'atmosphère
-                        est vraiment agréable.
-                    </p>
-
-                    <h3>Sarah</h3>
-
-                </div>
-
+            <div class="inputboite">
+                <input type="date" id="dateReservation" required>
             </div>
 
-
-            <!-- CLIENT 3 -->
-
-            <div class="box">
-
-                <div class="imbox">
-
-                    <img
-                        src="./images/Capture d'écran 2026-08-27 063959.png"
-                        alt="Gabriel">
-
-                </div>
-
-                <div class="text">
-
-                    <p>
-                        Bonjour tout le monde, je suis Gabriel, j'ai 19ans
-                        j'achète toujours mon goûter dans ce resto depuis
-                        mon enfance et ce que je savais c'est que l'accueil
-                        est respectueux et joyeux, on peut dire aussi que
-                        leurs menu sont moins chères alors que leurs plats
-                        sont tellement délicieux avec service rapide.
-                    </p>
-
-                    <h3>Gabriel</h3>
-
-                </div>
-
+            <div class="inputboite">
+                <input type="time" id="heureReservation" required>
             </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= CONTACT ================= -->
-
-    <section class="Contact" id="Contact">
-
-        <div class="titre noir">
-
-            <h2 class="titre-text">
-                <span>C</span>ontact
-            </h2>
-
-            <p>
-                Pour plus de renseignement, de relation ou encore en cas
-                de besoin, veuillez nous contacter en entrant votre nom,
-                votre email ainsi vos messages et puis l'envoyer vers nous.
-            </p>
-
-        </div>
-
-
-        <div class="contactform">
-
-            <h3>Envoyer un message</h3>
-
 
             <div class="inputboite">
 
-                <input
-                    type="text"
-                    placeholder="Nom">
+                <select id="personnesReservation" required>
+
+                    <option value="">Nombre de personnes</option>
+                    <option value="1">1 personne</option>
+                    <option value="2">2 personnes</option>
+                    <option value="3">3 personnes</option>
+                    <option value="4">4 personnes</option>
+                    <option value="5">5 personnes</option>
+                    <option value="6">6 personnes</option>
+                    <option value="7">7 personnes</option>
+                    <option value="8">8 personnes</option>
+
+                </select>
 
             </div>
-
 
             <div class="inputboite">
+                <select id="platReservation" required>
 
-                <input
-                    type="email"
-                    placeholder="Email">
+                    <option value="">Choisir un plat</option>
+                    <option value="Glace spéciale">Glace spéciale</option>
+                    <option value="Cocktail spécial">Cocktail spécial</option>
+                    <option value="Fruit de mer">Fruit de mer</option>
+                    <option value="Frites spéciales">Frites spéciales</option>
+                    <option value="Pizza">Pizza</option>
+                    <option value="Légumes verts">Légumes verts</option>
 
+                </select>
             </div>
-
 
             <div class="inputboite">
 
                 <textarea
-                    placeholder="Message"></textarea>
+                    id="messageReservation"
+                    placeholder="Message supplémentaire (facultatif)"
+                ></textarea>
 
             </div>
-
 
             <div class="inputboite">
 
-                <input
-                    type="submit"
-                    value="Envoyer">
+                <button type="submit" class="submit-btn">
+                    Confirmer la réservation
+                </button>
 
             </div>
 
-        </div>
+        </form>
 
-    </section>
+        <p id="reservationMessage" class="success-message"></p>
+
+    </div>
+
+</section>
 
 
-    <!-- ================= JAVASCRIPT ================= -->
+<!-- ================= CONTACT ================= -->
+<section class="Contact" id="contact">
 
-    <script src="script.js"></script>
+    <div class="titre blanc">
+
+        <h2 class="titre-texte">
+            <span>C</span>ontact
+        </h2>
+
+        <p>
+            Pour plus de renseignement, de relation ou encore en cas
+            de besoin, veuillez nous contacter en entrant votre nom,
+            votre email ainsi que votre message.
+        </p>
+
+    </div>
+
+
+    <div class="contactform">
+
+        <h3>Envoyer un message</h3>
+
+        <form onsubmit="submitContact(event)">
+
+            <div class="inputboite">
+                <input type="text" id="contactNom" placeholder="Nom" required>
+            </div>
+
+            <div class="inputboite">
+                <input type="email" id="contactEmail" placeholder="Email" required>
+            </div>
+
+            <div class="inputboite">
+
+                <textarea
+                    id="contactMessage"
+                    placeholder="Votre message"
+                    required
+                ></textarea>
+
+            </div>
+
+            <div class="inputboite">
+
+                <button type="submit" class="submit-btn">
+                    Envoyer
+                </button>
+
+            </div>
+
+        </form>
+
+        <p id="contactMessageResult" class="success-message"></p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+
+    <p>
+        © 2026 Resto-Snack — Projet pratique
+    </p>
+
+    <p>
+        Site web réalisé avec HTML, CSS et JavaScript.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
