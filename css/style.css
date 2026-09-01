@@ -23,19 +23,21 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px 5%;
     width: 100%;
+    padding: 20px 6%;
     z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     transition: 0.5s;
 }
 
 .logo {
     color: #fff;
+    font-size: 1.8em;
     font-weight: 700;
-    font-size: 2em;
     text-decoration: none;
     white-space: nowrap;
 }
@@ -47,23 +49,22 @@ header {
 .navbar {
     display: flex;
     align-items: center;
-    position: relative;
-    gap: 5px;
+    gap: 10px;
 }
 
 .navbar li {
     list-style: none;
 }
 
-.navbar a {
+.navbar li a {
     color: #fff;
     text-decoration: none;
-    margin-left: 25px;
+    margin-left: 20px;
     font-weight: 600;
     transition: 0.3s;
 }
 
-.navbar a:hover {
+.navbar li a:hover {
     color: #fb911f;
 }
 
@@ -71,9 +72,7 @@ header {
     padding: 10px 18px;
     background: #fb911f;
     color: #fff !important;
-    border-radius: 4px;
     text-transform: uppercase;
-    transition: 0.3s;
 }
 
 .btn-reserve:hover {
@@ -82,32 +81,28 @@ header {
 }
 
 
-/* ================= STICKY HEADER ================= */
+/* ================= HEADER STICKY ================= */
 
 header.sticky {
     background: #fff;
-    padding: 12px 5%;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 12px 6%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
 }
 
 header.sticky .logo {
     color: #111;
 }
 
-header.sticky .navbar a {
+header.sticky .navbar li a {
     color: #111;
 }
 
-header.sticky .navbar a:hover {
+header.sticky .navbar li a:hover {
     color: #fb911f;
 }
 
-header.sticky .navbar .btn-reserve {
+header.sticky .btn-reserve {
     color: #fff !important;
-}
-
-header.sticky .navbar .btn-reserve:hover {
-    color: #fb911f !important;
 }
 
 
@@ -117,6 +112,7 @@ header.sticky .navbar .btn-reserve:hover {
     position: relative;
     width: 100%;
     min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,75 +145,79 @@ header.sticky .navbar .btn-reserve:hover {
 .btn1,
 .btn2 {
     display: inline-block;
-    padding: 12px 22px;
-    margin-top: 25px;
-    margin-left: 8px;
+    margin: 25px 8px 0;
+
+    padding: 12px 25px;
+
     text-decoration: none;
-    color: #fff;
     text-transform: uppercase;
+
     letter-spacing: 1px;
+
     transition: 0.3s;
-    border-radius: 4px;
 }
 
 .btn1 {
     background: #fb911f;
+    color: #fff;
 }
 
 .btn2 {
     background: #2a4963;
+    color: #fff;
 }
 
 .btn1:hover,
 .btn2:hover {
-    letter-spacing: 3px;
+    transform: translateY(-3px);
+    letter-spacing: 2px;
 }
 
 
 /* ================= SECTIONS ================= */
 
 section {
-    padding: 90px 8%;
+    padding: 90px 7%;
 }
 
 .row {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 50px;
 }
 
 .row .col50 {
-    width: 48%;
+    width: 50%;
 }
 
 .row .col50 img {
     width: 100%;
     max-height: 450px;
     object-fit: cover;
-    border-radius: 5px;
+    display: block;
 }
 
 .titre {
     width: 100%;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .titre-texte {
     color: #111;
-    font-size: 2.3em;
-    font-weight: 500;
+    font-size: 2.2em;
+    font-weight: 400;
     text-transform: capitalize;
 }
 
 .titre-texte span {
     color: #fb911f;
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-weight: 700;
+}
+
+.titre p {
+    margin-top: 8px;
 }
 
 
@@ -231,47 +231,55 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
-.menu .contenu .box {
+.menu .box {
     width: 300px;
-    margin: 18px;
+    margin: 15px;
+
     background: #fff;
-    border: 12px solid #fff;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+
+    border: 10px solid #fff;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+
     transition: 0.3s;
 }
 
-.menu .contenu .box:hover {
-    transform: translateY(-7px);
+.menu .box:hover {
+    transform: translateY(-8px);
 }
 
-.menu .contenu .box .imbox {
-    position: relative;
+.menu .imbox {
     width: 100%;
-    height: 260px;
+    height: 270px;
     overflow: hidden;
 }
 
-.menu .contenu .box .imbox img {
+.menu .imbox img {
     width: 100%;
-    height: 260px;
+    height: 100%;
     object-fit: cover;
+    transition: 0.4s;
 }
 
-.menu .contenu .box .text {
+.menu .box:hover img {
+    transform: scale(1.05);
+}
+
+.menu .text {
     text-align: center;
-    padding: 12px 5px 5px;
+    padding: 12px 5px;
 }
 
-.menu .contenu .box .text h3 {
+.menu .text h3 {
+    font-weight: 500;
     color: #111;
-    font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
-.menu .contenu .box .text p {
+.menu .text p {
     font-size: 0.85em;
     color: #666;
 }
@@ -279,31 +287,35 @@ section {
 
 /* ================= EXPERT ================= */
 
+.expert {
+    background: #fff;
+}
+
 .expert .contenu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
-.expert .contenu .box {
-    width: 250px;
+.expert .box {
+    width: 240px;
     margin: 15px;
 }
 
-.expert .contenu .box .imbox {
+.expert .imbox {
     width: 100%;
     height: 300px;
     overflow: hidden;
 }
 
-.expert .contenu .box img {
+.expert .box img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
 }
 
-.expert .contenu .box h3 {
+.expert .text h3 {
     color: #111;
     font-weight: 500;
     text-align: center;
@@ -311,21 +323,23 @@ section {
 }
 
 
-/* ================= CLIENTS ================= */
+/* ================= TEMOIGNAGE ================= */
 
 .temoignage {
     background-image:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
         url("../images/Screenshot_20240405_151224.jpg");
 
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
-.blanc .titre-texte,
-.blanc p {
-    color: #fff;
+.temoignage .titre-texte {
+    color: #111;
+}
+
+.temoignage .titre p {
+    color: #111;
 }
 
 .temoignage .contenu {
@@ -335,46 +349,52 @@ section {
     margin-top: 40px;
 }
 
-.temoignage .contenu .box {
-    width: 340px;
-    margin: 20px;
+.temoignage .box {
+    width: 330px;
+    margin: 15px;
+
     background: #fff;
+
+    padding: 35px 25px;
+
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+
     border-radius: 15px;
-    padding: 35px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-.temoignage .contenu .box .imbox {
+.temoignage .imbox {
     width: 90px;
     height: 90px;
+
     border-radius: 50%;
     overflow: hidden;
+
     margin-bottom: 20px;
-    border: 4px solid #fb911f;
 }
 
-.temoignage .contenu .box .imbox img {
+.temoignage .imbox img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.temoignage .contenu .box .text {
+.temoignage .text {
     text-align: center;
 }
 
-.temoignage .contenu .box .text p {
+.temoignage .text p {
     color: #555;
     font-style: italic;
     font-size: 0.9em;
 }
 
-.temoignage .contenu .box .text h3 {
+.temoignage .text h3 {
     color: #fb911f;
-    margin-top: 18px;
+    margin-top: 15px;
 }
 
 
@@ -382,52 +402,36 @@ section {
 
 .Contact {
     background-image:
-        linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
-        url("../images/1712067916840 (4).jpg");
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("../images/1712067915861 - Copie.jpg");
 
     background-size: cover;
     background-position: center;
 }
 
+.Contact .titre-texte {
+    color: #fff;
+}
+
 .Contact .titre p {
-    color: #111;
-    max-width: 800px;
-    margin-top: 10px;
-}
-
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.contact-image {
-    width: 45%;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.contact-image img {
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-    object-fit: cover;
+    color: #fff;
+    max-width: 850px;
+    margin: auto;
 }
 
 .contactform {
-    width: 45%;
-    max-width: 500px;
-    padding: 45px;
+    max-width: 550px;
+    margin: 45px auto 0;
+
+    padding: 40px;
+
     background: #fff;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.2);
-    border-radius: 8px;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
 }
 
 .contactform h3 {
     color: #111;
-    font-size: 1.3em;
     margin-bottom: 20px;
 }
 
@@ -440,30 +444,44 @@ section {
 .inputboite textarea,
 .inputboite select {
     width: 100%;
+
     border: 1px solid #aaa;
+
     padding: 12px;
+
     color: #111;
+
     outline: none;
+
     font-size: 15px;
-    border-radius: 4px;
+
     background: #fff;
 }
 
 .inputboite textarea {
-    height: 120px;
-    resize: none;
+    min-height: 120px;
+    resize: vertical;
 }
 
-.contactform input[type="submit"] {
+.inputboite input[type="submit"] {
+    width: auto;
+
+    padding: 12px 25px;
+
     background: #fb911f;
+
     color: #fff;
+
     border: none;
+
     cursor: pointer;
+
     font-weight: 600;
+
     transition: 0.3s;
 }
 
-.contactform input[type="submit"]:hover {
+.inputboite input[type="submit"]:hover {
     background: #d87710;
 }
 
@@ -471,112 +489,50 @@ section {
 /* ================= RESERVATION ================= */
 
 .reservation {
-    background: #f5f5f5;
+    background: #f7f7f7;
 }
 
-.reservation-form {
-    width: 90%;
-    max-width: 600px;
-    margin: 40px auto 0;
-    padding: 45px;
+.reservation-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    align-items: stretch;
+
     background: #fff;
+
     box-shadow: 0 10px 35px rgba(0,0,0,0.18);
-    border-radius: 8px;
 }
 
-.reservation-form h3 {
-    text-align: center;
+.reservation-image {
+    width: 45%;
+}
+
+.reservation-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    object-fit: cover;
+}
+
+.reservationform {
+    width: 55%;
+    padding: 45px;
+}
+
+.reservationform h2 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    color: #111;
+}
+
+.reservationform h2 span {
+    color: #fb911f;
+}
+
+.reservationform > p {
+    color: #666;
     margin-bottom: 25px;
-    font-size: 1.4em;
-}
-
-.reservation-form input,
-.reservation-form select,
-.reservation-form textarea {
-    width: 100%;
-}
-
-.reservation-form button {
-    width: 100%;
-    padding: 13px;
-    background: #fb911f;
-    border: none;
-    color: #fff;
-    font-size: 1em;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-
-.reservation-form button:hover {
-    background: #d87710;
-}
-
-
-/* ================= POPUP ================= */
-
-.popup {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 3000;
-}
-
-.popup.active {
-    display: flex;
-}
-
-.popup-box {
-    width: 90%;
-    max-width: 400px;
-    background: #fff;
-    padding: 35px;
-    border-radius: 10px;
-    text-align: center;
-    animation: popup 0.3s ease;
-}
-
-@keyframes popup {
-    from {
-        transform: scale(0.7);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.popup-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 15px;
-    border-radius: 50%;
-    background: #fb911f;
-    color: #fff;
-    font-size: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-box h3 {
-    margin-bottom: 10px;
-}
-
-.popup-box button {
-    margin-top: 20px;
-    padding: 10px 30px;
-    background: #fb911f;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 4px;
 }
 
 
@@ -584,29 +540,31 @@ section {
 
 footer {
     background: #222;
-    color: #fff;
+    padding: 45px 20px 25px;
     text-align: center;
 }
 
 .footer-content {
-    padding: 45px 20px 30px;
+    max-width: 900px;
+    margin: auto;
 }
 
 .footer-content h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+    color: #fff;
+    font-size: 1.8em;
 }
 
 .footer-content h2 span {
     color: #fb911f;
 }
 
-.footer-content p {
+.footer-content > p {
     color: #ddd;
+    margin: 10px auto;
 }
 
 .footer-links {
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 .footer-links a {
@@ -621,53 +579,62 @@ footer {
 }
 
 .copyright {
-    padding: 15px;
-    border-top: 1px solid #444;
-}
-
-.copyright p {
-    color: #aaa;
     font-size: 0.85em;
+    color: #aaa !important;
+    margin-top: 25px !important;
 }
 
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE MENU ================= */
 
 .menutoogle {
     display: none;
 }
 
+
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 991px) {
 
     header {
-        padding: 15px 25px;
+        padding: 15px 5%;
     }
 
     .menutoogle {
         display: block;
-        width: 40px;
-        height: 40px;
-        position: relative;
+
+        width: 35px;
+        height: 30px;
+
         cursor: pointer;
+
+        position: relative;
     }
 
     .menutoogle::before,
-    .menutoogle::after {
-        content: "";
-        position: absolute;
-        left: 5px;
-        width: 30px;
-        height: 3px;
-        background: #fff;
+    .menutoogle::after,
+    .menutoogle {
+        border-top: 3px solid transparent;
     }
 
     .menutoogle::before {
-        top: 12px;
-        box-shadow: 0 10px 0 #fff;
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 3px;
+        background: #fff;
+        top: 5px;
+        left: 0;
     }
 
     .menutoogle::after {
-        top: 32px;
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 3px;
+        background: #fff;
+        top: 17px;
+        left: 0;
     }
 
     header.sticky .menutoogle::before,
@@ -675,21 +642,21 @@ footer {
         background: #111;
     }
 
-    header.sticky .menutoogle::before {
-        box-shadow: 0 10px 0 #111;
-    }
-
     .navbar {
         display: none;
-        position: fixed;
-        top: 70px;
+
+        position: absolute;
+
+        top: 100%;
         left: 0;
+
         width: 100%;
-        height: calc(100vh - 70px);
+
         background: #fff;
+
         flex-direction: column;
-        justify-content: center;
-        gap: 20px;
+
+        padding: 20px 0;
     }
 
     .navbar.active {
@@ -697,21 +664,16 @@ footer {
     }
 
     .navbar li {
-        margin: 5px 0;
+        margin: 8px 0;
     }
 
-    .navbar a {
-        color: #111 !important;
-        font-size: 1.1em;
+    .navbar li a {
+        color: #111;
         margin: 0;
     }
 
     .navbar .btn-reserve {
         color: #fff !important;
-    }
-
-    section {
-        padding: 70px 25px;
     }
 
     .row {
@@ -720,50 +682,68 @@ footer {
 
     .row .col50 {
         width: 100%;
-        margin-bottom: 30px;
     }
 
-    .contact-container {
+    .reservation-container {
         flex-direction: column;
-        align-items: center;
     }
 
-    .contact-image,
-    .contactform {
-        width: 90%;
-        max-width: 600px;
+    .reservation-image,
+    .reservationform {
+        width: 100%;
     }
 
+    .reservation-image img {
+        min-height: 350px;
+        max-height: 400px;
+    }
 }
 
 
 @media (max-width: 600px) {
 
+    section {
+        padding: 70px 5%;
+    }
+
     .logo {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
     .banniere .contenu h2 {
-        font-size: 2.2em;
+        font-size: 2em;
     }
 
     .banniere .contenu p {
         font-size: 0.9em;
     }
 
-    .menu .contenu .box {
-        width: 90%;
-        margin: 12px;
+    .menu .box {
+        width: 100%;
+        max-width: 350px;
     }
 
-    .reservation-form {
+    .expert .box {
         width: 100%;
+        max-width: 300px;
+    }
+
+    .temoignage .box {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .contactform,
+    .reservationform {
         padding: 25px;
     }
 
-    .contact-image,
-    .contactform {
-        width: 100%;
+    .reservationform h2 {
+        font-size: 1.8em;
     }
 
+    .footer-links a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
 }
