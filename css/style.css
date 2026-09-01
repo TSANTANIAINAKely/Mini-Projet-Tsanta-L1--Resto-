@@ -2,12 +2,12 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:'Poppins', sans-serif;
     scroll-behavior:smooth;
 }
 
 body{
-    background:#fff;
+    overflow-x:hidden;
 }
 
 p{
@@ -16,22 +16,25 @@ p{
     line-height:1.7;
 }
 
+
+/* ================= HEADER ================= */
+
 header{
     position:fixed;
     top:0;
     left:0;
-    padding:20px 50px;
+    padding:20px 10px;
     width:100%;
     z-index:1000;
     display:flex;
-    justify-content:space-between;
+    justify-content:space-evenly;
     align-items:center;
     transition:0.5s;
 }
 
 .logo{
     color:#fff;
-    font-weight:700;
+    font-weight:bold;
     font-size:2em;
     text-decoration:none;
 }
@@ -42,18 +45,18 @@ header{
 
 .navbar{
     display:flex;
+    position:relative;
     align-items:center;
-    gap:10px;
 }
 
 .navbar li{
     list-style:none;
 }
 
-.navbar a{
+.navbar li a{
     color:#fff;
     text-decoration:none;
-    margin-left:20px;
+    margin-left:30px;
     font-weight:600;
 }
 
@@ -73,18 +76,42 @@ header .navbar li a:hover{
 }
 
 
-/* ACCUEIL */
+/* ================= STICKY HEADER ================= */
+
+header.sticky{
+    background:#fff;
+    padding:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+header.sticky .logo{
+    color:#000;
+}
+
+header.sticky .navbar li a{
+    color:#000;
+}
+
+header.sticky .navbar li a:hover{
+    color:#fb911f;
+}
+
+
+/* ================= BANNIERE ================= */
 
 .banniere{
     position:relative;
     width:100%;
     min-height:100vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    background-image:
+
+    background:
     linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
     url("../images/Screenshot_20240402_143913_com.facebook.lite.jpg");
+
     background-size:cover;
     background-position:center;
 }
@@ -99,15 +126,13 @@ header .navbar li a:hover{
     color:#fff;
     font-size:3em;
     text-transform:capitalize;
+    margin-bottom:15px;
 }
 
 .banniere .contenu p{
     color:#fff;
     font-size:1.1em;
 }
-
-
-/* BOUTONS */
 
 .btn1,
 .btn2{
@@ -137,7 +162,7 @@ header .navbar li a:hover{
 }
 
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 section{
     padding:90px 8%;
@@ -154,7 +179,7 @@ section{
 
 .titre-texte{
     color:#000;
-    font-size:2.2em;
+    font-size:2em;
     font-weight:300;
     text-transform:capitalize;
 }
@@ -166,7 +191,7 @@ section{
 }
 
 
-/* A PROPOS */
+/* ================= A PROPOS ================= */
 
 .row{
     position:relative;
@@ -187,65 +212,74 @@ section{
 
 .row .col50 img{
     width:100%;
-    max-width:600px;
-    height:450px;
+    height:400px;
     object-fit:cover;
+    border-radius:5px;
 }
 
 
-/* MENU */
+/* ================= MENU ================= */
+
+.menu{
+    margin-top:-30px;
+}
 
 .menu .contenu{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    margin-top:40px;
+    margin-top:35px;
 }
 
 .menu .contenu .box{
-    width:360px;
-    margin:20px;
-    border:15px solid #fff;
-    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    width:310px;
+    margin:15px;
+    border:10px solid #fff;
     background:#fff;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    transition:0.3s;
+}
+
+.menu .contenu .box:hover{
+    transform:translateY(-5px);
 }
 
 .menu .contenu .box .imbox{
     position:relative;
     width:100%;
-    height:330px;
+    height:250px;
     overflow:hidden;
 }
 
 .menu .contenu .box .imbox img{
     width:100%;
-    height:330px;
+    height:250px;
     object-fit:cover;
-    transition:0.5s;
-}
-
-.menu .contenu .box:hover img{
-    transform:scale(1.05);
 }
 
 .menu .contenu .box .text{
     text-align:center;
-    padding:12px 5px 8px;
+    padding:12px 8px 15px;
 }
 
 .menu .contenu .box .text h3{
     font-weight:500;
     color:#111;
-    margin-bottom:4px;
+    margin-bottom:5px;
 }
 
 .menu .contenu .box .text p{
     font-size:0.85em;
     color:#555;
+    line-height:1.5;
 }
 
 
-/* EXPERT */
+/* ================= EXPERT ================= */
+
+.expert{
+    margin-top:-30px;
+}
 
 .expert .contenu{
     display:flex;
@@ -255,8 +289,14 @@ section{
 }
 
 .expert .contenu .box{
-    width:250px;
+    width:240px;
     margin:15px;
+}
+
+.expert .contenu .box .imbox{
+    width:100%;
+    height:300px;
+    overflow:hidden;
 }
 
 .expert .contenu .box img{
@@ -269,18 +309,25 @@ section{
     color:#111;
     font-weight:400;
     text-align:center;
-    margin-top:8px;
+    margin-top:10px;
 }
 
 
-/* TEMOIGNAGE */
+/* ================= TEMOIGNAGE ================= */
 
 .temoignage{
-    background-image:
-    linear-gradient(rgba(255,255,255,0.82),rgba(255,255,255,0.82)),
+
+    background:
+    linear-gradient(rgba(255,255,255,0.48),rgba(255,255,255,0.48)),
     url("../images/Screenshot_20240405_151224.jpg");
+
     background-size:cover;
     background-position:center;
+}
+
+.temoignage .titre-texte,
+.temoignage .titre p{
+    color:#111;
 }
 
 .temoignage .contenu{
@@ -293,16 +340,16 @@ section{
 }
 
 .temoignage .contenu .box{
-    width:340px;
-    margin:20px;
+    width:330px;
+    margin:15px;
     background:#fff;
     display:flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
     border-radius:15px;
-    padding:40px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+    padding:30px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.18);
 }
 
 .temoignage .contenu .box .imbox{
@@ -322,12 +369,12 @@ section{
 
 .temoignage .contenu .box .text{
     text-align:center;
-    color:#111;
-    font-style:italic;
 }
 
 .temoignage .contenu .box .text p{
     color:#111;
+    font-style:italic;
+    font-size:0.9em;
 }
 
 .temoignage .contenu .box .text h3{
@@ -337,37 +384,42 @@ section{
     font-weight:600;
 }
 
-.blanc .titre-texte,
-.blanc p{
-    color:#111;
-}
 
+/* ================= CONTACT ================= */
 
-/* CONTACT */
+.Contact{
 
-.contact{
-    background:#f5f5f5;
+    background:
+    linear-gradient(rgba(255,255,255,0.62),rgba(255,255,255,0.62)),
+    url("../images/1712067916721.jpg");
+
+    background-size:cover;
+    background-position:center;
     width:100%;
 }
 
-.contact .titre p{
+.contact-titre{
+    max-width:850px;
+    margin:auto;
+}
+
+.contact-titre p{
     color:#111;
-    max-width:800px;
-    text-align:center;
 }
 
 .contactform{
-    padding:50px;
+    padding:45px;
     background:#fff;
-    box-shadow:0 10px 35px rgba(0,0,0,0.15);
-    max-width:550px;
-    margin:50px auto 0;
-    border-radius:8px;
+    box-shadow:5px 15px 40px rgba(0,0,0,0.3);
+    width:100%;
+    max-width:500px;
+    margin:40px auto 0;
+    border-radius:5px;
 }
 
 .contactform h3{
     color:#111;
-    font-size:1.3em;
+    font-size:1.2em;
     margin-bottom:20px;
 }
 
@@ -381,24 +433,23 @@ section{
 .inputboite textarea,
 .inputboite select{
     width:100%;
-    border:1px solid #bbb;
-    padding:13px;
+    border:1px solid #555;
+    padding:12px;
     color:#111;
     outline:none;
-    font-size:16px;
+    font-size:15px;
     font-weight:300;
-    border-radius:4px;
-    background:#fff;
+    resize:none;
+    border-radius:3px;
 }
 
 .inputboite textarea{
-    height:120px;
-    resize:none;
+    height:110px;
 }
 
 .inputboite input[type="button"]{
     font-size:1em;
-    font-weight:600;
+    font-weight:700;
     color:#fff;
     background:#fb911f;
     border:none;
@@ -411,160 +462,192 @@ section{
 }
 
 
-/* RESERVATION */
+/* ================= RESERVATION ================= */
 
 .reservation{
-    background:#fff;
+    background:#f7f7f7;
+}
+
+.reservation-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
 }
 
 .reservationform{
-    padding:50px;
-    background:#fff;
-    box-shadow:0 10px 35px rgba(0,0,0,0.2);
+    width:100%;
     max-width:550px;
-    margin:50px auto 0;
-    border-radius:8px;
+    margin-top:40px;
+    padding:45px;
+    background:#fff;
+    box-shadow:0 10px 35px rgba(0,0,0,0.15);
+    border-radius:5px;
 }
 
 .reservationform h3{
-    color:#111;
+    text-align:center;
     font-size:1.3em;
     margin-bottom:25px;
-}
-
-.reservationform .inputboite input,
-.reservationform .inputboite select{
-    width:100%;
-    border:1px solid #bbb;
-    padding:13px;
     color:#111;
-    outline:none;
-    font-size:16px;
-    border-radius:4px;
-    background:#fff;
 }
 
-.reservationform .inputboite input[type="button"]{
+.reservationform label{
+    display:block;
+    margin-bottom:7px;
+    font-size:0.9em;
+    font-weight:500;
+    color:#111;
+}
+
+.reservationform input,
+.reservationform select,
+.reservationform textarea{
+    width:100%;
+}
+
+.reservationform textarea{
+    height:100px;
+}
+
+
+/* ================= NOTIFICATION ================= */
+
+.notification{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.55);
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    z-index:3000;
+}
+
+.notification.show{
+    display:flex;
+}
+
+.notification-box{
+    width:90%;
+    max-width:380px;
+    background:#fff;
+    padding:35px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 15px 50px rgba(0,0,0,0.3);
+    animation:popup 0.3s ease;
+}
+
+.success-icon{
+    width:60px;
+    height:60px;
+    margin:0 auto 15px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
     background:#fb911f;
     color:#fff;
-    font-weight:600;
-    border:none;
-    cursor:pointer;
+
+    font-size:30px;
+    font-weight:bold;
 }
 
-.reservationform .inputboite input[type="button"]:hover{
+.notification-box h3{
+    margin-bottom:10px;
+}
+
+.notification-box button{
+    margin-top:20px;
+    padding:10px 30px;
+    border:none;
+    background:#fb911f;
+    color:#fff;
+    cursor:pointer;
+    font-weight:600;
+    border-radius:3px;
+}
+
+.notification-box button:hover{
     background:#d87710;
 }
 
+@keyframes popup{
 
-/* CONFIRMATION */
+    from{
+        transform:scale(0.8);
+        opacity:0;
+    }
 
-.confirmation{
-    display:none;
-    position:fixed;
-    z-index:2000;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.6);
-    justify-content:center;
-    align-items:center;
-}
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
 
-.confirmation-box{
-    position:relative;
-    background:#fff;
-    width:90%;
-    max-width:450px;
-    padding:40px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow:0 10px 40px rgba(0,0,0,0.4);
-}
-
-.confirmation-box h2{
-    color:#fb911f;
-    margin-bottom:15px;
-}
-
-.confirmation-box p{
-    color:#111;
-    margin-bottom:25px;
-}
-
-.confirmation-box button{
-    background:#fb911f;
-    color:#fff;
-    border:none;
-    padding:10px 30px;
-    cursor:pointer;
-    border-radius:4px;
-}
-
-.close{
-    position:absolute;
-    right:18px;
-    top:10px;
-    font-size:30px;
-    cursor:pointer;
-    color:#111;
 }
 
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
-    background:#111;
+    background:#2a4963;
     color:#fff;
     text-align:center;
-    padding:35px 20px 20px;
+}
+
+.footer-content{
+    padding:45px 20px 30px;
 }
 
 .footer-content h3{
-    font-size:1.6em;
-    color:#fb911f;
+    font-size:1.8em;
     margin-bottom:10px;
+}
+
+.footer-content h3 span{
+    color:#fb911f;
 }
 
 .footer-content p{
     color:#fff;
+    max-width:600px;
+    margin:auto;
 }
 
-.footer-bottom{
-    margin-top:25px;
-    padding-top:15px;
-    border-top:1px solid #444;
+.footer-links{
+    margin-top:20px;
 }
 
-.footer-bottom p{
-    color:#ddd;
+.footer-links a{
+    color:#fff;
+    text-decoration:none;
+    margin:0 10px;
     font-size:0.9em;
 }
 
-
-/* HEADER STICKY */
-
-header.sticky{
-    background:#fff;
-    padding:10px 50px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+.footer-links a:hover{
+    color:#fb911f;
 }
 
-header.sticky .logo{
-    color:#000;
+.copyright{
+    border-top:1px solid rgba(255,255,255,0.2);
+    padding:15px;
 }
 
-header.sticky .navbar li a{
-    color:#000;
-}
-
-header.sticky .navbar .btn-reserve{
+.copyright p{
     color:#fff;
+    font-size:0.8em;
 }
 
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 .menutoogle{
     display:none;
@@ -573,7 +656,8 @@ header.sticky .navbar .btn-reserve{
 @media(max-width:991px){
 
     header{
-        padding:15px 25px;
+        padding:15px 20px;
+        justify-content:space-between;
     }
 
     .navbar{
@@ -584,7 +668,8 @@ header.sticky .navbar .btn-reserve{
         width:100%;
         background:#fff;
         flex-direction:column;
-        padding:20px;
+        align-items:center;
+        padding:20px 0;
     }
 
     .navbar.active{
@@ -595,15 +680,20 @@ header.sticky .navbar .btn-reserve{
         margin:10px 0;
     }
 
-    .navbar a{
+    .navbar li a{
         color:#111;
         margin-left:0;
+        font-size:1.1em;
+    }
+
+    .navbar .btn-reserve{
+        color:#fff;
     }
 
     .menutoogle{
         display:block;
         width:35px;
-        height:30px;
+        height:35px;
         cursor:pointer;
         position:relative;
     }
@@ -611,7 +701,20 @@ header.sticky .navbar .btn-reserve{
     .menutoogle::before,
     .menutoogle::after,
     .menutoogle{
-        border-top:3px solid transparent;
+        background-size:100%;
+    }
+
+    .menutoogle::before{
+        content:"☰";
+        color:#fff;
+        font-size:30px;
+        position:absolute;
+        top:-5px;
+        left:0;
+    }
+
+    header.sticky .menutoogle::before{
+        color:#111;
     }
 
     .row{
@@ -637,8 +740,7 @@ header.sticky .navbar .btn-reserve{
 
     .contactform,
     .reservationform{
-        width:100%;
-        padding:30px 20px;
+        padding:30px;
     }
 }
 
@@ -659,22 +761,33 @@ header.sticky .navbar .btn-reserve{
 
     .btn1,
     .btn2{
-        margin-left:0;
+        font-size:0.8em;
+        padding:10px 15px;
+        margin-left:3px;
+    }
+
+    .titre-texte{
+        font-size:1.7em;
     }
 
     .menu .contenu .box{
         width:100%;
-        margin:15px 0;
-    }
-
-    .menu .contenu .box .imbox,
-    .menu .contenu .box .imbox img{
-        height:280px;
+        max-width:320px;
     }
 
     .temoignage .contenu .box{
         width:100%;
-        margin:15px 0;
+        max-width:340px;
+    }
+
+    .contactform,
+    .reservationform{
+        padding:25px 20px;
+    }
+
+    .footer-links a{
+        display:inline-block;
+        margin:5px;
     }
 
 }
