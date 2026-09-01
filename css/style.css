@@ -23,6 +23,11 @@ section {
     padding: 80px 10%;
 }
 
+
+/* =========================
+   TITRE
+========================= */
+
 .titre {
     text-align: center;
     margin-bottom: 50px;
@@ -52,6 +57,7 @@ section {
     color: #fb911f;
 }
 
+
 /* =========================
    HEADER
 ========================= */
@@ -75,6 +81,11 @@ header.sticky {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
+
+/* =========================
+   LOGO
+========================= */
+
 .logo {
     color: #fff;
     font-size: 2em;
@@ -90,6 +101,11 @@ header.sticky {
 header.sticky .logo {
     color: #111;
 }
+
+
+/* =========================
+   NAVIGATION
+========================= */
 
 .navbar {
     display: flex;
@@ -117,8 +133,10 @@ header.sticky .navbar li a {
     color: #fb911f !important;
 }
 
+
 /* =========================
    BOUTON RESERVATION
+   HEADER
 ========================= */
 
 .btn-reserve {
@@ -150,17 +168,24 @@ header.sticky .btn-reserve:hover {
     color: #fff !important;
 }
 
+
 /* =========================
-   BANNER / ACCUEIL
+   BANNIERE / ACCUEIL
 ========================= */
 
 .banniere {
     min-height: 100vh;
+
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
         url("../images/Screenshot_20240402_143913_com.facebook.lite.jpg");
+
     background-size: cover;
     background-position: center;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,6 +209,11 @@ header.sticky .btn-reserve:hover {
     margin-bottom: 30px;
 }
 
+
+/* =========================
+   BOUTON NOTRE MENU
+========================= */
+
 .btn1 {
     display: inline-block;
     padding: 12px 25px;
@@ -201,23 +231,40 @@ header.sticky .btn-reserve:hover {
     background: #d9770f;
 }
 
-.btn2 {
+
+/* =========================
+   BOUTON RESERVATION
+   ACCUEIL
+   MANGA + FOTSY
+========================= */
+
+.banniere .btn2 {
     display: inline-block;
     padding: 12px 25px;
-    border: 2px solid #fff;
+
+    background: #1976d2;
+    border: 2px solid #1976d2;
+
     color: #fff;
+
     text-decoration: none;
     text-transform: uppercase;
+
     font-weight: 600;
+
     margin: 5px;
+
     border-radius: 3px;
+
     transition: 0.3s;
 }
 
-.btn2:hover {
+.banniere .btn2:hover {
     background: #fff;
-    color: #111;
+    border-color: #fff;
+    color: #1976d2;
 }
+
 
 /* =========================
    A PROPOS
@@ -254,6 +301,7 @@ header.sticky .btn-reserve:hover {
     border-radius: 5px;
 }
 
+
 /* =========================
    MENU
 ========================= */
@@ -273,8 +321,11 @@ header.sticky .btn-reserve:hover {
     width: 250px;
     background: #fff;
     padding: 15px;
+
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
     border-radius: 5px;
+
     transition: 0.3s;
 }
 
@@ -293,6 +344,7 @@ header.sticky .btn-reserve:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
     transition: 0.4s;
 }
 
@@ -316,6 +368,7 @@ header.sticky .btn-reserve:hover {
     line-height: 1.5;
 }
 
+
 /* =========================
    EXPERT / CHEFS
 ========================= */
@@ -334,9 +387,13 @@ header.sticky .btn-reserve:hover {
 .expert .box {
     width: 250px;
     padding: 15px;
+
     background: #fff;
+
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
     border-radius: 5px;
+
     transition: 0.3s;
 }
 
@@ -347,13 +404,16 @@ header.sticky .btn-reserve:hover {
 .expert .imbox {
     width: 100%;
     height: 280px;
+
     overflow: hidden;
+
     border-radius: 4px;
 }
 
 .expert .imbox img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
 }
 
@@ -367,14 +427,19 @@ header.sticky .btn-reserve:hover {
     font-size: 1.1em;
 }
 
+
 /* =========================
    TEMOIGNAGES / CLIENTS
 ========================= */
 
 .temoignage {
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
         url("../images/Screenshot_20240405_151224.jpg");
+
     background-size: cover;
     background-position: center;
 }
@@ -396,28 +461,44 @@ header.sticky .btn-reserve:hover {
 
 .temoignage .box {
     width: 300px;
+
     padding: 35px 25px;
+
     background: #fff;
+
     border-radius: 5px;
+
     text-align: center;
+
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
 }
+
+
+/* Image client */
 
 .temoignage .imbox {
     width: 90px;
     height: 90px;
+
     border-radius: 50%;
+
     overflow: hidden;
+
     margin: 0 auto 20px;
+
     background: #fff;
 }
 
 .temoignage .imbox img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     display: block;
+
     opacity: 1;
+
     filter: none;
 }
 
@@ -427,136 +508,201 @@ header.sticky .btn-reserve:hover {
 
 .temoignage .box .text p {
     color: #555;
+
     font-style: italic;
+
     margin-bottom: 15px;
 }
 
 .temoignage .box .text h3 {
     color: #fb911f;
+
     font-weight: 600;
 }
+
 
 /* =========================
    CONTACT
 ========================= */
 
 .Contact {
+    padding: 80px 10%;
+
     background: #f7f7f7;
+
     background-image: none;
+}
+
+.Contact .titre {
+    text-align: center;
+
+    margin-bottom: 40px;
 }
 
 .Contact .titre h2 {
     color: #111;
 }
 
+.Contact .titre h2 span {
+    color: #fb911f;
+}
+
 .Contact .titre p {
     color: #111;
+
     max-width: 850px;
+
     margin: auto;
 }
 
+
+/* Contact form */
+
 .contactform {
     max-width: 550px;
-    margin: 45px auto 0;
-    padding: 40px;
+
+    margin: 40px auto 0;
+
+    padding: 35px;
+
     background: #fff;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+
     border-radius: 5px;
 }
 
 .contactform h3 {
     color: #111;
-    font-size: 1.5em;
-    margin-bottom: 25px;
+
+    margin-bottom: 20px;
 }
 
 .contactform .inputbox {
-    position: relative;
     width: 100%;
+
     margin-bottom: 20px;
 }
 
 .contactform .inputbox input,
-.contactform .inputbox textarea,
-.contactform select {
+.contactform .inputbox textarea {
     width: 100%;
-    padding: 12px 15px;
+
+    padding: 12px;
+
     border: 1px solid #ddd;
+
     outline: none;
+
     font-size: 15px;
+
     color: #111;
+
     background: #fff;
-    border-radius: 3px;
 }
 
 .contactform .inputbox textarea {
-    min-height: 120px;
+    height: 120px;
+
     resize: vertical;
 }
 
 .contactform .inputbox input:focus,
-.contactform .inputbox textarea:focus,
-.contactform select:focus {
+.contactform .inputbox textarea:focus {
     border-color: #fb911f;
 }
 
 .contactform .btn1 {
     border: none;
+
     cursor: pointer;
 }
+
 
 /* =========================
    RESERVATION
 ========================= */
 
 .reservation {
+    padding: 80px 10%;
+
     background: #fff;
 }
 
 .reservation .row {
-    align-items: stretch;
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 40px;
 }
+
+
+/* Image reservation */
 
 .reservation .img-reservation {
     width: 48%;
+
     overflow: hidden;
+
     border-radius: 5px;
 }
 
 .reservation .img-reservation img {
     width: 100%;
-    height: 100%;
-    min-height: 450px;
+
+    height: 430px;
+
     object-fit: cover;
+
     display: block;
 }
 
+
+/* Form reservation */
+
 .reservation .form-reservation {
     width: 48%;
-    padding: 40px;
+
+    padding: 35px;
+
     background: #f7f7f7;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.10);
+
     border-radius: 5px;
 }
 
 .reservation .form-reservation h3 {
-    font-size: 1.7em;
-    margin-bottom: 25px;
     color: #111;
+
+    font-size: 1.6em;
+
+    margin-bottom: 25px;
 }
 
 .reservation .form-reservation input,
 .reservation .form-reservation select,
 .reservation .form-reservation textarea {
     width: 100%;
-    padding: 13px 15px;
+
+    padding: 12px 15px;
+
     margin-bottom: 18px;
+
     border: 1px solid #ddd;
+
     outline: none;
+
     background: #fff;
+
     color: #111;
-    border-radius: 3px;
+
     font-size: 15px;
+
+    border-radius: 3px;
 }
 
 .reservation .form-reservation input:focus,
@@ -566,14 +712,17 @@ header.sticky .btn-reserve:hover {
 }
 
 .reservation .form-reservation textarea {
-    min-height: 100px;
+    height: 100px;
+
     resize: vertical;
 }
 
 .reservation .form-reservation button {
     border: none;
+
     cursor: pointer;
 }
+
 
 /* =========================
    POPUP RESERVATION
@@ -581,15 +730,23 @@ header.sticky .btn-reserve:hover {
 
 .reservation-popup {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     background: rgba(0, 0, 0, 0.6);
+
     display: none;
+
     justify-content: center;
+
     align-items: center;
+
     z-index: 2000;
+
     padding: 20px;
 }
 
@@ -599,64 +756,81 @@ header.sticky .btn-reserve:hover {
 
 .reservation-popup .popup-content {
     width: 100%;
+
     max-width: 400px;
+
     background: #fff;
-    padding: 35px;
-    border-radius: 6px;
+
+    padding: 30px;
+
+    border-radius: 5px;
+
     text-align: center;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
 }
 
 .reservation-popup .popup-content h3 {
     color: #fb911f;
+
     margin-bottom: 15px;
 }
 
 .reservation-popup .popup-content p {
     color: #444;
+
     margin-bottom: 20px;
 }
 
 .reservation-popup .popup-close {
-    display: inline-block;
     padding: 10px 25px;
+
     background: #fb911f;
+
     color: #fff;
+
     border: none;
+
     border-radius: 3px;
+
     cursor: pointer;
-    font-weight: 600;
 }
 
+
 /* =========================
-   FOOTER
+   FOOTER MANGA
 ========================= */
 
 footer {
-    background: #111;
+    background: #1976d2;
+
     padding: 30px 10%;
+
     text-align: center;
 }
 
 footer p {
     color: #fff;
+
     margin: 0;
 }
 
 footer p span {
-    color: #fb911f;
+    color: #fff;
 }
 
+
 /* =========================
-   MOBILE MENU
+   MENU MOBILE
 ========================= */
 
 .menutoogle {
     display: none;
 }
 
+
 /* =========================
-   RESPONSIVE
+   RESPONSIVE TABLET
 ========================= */
 
 @media screen and (max-width: 991px) {
@@ -673,16 +847,28 @@ footer p span {
         padding: 70px 5%;
     }
 
+
+    /* Navigation */
+
     .navbar {
         display: none;
+
         position: absolute;
+
         top: 100%;
+
         right: 5%;
+
         width: 250px;
+
         background: #fff;
+
         flex-direction: column;
+
         align-items: stretch;
+
         padding: 15px 0;
+
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     }
 
@@ -696,30 +882,44 @@ footer p span {
 
     .navbar li a {
         display: block;
+
         color: #111 !important;
+
         padding: 12px 20px;
     }
 
     .navbar .btn-reserve {
         margin: 8px 20px;
+
         text-align: center;
     }
 
+
+    /* Menu icon */
+
     .menutoogle {
         display: block;
+
         width: 35px;
         height: 35px;
+
         cursor: pointer;
+
         position: relative;
     }
 
     .menutoogle::before {
         content: "☰";
+
         position: absolute;
+
         top: 0;
         left: 0;
+
         font-size: 30px;
+
         color: #fff;
+
         line-height: 35px;
     }
 
@@ -731,6 +931,9 @@ footer p span {
         content: "✕";
     }
 
+
+    /* Row */
+
     .row {
         flex-direction: column;
     }
@@ -739,19 +942,27 @@ footer p span {
         width: 100%;
     }
 
+
+    /* Reservation */
+
+    .reservation .row {
+        flex-direction: column;
+    }
+
     .reservation .img-reservation,
     .reservation .form-reservation {
         width: 100%;
     }
 
     .reservation .img-reservation img {
-        min-height: 300px;
-    }
-
-    .reservation .form-reservation {
-        padding: 30px;
+        height: 300px;
     }
 }
+
+
+/* =========================
+   RESPONSIVE 768px
+========================= */
 
 @media screen and (max-width: 768px) {
 
@@ -778,13 +989,23 @@ footer p span {
 
     .temoignage .box {
         width: 100%;
+
         max-width: 350px;
     }
 
     .contactform {
         padding: 25px;
     }
+
+    .reservation .form-reservation {
+        padding: 30px;
+    }
 }
+
+
+/* =========================
+   RESPONSIVE TELEPHONE
+========================= */
 
 @media screen and (max-width: 480px) {
 
@@ -813,14 +1034,16 @@ footer p span {
     }
 
     .btn1,
-    .btn2 {
+    .banniere .btn2 {
         padding: 10px 18px;
+
         font-size: 0.9em;
     }
 
     .menu .box,
     .expert .box {
         width: 100%;
+
         max-width: 300px;
     }
 
@@ -833,6 +1056,10 @@ footer p span {
     }
 
     .reservation-popup .popup-content {
+        padding: 25px 20px;
+    }
+
+    .contactform {
         padding: 25px 20px;
     }
 }
