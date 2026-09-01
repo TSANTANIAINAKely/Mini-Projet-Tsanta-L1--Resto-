@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +10,7 @@
 
 body {
     background: #fff;
+    color: #111;
 }
 
 p {
@@ -16,27 +19,65 @@ p {
     line-height: 1.7;
 }
 
+section {
+    padding: 80px 10%;
+}
 
-/* ================= HEADER ================= */
+.titre {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titre h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #111;
+}
+
+.titre h2 span {
+    color: #fb911f;
+}
+
+.titre p {
+    max-width: 850px;
+    margin: 15px auto 0;
+    color: #555;
+}
+
+.titre-texte {
+    color: #111;
+}
+
+.titre-texte span {
+    color: #fb911f;
+}
+
+/* =========================
+   HEADER
+========================= */
 
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 6%;
+    padding: 20px 10%;
     z-index: 1000;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     transition: 0.5s;
+}
+
+header.sticky {
+    background: #fff;
+    padding: 15px 10%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 .logo {
     color: #fff;
-    font-size: 1.8em;
+    font-size: 2em;
     font-weight: 700;
     text-decoration: none;
     white-space: nowrap;
@@ -46,10 +87,14 @@ header {
     color: #fb911f;
 }
 
+header.sticky .logo {
+    color: #111;
+}
+
 .navbar {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .navbar li {
@@ -59,126 +104,124 @@ header {
 .navbar li a {
     color: #fff;
     text-decoration: none;
-    margin-left: 20px;
-    font-weight: 600;
+    font-weight: 500;
+    padding: 10px 15px;
     transition: 0.3s;
-}
-
-.navbar li a:hover {
-    color: #fb911f;
-}
-
-.btn-reserve {
-    padding: 10px 18px;
-    background: #fb911f;
-    color: #fff !important;
-    text-transform: uppercase;
-}
-
-.btn-reserve:hover {
-    background: #fff;
-    color: #fb911f !important;
-}
-
-
-/* ================= HEADER STICKY ================= */
-
-header.sticky {
-    background: #fff;
-    padding: 12px 6%;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-}
-
-header.sticky .logo {
-    color: #111;
 }
 
 header.sticky .navbar li a {
     color: #111;
 }
 
-header.sticky .navbar li a:hover {
-    color: #fb911f;
+.navbar li a:hover {
+    color: #fb911f !important;
+}
+
+/* =========================
+   BOUTON RESERVATION
+========================= */
+
+.btn-reserve {
+    display: inline-block;
+    padding: 10px 18px !important;
+    background: #fb911f !important;
+    color: #fff !important;
+    border-radius: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600 !important;
+    transition: 0.3s ease;
+    margin-left: 10px;
+}
+
+.btn-reserve:hover {
+    background: #d9770f !important;
+    color: #fff !important;
+    transform: translateY(-1px);
 }
 
 header.sticky .btn-reserve {
+    background: #fb911f !important;
     color: #fff !important;
 }
 
+header.sticky .btn-reserve:hover {
+    background: #d9770f !important;
+    color: #fff !important;
+}
 
-/* ================= BANNIERE ================= */
+/* =========================
+   BANNER / ACCUEIL
+========================= */
 
 .banniere {
-    position: relative;
-    width: 100%;
     min-height: 100vh;
-
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("../images/Screenshot_20240402_143913_com.facebook.lite.jpg");
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-image:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url("../images/Screenshot_20240402_143913_com.facebook.lite.jpg");
-
-    background-size: cover;
-    background-position: center;
 }
 
 .banniere .contenu {
-    max-width: 850px;
+    max-width: 900px;
     text-align: center;
-    padding: 20px;
-}
-
-.banniere .contenu h2 {
     color: #fff;
-    font-size: 3.2em;
-    margin-bottom: 15px;
 }
 
-.banniere .contenu p {
+.banniere h2 {
+    font-size: 4em;
     color: #fff;
-    font-size: 1.05em;
+    margin-bottom: 10px;
 }
 
-.btn1,
-.btn2 {
-    display: inline-block;
-    margin: 25px 8px 0;
-
-    padding: 12px 25px;
-
-    text-decoration: none;
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-
-    transition: 0.3s;
+.banniere p {
+    color: #fff;
+    font-size: 1.1em;
+    margin-bottom: 30px;
 }
 
 .btn1 {
+    display: inline-block;
+    padding: 12px 25px;
     background: #fb911f;
     color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 5px;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.btn1:hover {
+    background: #d9770f;
 }
 
 .btn2 {
-    background: #2a4963;
+    display: inline-block;
+    padding: 12px 25px;
+    border: 2px solid #fff;
     color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 5px;
+    border-radius: 3px;
+    transition: 0.3s;
 }
 
-.btn1:hover,
 .btn2:hover {
-    transform: translateY(-3px);
-    letter-spacing: 2px;
+    background: #fff;
+    color: #111;
 }
 
-
-/* ================= SECTIONS ================= */
-
-section {
-    padding: 90px 7%;
-}
+/* =========================
+   A PROPOS
+========================= */
 
 .row {
     display: flex;
@@ -187,74 +230,63 @@ section {
     gap: 50px;
 }
 
-.row .col50 {
-    width: 50%;
+.col50 {
+    width: 48%;
 }
 
-.row .col50 img {
+.col50 h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.col50 p {
+    color: #555;
+}
+
+.img {
+    width: 100%;
+}
+
+.img img {
     width: 100%;
     max-height: 450px;
     object-fit: cover;
-    display: block;
+    border-radius: 5px;
 }
 
-.titre {
-    width: 100%;
-    text-align: center;
-}
-
-.titre-texte {
-    color: #111;
-    font-size: 2.2em;
-    font-weight: 400;
-    text-transform: capitalize;
-}
-
-.titre-texte span {
-    color: #fb911f;
-    font-size: 1.4em;
-    font-weight: 700;
-}
-
-.titre p {
-    margin-top: 8px;
-}
-
-
-/* ================= MENU ================= */
+/* =========================
+   MENU
+========================= */
 
 .menu {
-    background: #fafafa;
+    background: #f7f7f7;
 }
 
 .menu .contenu {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 40px;
+    gap: 25px;
 }
 
 .menu .box {
-    width: 300px;
-    margin: 15px;
-
+    width: 250px;
     background: #fff;
-
-    border: 10px solid #fff;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-
+    padding: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
     transition: 0.3s;
 }
 
 .menu .box:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
 }
 
 .menu .imbox {
     width: 100%;
-    height: 270px;
+    height: 190px;
     overflow: hidden;
+    border-radius: 4px;
 }
 
 .menu .imbox img {
@@ -264,28 +296,29 @@ section {
     transition: 0.4s;
 }
 
-.menu .box:hover img {
+.menu .box:hover .imbox img {
     transform: scale(1.05);
 }
 
 .menu .text {
-    text-align: center;
-    padding: 12px 5px;
+    padding: 15px 5px 5px;
 }
 
 .menu .text h3 {
-    font-weight: 500;
     color: #111;
-    margin-bottom: 3px;
+    font-size: 1.1em;
+    margin-bottom: 7px;
 }
 
 .menu .text p {
-    font-size: 0.85em;
     color: #666;
+    font-size: 0.9em;
+    line-height: 1.5;
 }
 
-
-/* ================= EXPERT ================= */
+/* =========================
+   EXPERT / CHEFS
+========================= */
 
 .expert {
     background: #fff;
@@ -293,128 +326,131 @@ section {
 
 .expert .contenu {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .expert .box {
-    width: 240px;
-    margin: 15px;
+    width: 250px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.expert .box:hover {
+    transform: translateY(-5px);
 }
 
 .expert .imbox {
     width: 100%;
-    height: 300px;
+    height: 280px;
     overflow: hidden;
+    border-radius: 4px;
 }
 
-.expert .box img {
+.expert .imbox img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.expert .text h3 {
-    color: #111;
-    font-weight: 500;
+.expert .text {
+    padding: 15px 5px 5px;
     text-align: center;
-    margin-top: 10px;
 }
 
+.expert .text h3 {
+    color: #111;
+    font-size: 1.1em;
+}
 
-/* ================= TEMOIGNAGE ================= */
+/* =========================
+   TEMOIGNAGES / CLIENTS
+========================= */
 
 .temoignage {
     background-image:
-        linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
         url("../images/Screenshot_20240405_151224.jpg");
-
     background-size: cover;
     background-position: center;
 }
 
-.temoignage .titre-texte {
-    color: #111;
+.temoignage .titre h2 {
+    color: #fff;
 }
 
 .temoignage .titre p {
-    color: #111;
+    color: #fff;
 }
 
 .temoignage .contenu {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 40px;
+    gap: 30px;
 }
 
 .temoignage .box {
-    width: 330px;
-    margin: 15px;
-
-    background: #fff;
-
+    width: 300px;
     padding: 35px 25px;
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    border-radius: 15px;
-
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
 }
 
 .temoignage .imbox {
     width: 90px;
     height: 90px;
-
     border-radius: 50%;
     overflow: hidden;
-
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
+    background: #fff;
 }
 
 .temoignage .imbox img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+    opacity: 1;
+    filter: none;
 }
 
-.temoignage .text {
+.temoignage .box .text {
     text-align: center;
 }
 
-.temoignage .text p {
+.temoignage .box .text p {
     color: #555;
     font-style: italic;
-    font-size: 0.9em;
+    margin-bottom: 15px;
 }
 
-.temoignage .text h3 {
+.temoignage .box .text h3 {
     color: #fb911f;
-    margin-top: 15px;
+    font-weight: 600;
 }
 
-
-/* ================= CONTACT ================= */
+/* =========================
+   CONTACT
+========================= */
 
 .Contact {
-    background-image:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url("../images/1712067915861 - Copie.jpg");
-
-    background-size: cover;
-    background-position: center;
+    background: #f7f7f7;
+    background-image: none;
 }
 
-.Contact .titre-texte {
-    color: #fff;
+.Contact .titre h2 {
+    color: #111;
 }
 
 .Contact .titre p {
-    color: #fff;
+    color: #111;
     max-width: 850px;
     margin: auto;
 }
@@ -422,241 +458,232 @@ section {
 .contactform {
     max-width: 550px;
     margin: 45px auto 0;
-
     padding: 40px;
-
     background: #fff;
-
-    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
 }
 
 .contactform h3 {
     color: #111;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+}
+
+.contactform .inputbox {
+    position: relative;
+    width: 100%;
     margin-bottom: 20px;
 }
 
-.inputboite {
+.contactform .inputbox input,
+.contactform .inputbox textarea,
+.contactform select {
     width: 100%;
-    margin-bottom: 18px;
-}
-
-.inputboite input,
-.inputboite textarea,
-.inputboite select {
-    width: 100%;
-
-    border: 1px solid #aaa;
-
-    padding: 12px;
-
-    color: #111;
-
+    padding: 12px 15px;
+    border: 1px solid #ddd;
     outline: none;
-
     font-size: 15px;
-
+    color: #111;
     background: #fff;
+    border-radius: 3px;
 }
 
-.inputboite textarea {
+.contactform .inputbox textarea {
     min-height: 120px;
     resize: vertical;
 }
 
-.inputboite input[type="submit"] {
-    width: auto;
+.contactform .inputbox input:focus,
+.contactform .inputbox textarea:focus,
+.contactform select:focus {
+    border-color: #fb911f;
+}
 
-    padding: 12px 25px;
-
-    background: #fb911f;
-
-    color: #fff;
-
+.contactform .btn1 {
     border: none;
-
     cursor: pointer;
-
-    font-weight: 600;
-
-    transition: 0.3s;
 }
 
-.inputboite input[type="submit"]:hover {
-    background: #d87710;
-}
-
-
-/* ================= RESERVATION ================= */
+/* =========================
+   RESERVATION
+========================= */
 
 .reservation {
-    background: #f7f7f7;
-}
-
-.reservation-container {
-    max-width: 1100px;
-    margin: auto;
-
-    display: flex;
-    align-items: stretch;
-
     background: #fff;
-
-    box-shadow: 0 10px 35px rgba(0,0,0,0.18);
 }
 
-.reservation-image {
-    width: 45%;
+.reservation .row {
+    align-items: stretch;
 }
 
-.reservation-image img {
+.reservation .img-reservation {
+    width: 48%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.reservation .img-reservation img {
     width: 100%;
     height: 100%;
-    min-height: 600px;
+    min-height: 450px;
     object-fit: cover;
+    display: block;
 }
 
-.reservationform {
-    width: 55%;
-    padding: 45px;
+.reservation .form-reservation {
+    width: 48%;
+    padding: 40px;
+    background: #f7f7f7;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
 }
 
-.reservationform h2 {
-    font-size: 2.2em;
-    margin-bottom: 5px;
+.reservation .form-reservation h3 {
+    font-size: 1.7em;
+    margin-bottom: 25px;
     color: #111;
 }
 
-.reservationform h2 span {
+.reservation .form-reservation input,
+.reservation .form-reservation select,
+.reservation .form-reservation textarea {
+    width: 100%;
+    padding: 13px 15px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    outline: none;
+    background: #fff;
+    color: #111;
+    border-radius: 3px;
+    font-size: 15px;
+}
+
+.reservation .form-reservation input:focus,
+.reservation .form-reservation select:focus,
+.reservation .form-reservation textarea:focus {
+    border-color: #fb911f;
+}
+
+.reservation .form-reservation textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.reservation .form-reservation button {
+    border: none;
+    cursor: pointer;
+}
+
+/* =========================
+   POPUP RESERVATION
+========================= */
+
+.reservation-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.reservation-popup.active {
+    display: flex;
+}
+
+.reservation-popup .popup-content {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 35px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.reservation-popup .popup-content h3 {
     color: #fb911f;
+    margin-bottom: 15px;
 }
 
-.reservationform > p {
-    color: #666;
-    margin-bottom: 25px;
+.reservation-popup .popup-content p {
+    color: #444;
+    margin-bottom: 20px;
 }
 
+.reservation-popup .popup-close {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #fb911f;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 600;
+}
 
-/* ================= FOOTER ================= */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    background: #222;
-    padding: 45px 20px 25px;
+    background: #111;
+    padding: 30px 10%;
     text-align: center;
 }
 
-.footer-content {
-    max-width: 900px;
-    margin: auto;
-}
-
-.footer-content h2 {
+footer p {
     color: #fff;
-    font-size: 1.8em;
+    margin: 0;
 }
 
-.footer-content h2 span {
+footer p span {
     color: #fb911f;
 }
 
-.footer-content > p {
-    color: #ddd;
-    margin: 10px auto;
-}
-
-.footer-links {
-    margin: 20px 0;
-}
-
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 12px;
-    transition: 0.3s;
-}
-
-.footer-links a:hover {
-    color: #fb911f;
-}
-
-.copyright {
-    font-size: 0.85em;
-    color: #aaa !important;
-    margin-top: 25px !important;
-}
-
-
-/* ================= MOBILE MENU ================= */
+/* =========================
+   MOBILE MENU
+========================= */
 
 .menutoogle {
     display: none;
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
 
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
 
     header {
+        padding: 20px 5%;
+    }
+
+    header.sticky {
         padding: 15px 5%;
     }
 
-    .menutoogle {
-        display: block;
-
-        width: 35px;
-        height: 30px;
-
-        cursor: pointer;
-
-        position: relative;
-    }
-
-    .menutoogle::before,
-    .menutoogle::after,
-    .menutoogle {
-        border-top: 3px solid transparent;
-    }
-
-    .menutoogle::before {
-        content: "";
-        position: absolute;
-        width: 35px;
-        height: 3px;
-        background: #fff;
-        top: 5px;
-        left: 0;
-    }
-
-    .menutoogle::after {
-        content: "";
-        position: absolute;
-        width: 35px;
-        height: 3px;
-        background: #fff;
-        top: 17px;
-        left: 0;
-    }
-
-    header.sticky .menutoogle::before,
-    header.sticky .menutoogle::after {
-        background: #111;
+    section {
+        padding: 70px 5%;
     }
 
     .navbar {
         display: none;
-
         position: absolute;
-
         top: 100%;
-        left: 0;
-
-        width: 100%;
-
+        right: 5%;
+        width: 250px;
         background: #fff;
-
         flex-direction: column;
-
-        padding: 20px 0;
+        align-items: stretch;
+        padding: 15px 0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     }
 
     .navbar.active {
@@ -664,68 +691,89 @@ footer {
     }
 
     .navbar li {
-        margin: 8px 0;
+        width: 100%;
     }
 
     .navbar li a {
-        color: #111;
-        margin: 0;
+        display: block;
+        color: #111 !important;
+        padding: 12px 20px;
     }
 
     .navbar .btn-reserve {
-        color: #fff !important;
+        margin: 8px 20px;
+        text-align: center;
+    }
+
+    .menutoogle {
+        display: block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .menutoogle::before {
+        content: "☰";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 30px;
+        color: #fff;
+        line-height: 35px;
+    }
+
+    header.sticky .menutoogle::before {
+        color: #111;
+    }
+
+    .menutoogle.active::before {
+        content: "✕";
     }
 
     .row {
         flex-direction: column;
     }
 
-    .row .col50 {
+    .col50 {
         width: 100%;
     }
 
-    .reservation-container {
-        flex-direction: column;
-    }
-
-    .reservation-image,
-    .reservationform {
+    .reservation .img-reservation,
+    .reservation .form-reservation {
         width: 100%;
     }
 
-    .reservation-image img {
-        min-height: 350px;
-        max-height: 400px;
+    .reservation .img-reservation img {
+        min-height: 300px;
+    }
+
+    .reservation .form-reservation {
+        padding: 30px;
     }
 }
 
-
-@media (max-width: 600px) {
-
-    section {
-        padding: 70px 5%;
-    }
+@media screen and (max-width: 768px) {
 
     .logo {
-        font-size: 1.4em;
+        font-size: 1.7em;
     }
 
-    .banniere .contenu h2 {
+    .banniere h2 {
+        font-size: 2.7em;
+    }
+
+    .banniere p {
+        font-size: 1em;
+    }
+
+    .titre h2 {
         font-size: 2em;
     }
 
-    .banniere .contenu p {
-        font-size: 0.9em;
-    }
-
-    .menu .box {
-        width: 100%;
-        max-width: 350px;
-    }
-
+    .menu .box,
     .expert .box {
-        width: 100%;
-        max-width: 300px;
+        width: 280px;
     }
 
     .temoignage .box {
@@ -733,17 +781,58 @@ footer {
         max-width: 350px;
     }
 
-    .contactform,
-    .reservationform {
+    .contactform {
         padding: 25px;
     }
+}
 
-    .reservationform h2 {
-        font-size: 1.8em;
+@media screen and (max-width: 480px) {
+
+    section {
+        padding: 60px 5%;
     }
 
-    .footer-links a {
-        display: inline-block;
-        margin: 5px 8px;
+    header {
+        padding: 15px 5%;
+    }
+
+    header.sticky {
+        padding: 12px 5%;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .banniere h2 {
+        font-size: 2.1em;
+    }
+
+    .banniere p {
+        font-size: 0.9em;
+    }
+
+    .btn1,
+    .btn2 {
+        padding: 10px 18px;
+        font-size: 0.9em;
+    }
+
+    .menu .box,
+    .expert .box {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .menu .imbox {
+        height: 180px;
+    }
+
+    .reservation .form-reservation {
+        padding: 25px 20px;
+    }
+
+    .reservation-popup .popup-content {
+        padding: 25px 20px;
     }
 }
