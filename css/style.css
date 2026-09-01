@@ -1,7 +1,3 @@
-/* =========================
-   RESET
-========================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +7,7 @@
 }
 
 body {
-    overflow-x: hidden;
+    background: #fff;
 }
 
 p {
@@ -20,16 +16,13 @@ p {
     line-height: 1.7;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* ================= HEADER ================= */
 
 header {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px 6%;
+    padding: 20px 60px;
     width: 100%;
     z-index: 1000;
     display: flex;
@@ -62,20 +55,24 @@ header {
 .navbar li a {
     color: #fff;
     text-decoration: none;
-    margin-left: 30px;
+    margin-left: 25px;
     font-weight: 600;
     transition: 0.3s;
 }
 
 .navbar li a:hover {
     color: #fb911f;
+    border-bottom: 2px solid #fb911f;
+    padding-bottom: 5px;
 }
 
 .btn-reserve {
     padding: 10px 20px;
     background: #fb911f;
     color: #fff !important;
+    margin-left: 25px;
     text-transform: uppercase;
+    text-decoration: none;
     transition: 0.3s;
 }
 
@@ -83,76 +80,61 @@ header {
     background: #d87710;
 }
 
-
-/* =========================
-   HEADER STICKY
-========================= */
+/* ================= HEADER STICKY ================= */
 
 header.sticky {
     background: #fff;
-    padding: 12px 6%;
+    padding: 10px 60px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 header.sticky .logo {
-    color: #000;
+    color: #111;
 }
 
 header.sticky .navbar li a {
-    color: #000;
+    color: #111;
 }
 
 header.sticky .navbar li a:hover {
     color: #fb911f;
 }
 
-
-/* =========================
-   BANNIERE
-========================= */
+/* ================= BANNIERE ================= */
 
 .banniere {
     position: relative;
     width: 100%;
     min-height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.55)
-        ),
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
         url("../images/Screenshot_20240402_143913_com.facebook.lite.jpg");
-
     background-size: cover;
     background-position: center;
 }
 
 .banniere .contenu {
     max-width: 900px;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
 }
 
 .banniere .contenu h2 {
     color: #fff;
     font-size: 3em;
     text-transform: capitalize;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .banniere .contenu p {
     color: #fff;
-    font-size: 1.05em;
+    font-size: 1.1em;
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
+/* ================= BUTTONS ================= */
 
 .btn1,
 .btn2 {
@@ -163,7 +145,7 @@ header.sticky .navbar li a:hover {
     margin-top: 25px;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     transition: 0.4s;
     margin-left: 10px;
 }
@@ -178,16 +160,13 @@ header.sticky .navbar li a:hover {
 
 .btn1:hover,
 .btn2:hover {
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
 
-
-/* =========================
-   SECTION
-========================= */
+/* ================= SECTIONS ================= */
 
 section {
-    padding: 90px 7%;
+    padding: 100px 80px;
 }
 
 .titre {
@@ -213,10 +192,7 @@ section {
     font-weight: 700;
 }
 
-
-/* =========================
-   A PROPOS
-========================= */
+/* ================= A PROPOS ================= */
 
 .row {
     position: relative;
@@ -238,20 +214,15 @@ section {
 .row .col50 img {
     width: 100%;
     max-width: 600px;
-    height: 430px;
+    height: 450px;
     object-fit: cover;
-    border-radius: 8px;
-    display: block;
-    margin: auto;
+    border-radius: 5px;
 }
 
-
-/* =========================
-   MENU
-========================= */
+/* ================= MENU ================= */
 
 .menu {
-    background: #f8f8f8;
+    margin-top: 0;
 }
 
 .menu .contenu {
@@ -262,8 +233,8 @@ section {
 }
 
 .menu .contenu .box {
-    width: 320px;
-    margin: 18px;
+    width: 350px;
+    margin: 20px;
     background: #fff;
     border: 10px solid #fff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -272,18 +243,22 @@ section {
 
 .menu .contenu .box:hover {
     transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22);
 }
 
 .menu .contenu .box .imbox {
     position: relative;
     width: 100%;
-    height: 260px;
+    height: 300px;
     overflow: hidden;
 }
 
 .menu .contenu .box .imbox img {
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
     transition: 0.5s;
 }
@@ -294,28 +269,26 @@ section {
 
 .menu .contenu .box .text {
     text-align: center;
-    padding: 15px 8px 12px;
+    padding: 12px 5px 8px;
 }
 
 .menu .contenu .box .text h3 {
-    font-weight: 500;
     color: #111;
-    margin-bottom: 7px;
+    font-size: 1.15em;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 
 .menu .contenu .box .text p {
-    font-size: 13px;
-    color: #666;
+    color: #777;
+    font-size: 0.85em;
     line-height: 1.5;
 }
 
-
-/* =========================
-   EXPERT
-========================= */
+/* ================= EXPERT ================= */
 
 .expert {
-    background: #fff;
+    margin-top: 0;
 }
 
 .expert .contenu {
@@ -326,8 +299,13 @@ section {
 }
 
 .expert .contenu .box {
-    width: 240px;
+    width: 250px;
     margin: 15px;
+    transition: 0.4s;
+}
+
+.expert .contenu .box:hover {
+    transform: translateY(-5px);
 }
 
 .expert .contenu .box .imbox {
@@ -338,38 +316,30 @@ section {
 
 .expert .contenu .box img {
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
-    transition: 0.4s;
-}
-
-.expert .contenu .box:hover img {
-    transform: scale(1.05);
 }
 
 .expert .contenu .box h3 {
     color: #111;
     font-weight: 500;
     text-align: center;
-    padding-top: 12px;
+    margin-top: 10px;
 }
 
-
-/* =========================
-   TEMOIGNAGES
-========================= */
+/* ================= TEMOIGNAGES ================= */
 
 .temoignage {
     background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.65)
-        ),
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
         url("../images/Screenshot_20240405_151224.jpg");
-
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+}
+
+.temoignage .titre-texte,
+.temoignage .titre p {
+    color: #fff;
 }
 
 .temoignage .contenu {
@@ -385,21 +355,22 @@ section {
     width: 340px;
     margin: 20px;
     background: #fff;
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     border-radius: 15px;
-    padding: 35px 30px;
+    padding: 35px;
+    transition: 0.4s;
+}
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+.temoignage .contenu .box:hover {
+    transform: translateY(-8px);
 }
 
 .temoignage .contenu .box .imbox {
-    width: 85px;
-    height: 85px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     position: relative;
     margin-bottom: 20px;
@@ -414,41 +385,31 @@ section {
 
 .temoignage .contenu .box .text {
     text-align: center;
+    color: #666;
+    font-style: italic;
 }
 
 .temoignage .contenu .box .text p {
     color: #666;
-    font-style: italic;
-    font-size: 14px;
+    font-size: 0.9em;
 }
 
 .temoignage .contenu .box .text h3 {
     color: #fb911f;
-    margin-top: 18px;
+    margin-top: 20px;
     font-size: 1em;
     font-weight: 600;
 }
 
-.blanc .titre-texte,
-.blanc p {
-    color: #fff;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
+/* ================= CONTACT ================= */
 
 .Contact {
     background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.65)
-        ),
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
         url("../images/1712067915861 - Copie.jpg");
-
     background-size: cover;
     background-position: center;
+    min-height: 700px;
 }
 
 .Contact .titre-texte,
@@ -456,15 +417,17 @@ section {
     color: #fff;
 }
 
+.Contact .titre p {
+    max-width: 850px;
+    text-align: center;
+}
+
 .contactform {
-    padding: 45px;
+    padding: 45px 40px;
     background: #fff;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
-
-    width: 100%;
+    box-shadow: 5px 15px 50px rgba(0, 0, 0, 0.3);
     max-width: 550px;
-
-    margin: 45px auto 0;
+    margin: 50px auto 0;
     border-radius: 8px;
 }
 
@@ -487,12 +450,19 @@ section {
     padding: 13px;
     color: #111;
     outline: none;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 300;
     resize: none;
+    border-radius: 4px;
 }
 
 .contactform .inputboite textarea {
-    min-height: 130px;
+    height: 130px;
+}
+
+.contactform .inputboite input:focus,
+.contactform .inputboite textarea:focus {
+    border-color: #fb911f;
 }
 
 .contactform .inputboite input[type="submit"] {
@@ -500,312 +470,159 @@ section {
     font-weight: 600;
     color: #fff;
     background: #fb911f;
-    cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     border: none;
-    transition: 0.3s;
+    cursor: pointer;
+    max-width: 150px;
+    transition: 0.4s;
 }
 
 .contactform .inputboite input[type="submit"]:hover {
     background: #d87710;
 }
 
-
-/* =========================
-   RESERVATION
-========================= */
+/* ================= RESERVATION ================= */
 
 .reservation {
     background: #f7f7f7;
 }
 
-.reservationform {
-    padding: 45px;
+.reservation-form {
+    max-width: 600px;
+    margin: 40px auto 0;
     background: #fff;
-
-    width: 100%;
-    max-width: 550px;
-
-    margin: 45px auto 0;
-
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
     border-radius: 8px;
 }
 
-.reservationform h3 {
-    text-align: center;
-    font-size: 1.3em;
-    margin-bottom: 25px;
+.reservation-form .inputboite {
+    margin-bottom: 20px;
 }
 
-.reservationform .inputboite {
-    width: 100%;
-    margin-bottom: 18px;
+.reservation-form label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 500;
+    color: #222;
 }
 
-.reservationform .inputboite input {
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
     width: 100%;
-    padding: 13px;
+    padding: 12px;
     border: 1px solid #ccc;
     outline: none;
     font-size: 15px;
+    border-radius: 4px;
 }
 
-.btn-reservation {
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus {
+    border-color: #fb911f;
+}
+
+.reservation-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.reservation-form button {
     width: 100%;
     padding: 13px;
     border: none;
     background: #fb911f;
     color: #fff;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
-}
-
-.btn-reservation:hover {
-    background: #d87710;
-}
-
-
-/* =========================
-   POPUP
-========================= */
-
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background: rgba(0, 0, 0, 0.65);
-
-    display: none;
-    justify-content: center;
-    align-items: center;
-
-    z-index: 2000;
-}
-
-.popup.active {
-    display: flex;
-}
-
-.popup-content {
-    background: #fff;
-    width: 90%;
-    max-width: 400px;
-
-    padding: 35px;
-    border-radius: 12px;
-
-    text-align: center;
-
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
-
-    animation: popupAnimation 0.3s ease;
-}
-
-.popup-icon {
-    width: 65px;
-    height: 65px;
-
-    margin: 0 auto 15px;
-
-    border-radius: 50%;
-
-    background: #fb911f;
-    color: #fff;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.popup-content h3 {
-    margin-bottom: 10px;
-    color: #111;
-}
-
-.popup-content p {
-    color: #666;
-    font-size: 14px;
-}
-
-.popup-content button {
-    margin-top: 20px;
-
-    padding: 10px 30px;
-
-    border: none;
-    background: #fb911f;
-    color: #fff;
-
-    font-weight: 600;
-    cursor: pointer;
     border-radius: 4px;
 }
 
-.popup-content button:hover {
+.reservation-form button:hover {
     background: #d87710;
 }
 
-@keyframes popupAnimation {
-    from {
-        transform: scale(0.7);
-        opacity: 0;
-    }
+/* ================= MESSAGE RESERVATION ================= */
 
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    background: #222;
-    color: #fff;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 35px;
-
-    padding: 60px 7%;
-}
-
-.footer-box {
-    width: 220px;
-}
-
-.footer-box h3 {
-    margin-bottom: 20px;
-    font-size: 1.2em;
-}
-
-.footer-box h3 span {
-    color: #fb911f;
-}
-
-.footer-box p {
-    color: #ccc;
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-.footer-box a {
-    display: block;
-    color: #ccc;
-    text-decoration: none;
-    margin-bottom: 9px;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.footer-box a:hover {
-    color: #fb911f;
-    padding-left: 5px;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 20px;
+.message-reservation {
+    display: none;
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 18px 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    z-index: 2000;
     text-align: center;
 }
 
-.footer-bottom p {
-    color: #aaa;
-    font-size: 13px;
+.message-reservation.active {
+    display: block;
 }
 
+.message-reservation h3 {
+    color: #fb911f;
+    margin-bottom: 5px;
+}
 
-/* =========================
-   MOBILE MENU
-========================= */
+/* ================= FOOTER ================= */
+
+footer {
+    background: #2a4963;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    color: #fff;
+    margin: 5px 0;
+}
+
+footer span {
+    color: #fb911f;
+}
+
+/* ================= MOBILE ================= */
 
 .menutoogle {
     display: none;
 }
 
-
-/* =========================
-   TABLET
-========================= */
-
 @media (max-width: 991px) {
 
-    header {
-        padding: 15px 5%;
+    header,
+    header.sticky {
+        padding: 10px 20px;
     }
 
     .navbar {
         display: none;
     }
 
-    .navbar.active {
-        display: flex;
-
-        position: fixed;
-
-        top: 70px;
-        left: 0;
-
-        width: 100%;
-        height: calc(100vh - 70px);
-
-        background: #fff;
-
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .navbar.active li {
-        margin: 12px 0;
-    }
-
-    .navbar.active li a {
-        color: #111;
-        font-size: 1.2em;
-        margin-left: 0;
-    }
-
-    .navbar.active .btn-reserve {
-        color: #fff !important;
-        margin-top: 10px;
-    }
-
     .menutoogle {
         display: block;
-
-        width: 35px;
-        height: 35px;
-
         position: relative;
-
+        width: 40px;
+        height: 40px;
         cursor: pointer;
     }
 
     .menutoogle::before {
         content: "☰";
-
         color: #fff;
         font-size: 30px;
-
         position: absolute;
-        top: -5px;
-        left: 0;
+        top: 0;
+        left: 5px;
     }
 
     header.sticky .menutoogle::before {
@@ -816,69 +633,110 @@ footer {
         content: "✕";
     }
 
+    .navbar.active {
+        width: 100%;
+        height: calc(100vh - 60px);
+        position: fixed;
+        top: 60px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: #fff;
+        align-items: center;
+    }
+
+    .navbar.active li {
+        margin: 15px 0;
+    }
+
+    .navbar.active li a {
+        color: #111;
+        font-size: 1.2em;
+        margin-left: 0;
+    }
+
+    .navbar.active .btn-reserve {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    section {
+        padding: 70px 25px;
+    }
+
+    .banniere .contenu h2 {
+        font-size: 2.3em;
+    }
+
     .row {
         flex-direction: column;
     }
 
     .row .col50 {
         width: 100%;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
     }
 
     .row .col50 img {
-        height: 400px;
+        width: 100%;
+        height: 350px;
     }
 
-    section {
-        padding: 70px 5%;
+    .menu .contenu .box {
+        width: 350px;
+        max-width: 100%;
+    }
+
+    .contactform {
+        width: 100%;
+        margin-left: 0;
     }
 }
 
+/* ================= SMALL PHONE ================= */
 
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 600px) {
+@media (max-width: 480px) {
 
     header {
-        padding: 12px 5%;
+        padding: 10px 15px;
     }
 
     .logo {
         font-size: 1.5em;
     }
 
+    section {
+        padding: 60px 15px;
+    }
+
     .banniere .contenu h2 {
-        font-size: 2.1em;
+        font-size: 1.9em;
     }
 
     .banniere .contenu p {
-        font-size: 0.95em;
+        font-size: 0.9em;
     }
 
     .btn1,
     .btn2 {
         font-size: 0.85em;
-        padding: 10px 17px;
-    }
-
-    section {
-        padding: 60px 5%;
+        padding: 10px 15px;
+        margin-left: 3px;
     }
 
     .titre-texte {
-        font-size: 1.8em;
-    }
-
-    .row .col50 img {
-        height: 300px;
+        font-size: 1.7em;
     }
 
     .menu .contenu .box {
         width: 100%;
-        max-width: 340px;
         margin: 15px 0;
+    }
+
+    .menu .contenu .box .imbox,
+    .menu .contenu .box .imbox img {
+        height: 260px;
     }
 
     .expert .contenu .box {
@@ -889,18 +747,11 @@ footer {
     .temoignage .contenu .box {
         width: 100%;
         margin: 15px 0;
+        padding: 25px;
     }
 
     .contactform,
-    .reservationform {
+    .reservation-form {
         padding: 30px 20px;
-    }
-
-    .footer-content {
-        padding: 45px 8%;
-    }
-
-    .footer-box {
-        width: 100%;
     }
 }
