@@ -6,9 +6,18 @@
     scroll-behavior: smooth;
 }
 
+body {
+    background: #fff;
+}
+
 p {
     font-weight: 300;
     color: #111;
+    line-height: 1.7;
+}
+
+section {
+    padding: 100px;
 }
 
 /* ================= HEADER ================= */
@@ -17,18 +26,18 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px 10px;
     width: 100%;
+    padding: 20px 8%;
     z-index: 1000;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     transition: 0.5s;
 }
 
 .logo {
     color: #fff;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 2em;
     text-decoration: none;
 }
@@ -39,8 +48,8 @@ header {
 
 .navbar {
     display: flex;
-    position: relative;
     align-items: center;
+    gap: 25px;
 }
 
 .navbar li {
@@ -50,26 +59,43 @@ header {
 .navbar li a {
     color: #fff;
     text-decoration: none;
-    margin-left: 30px;
-    font-weight: 700;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar li a:hover {
+    color: #fb911f;
 }
 
 .btn-reserve {
-    padding: 10px 20px;
+    padding: 10px 18px;
     background: #fb911f;
-    color: #fff;
-    margin-left: 30px;
+    color: #fff !important;
     text-transform: uppercase;
-    text-decoration: none;
 }
 
 .btn-reserve:hover {
     background: #d87710;
 }
 
-header .navbar li a:hover {
+/* ================= HEADER STICKY ================= */
+
+header.sticky {
+    background: #fff;
+    padding: 12px 8%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+header.sticky .logo {
+    color: #111;
+}
+
+header.sticky .navbar li a {
+    color: #111;
+}
+
+header.sticky .navbar li a:hover {
     color: #fb911f;
-    border-bottom: 2px solid #fb911f;
 }
 
 /* ================= BANNIERE ================= */
@@ -81,109 +107,112 @@ header .navbar li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
         url("../images/Screenshot_20240402_143913_com.facebook.lite.jpg");
-
     background-size: cover;
     background-position: center;
 }
 
 .banniere .contenu {
-    max-width: 70%;
+    max-width: 800px;
     text-align: center;
 }
 
 .banniere .contenu h2 {
     color: #fff;
-    font-size: 3em;
-    text-transform: capitalize;
+    font-size: 3.2em;
+    margin-bottom: 20px;
 }
 
 .banniere .contenu p {
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.05em;
+}
+
+.hero-buttons {
+    margin-top: 20px;
 }
 
 /* ================= BUTTONS ================= */
 
-.btn1 {
-    font-size: 1em;
-    color: #fff;
-    background: #fb911f;
-    padding: 10px 20px;
+.btn1,
+.btn2 {
     display: inline-block;
-    margin-top: 20px;
+    padding: 12px 22px;
+    margin: 5px;
+    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.5s;
-    margin-left: 10px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn1 {
+    background: #fb911f;
 }
 
 .btn2 {
-    font-size: 1em;
-    color: #fff;
     background: #2a4963;
-    padding: 10px 20px;
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.5s;
-    margin-left: 10px;
 }
 
 .btn1:hover,
 .btn2:hover {
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 }
 
-/* ================= SECTIONS ================= */
-
-section {
-    padding: 100px;
-}
+/* ================= TITRES ================= */
 
 .titre {
-    display: flex;
     width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 .titre-texte {
-    color: #000;
-    font-size: 2em;
-    font-weight: 300;
+    color: #111;
+    font-size: 2.2em;
+    font-weight: 400;
     text-transform: capitalize;
+    margin-bottom: 10px;
 }
 
 .titre-texte span {
     color: #fb911f;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 700;
 }
 
-/* ================= A PROPOS ================= */
+.blanc .titre-texte,
+.blanc p {
+    color: #fff;
+}
+
+/* ================= À PROPOS ================= */
+
+.apropos {
+    background: #fff;
+}
 
 .row {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 50px;
 }
 
 .row .col50 {
     position: relative;
-    width: 48%;
+    width: 50%;
 }
 
-.row .col50 h2 {
-    margin-bottom: 20px;
+.row .col50 p {
+    margin-bottom: 15px;
 }
 
 .row .col50 img {
@@ -192,341 +221,342 @@ section {
     height: 450px;
     object-fit: cover;
     display: block;
+    margin: auto;
 }
 
 /* ================= MENU ================= */
 
 .menu {
-    margin-top: -50px;
+    background: #f8f8f8;
 }
 
-.menu .contenu {
+.menu-grid {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 40px;
 }
 
-.menu .contenu .box {
-    width: 350px;
-    margin: 20px;
-    border: 15px solid #fff;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+.menu .box {
+    width: 300px;
+    margin: 15px;
+    background: #fff;
+    border: 10px solid #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: 0.3s;
 }
 
-.menu .contenu .box .imbox {
-    position: relative;
+.menu .box:hover {
+    transform: translateY(-8px);
+}
+
+.menu .imbox {
     width: 100%;
-    height: 300px;
+    height: 250px;
     overflow: hidden;
 }
 
-.menu .contenu .box .imbox img {
+.menu .imbox img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
-    display: block;
+    transition: 0.4s;
 }
 
-.menu .contenu .box .text {
+.menu .box:hover img {
+    transform: scale(1.05);
+}
+
+.menu .text {
     text-align: center;
+    padding: 15px 5px;
+}
+
+.menu .text h3 {
     color: #111;
-    padding: 10px;
+    font-weight: 500;
 }
 
-.menu .contenu .box .text h3 {
-    font-weight: 400;
+.menu .text p {
+    font-size: 0.9em;
+    margin-top: 5px;
 }
 
-/* ================= EXPERT ================= */
+/* ================= EXPERTS ================= */
 
 .expert {
-    margin-top: -50px;
+    background: #fff;
 }
 
-.expert .contenu {
+.expert-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 40px;
 }
 
-.expert .contenu .box {
+.expert .box {
     width: 250px;
     margin: 15px;
+    transition: 0.3s;
 }
 
-.expert .contenu .box .imbox {
+.expert .box:hover {
+    transform: translateY(-8px);
+}
+
+.expert .imbox {
     width: 100%;
     height: 300px;
     overflow: hidden;
 }
 
-.expert .contenu .box img {
+.expert .imbox img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
-    display: block;
 }
 
-.expert .contenu .box h3 {
+.expert .text h3 {
     color: #111;
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
-    margin-top: 10px;
+    padding-top: 12px;
 }
 
-/* ================= TEMOIGNAGE ================= */
+/* ================= TEMOIGNAGES ================= */
 
 .temoignage {
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
         url("../images/Screenshot_20240405_151224.jpg");
-
     background-size: cover;
     background-position: center;
 }
 
-.temoignage .contenu {
+.testimonials-grid {
     display: flex;
-    margin-top: 40px;
-    width: 100%;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
+    margin-top: 40px;
 }
 
-.temoignage .contenu .box {
-    width: 340px;
-    margin: 20px;
+.temoignage .box {
+    width: 330px;
+    margin: 15px;
+    padding: 35px 25px;
     background: #fff;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 15px;
-    padding: 40px;
 }
 
-.temoignage .contenu .box .imbox {
-    width: 80px;
-    height: 80px;
+.temoignage .imbox {
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
-    position: relative;
-    margin-bottom: 20px;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
-.temoignage .contenu .box .imbox img {
+.temoignage .imbox img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
-.temoignage .contenu .box .text {
+.temoignage .text {
     text-align: center;
+}
+
+.temoignage .text p {
     color: #666;
     font-style: italic;
 }
 
-.temoignage .contenu .box .text h3 {
+.temoignage .text h3 {
     color: #fb911f;
     margin-top: 20px;
-    font-size: 1em;
-    font-weight: 600;
 }
 
-.blanc .titre-texte,
-.blanc p {
+/* ================= RESERVATION ================= */
+
+.reservation {
+    background: #f8f8f8;
+}
+
+.reservationform {
+    max-width: 600px;
+    margin: 40px auto 0;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+.inputboite {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inputboite input,
+.inputboite textarea,
+.inputboite select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 13px;
+    color: #111;
+    outline: none;
+    font-size: 15px;
+    background: #fff;
+}
+
+.inputboite textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    border: none;
+    background: #fb911f;
     color: #fff;
+    padding: 13px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #d87710;
+}
+
+.success-message {
+    color: #238636;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* ================= CONTACT ================= */
 
 .Contact {
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
         url("../images/1712067915861 - Copie.jpg");
-
     background-size: cover;
     background-position: center;
-    width: 100%;
 }
 
-.Contact .titre-text {
+.Contact .titre p {
     color: #fff;
-}
-
-.Contact .titre-text span {
-    color: #fb911f;
-    font-size: 2em;
+    max-width: 800px;
 }
 
 .contactform {
-    padding: 50px;
+    max-width: 550px;
+    margin: 45px auto 0;
+    padding: 45px;
     background: #fff;
-    box-shadow: 5px 15px 50px rgba(0, 0, 0, 0.4);
-    max-width: 500px;
-    margin: 50px auto 0;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
 
 .contactform h3 {
     color: #111;
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1.3em;
+    margin-bottom: 25px;
 }
 
-.contactform .inputboite {
-    position: relative;
-    width: 100%;
-    margin-bottom: 20px;
+/* ================= FOOTER ================= */
+
+footer {
+    background: #111;
+    text-align: center;
+    padding: 25px 15px;
 }
 
-.contactform .inputboite input,
-.contactform .inputboite textarea {
-    width: 100%;
-    border: 1px solid #555;
-    padding: 10px;
-    color: #111;
-    outline: none;
-    font-size: 16px;
-    font-weight: 300;
-    resize: none;
-}
-
-.contactform .inputboite textarea {
-    height: 120px;
-}
-
-.contactform .inputboite input[type="submit"] {
-    font-size: 1em;
-    font-weight: 700;
+footer p {
     color: #fff;
-    background: #fb911f;
-    display: inline-block;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 2px;
-    outline: none;
-    border: none;
-    transition: 0.5s;
-    max-width: 120px;
-    cursor: pointer;
+    font-size: 0.9em;
+    margin: 5px;
 }
 
-.contactform .inputboite input[type="submit"]:hover {
-    background: #d87710;
-}
-
-/* ================= STICKY HEADER ================= */
-
-header.sticky {
-    background: #fff;
-    padding: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-}
-
-header.sticky .logo {
-    color: #000;
-}
-
-header.sticky .navbar li a {
-    color: #000;
-}
-
-header.sticky .navbar li a:hover {
-    color: #fb911f;
-}
-
-/* ================= MOBILE ================= */
+/* ================= MOBILE MENU ================= */
 
 .menutoogle {
     display: none;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
 }
+
+.menutoogle::before,
+.menutoogle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 35px;
+    height: 3px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.menutoogle::before {
+    top: 8px;
+}
+
+.menutoogle::after {
+    top: 20px;
+}
+
+header.sticky .menutoogle::before,
+header.sticky .menutoogle::after {
+    background: #111;
+}
+
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 991px) {
 
-    header,
-    header.sticky {
-        padding: 15px 20px;
-        justify-content: space-between;
+    section {
+        padding: 80px 30px;
+    }
+
+    header {
+        padding: 15px 30px;
+    }
+
+    .menutoogle {
+        display: block;
     }
 
     .navbar {
-        display: none;
-        position: fixed;
-        top: 70px;
+        position: absolute;
+        top: 100%;
         left: 0;
         width: 100%;
-        height: calc(100vh - 70px);
         background: #fff;
-        justify-content: center;
-        align-items: center;
+        display: none;
         flex-direction: column;
+        align-items: center;
+        padding: 25px 0;
+        gap: 20px;
     }
 
     .navbar.active {
         display: flex;
     }
 
-    .navbar li {
-        margin: 15px 0;
-    }
-
-    .navbar li a,
-    header.sticky .navbar li a {
+    .navbar li a {
         color: #111;
-        font-size: 1.4em;
-        margin-left: 0;
+        margin: 0;
     }
 
-    .btn-reserve {
-        margin: 15px 0 0;
-    }
-
-    .menutoogle {
-        display: block;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        position: relative;
-    }
-
-    .menutoogle::before,
-    .menutoogle::after {
-        content: "";
-        position: absolute;
-        left: 7px;
-        width: 26px;
-        height: 3px;
-        background: #fff;
-        transition: 0.3s;
-    }
-
-    .menutoogle::before {
-        top: 13px;
-    }
-
-    .menutoogle::after {
-        top: 25px;
-    }
-
-    header.sticky .menutoogle::before,
-    header.sticky .menutoogle::after {
-        background: #111;
-    }
-
-    section {
-        padding: 70px 20px;
-    }
-
-    .banniere .contenu {
-        max-width: 90%;
-    }
-
-    .banniere .contenu h2 {
-        font-size: 2.2em;
+    .navbar .btn-reserve {
+        color: #fff !important;
     }
 
     .row {
@@ -535,73 +565,71 @@ header.sticky .navbar li a:hover {
 
     .row .col50 {
         width: 100%;
-        margin-bottom: 30px;
     }
 
-    .row .col50 img {
-        width: 100%;
-        height: auto;
-        max-height: 450px;
-    }
-
-    .menu,
-    .expert {
-        margin-top: 0;
-    }
-
-    .contactform {
-        width: 100%;
-        margin: 40px auto 0;
+    .banniere .contenu h2 {
+        font-size: 2.5em;
     }
 }
 
-/* ================= SMALL MOBILE ================= */
+@media (max-width: 600px) {
 
-@media (max-width: 480px) {
+    section {
+        padding: 70px 20px;
+    }
+
+    header {
+        padding: 15px 20px;
+    }
 
     .logo {
         font-size: 1.5em;
     }
 
+    .banniere .contenu {
+        max-width: 100%;
+    }
+
     .banniere .contenu h2 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
 
     .banniere .contenu p {
-        font-size: 1em;
+        font-size: 0.95em;
     }
 
     .titre-texte {
-        font-size: 1.6em;
-        text-align: center;
+        font-size: 1.8em;
     }
 
-    .menu .contenu .box {
+    .row .col50 img {
+        height: 300px;
+    }
+
+    .menu .box {
         width: 100%;
-        margin: 15px 0;
+        max-width: 350px;
     }
 
-    .expert .contenu .box {
+    .expert .box {
         width: 100%;
         max-width: 300px;
     }
 
-    .temoignage .contenu .box {
+    .temoignage .box {
         width: 100%;
-        margin: 15px 0;
-        padding: 25px;
+        max-width: 350px;
     }
 
+    .reservationform,
     .contactform {
-        padding: 30px 20px;
+        padding: 25px 20px;
     }
 
     .btn1,
     .btn2 {
-        font-size: 0.9em;
-        padding: 9px 14px;
+        display: block;
+        margin: 10px auto;
+        width: 200px;
     }
 }
-    .Contact .titre p {
-    color: #fff;
-    }
