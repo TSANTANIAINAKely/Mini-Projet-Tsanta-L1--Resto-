@@ -1,6 +1,4 @@
-/* =========================
-   HEADER STICKY
-========================= */
+// ================= HEADER STICKY =================
 
 window.addEventListener("scroll", function () {
 
@@ -14,99 +12,82 @@ window.addEventListener("scroll", function () {
 });
 
 
-/* =========================
-   MENU MOBILE
-========================= */
+// ================= MENU MOBILE =================
 
 function toggleMenu() {
 
-    const menutoogle = document.querySelector(".menutoogle");
     const navbar = document.querySelector(".navbar");
 
-    menutoogle.classList.toggle("active");
     navbar.classList.toggle("active");
 
 }
 
 
-/* =========================
-   RESERVATION
-========================= */
+// ================= RESERVATION =================
 
-function faireReservation() {
+const reservationForm = document.getElementById("reservationForm");
 
-    const nom = document.getElementById("nomReservation").value.trim();
-    const telephone = document.getElementById("telephoneReservation").value.trim();
-    const date = document.getElementById("dateReservation").value;
-    const heure = document.getElementById("heureReservation").value;
-    const personnes = document.getElementById("personnesReservation").value;
+if (reservationForm) {
 
-    /*
-       Vérification simple des champs
-    */
+    reservationForm.addEventListener("submit", function (event) {
 
-    if (
-        nom === "" ||
-        telephone === "" ||
-        date === "" ||
-        heure === "" ||
-        personnes === ""
-    ) {
+        event.preventDefault();
 
-        alert("Veuillez remplir tous les champs de réservation.");
+        const nom = document.getElementById("nom").value;
+        const date = document.getElementById("date").value;
+        const heure = document.getElementById("heure").value;
+        const personnes = document.getElementById("personnes").value;
 
-        return;
-    }
+        showPopup(
+            "Réservation réussie !",
+            "Merci " + nom +
+            " ! Votre demande de réservation pour " +
+            personnes +
+            " personne(s), le " +
+            date +
+            " à " +
+            heure +
+            " a bien été enregistrée."
+        );
 
+        reservationForm.reset();
 
-    /*
-       Affichage de la fenêtre de confirmation
-    */
-
-    const popup = document.getElementById("popup");
-
-    popup.classList.add("active");
-
-
-    /*
-       Effacer les champs après réservation
-    */
-
-    document.getElementById("nomReservation").value = "";
-    document.getElementById("telephoneReservation").value = "";
-    document.getElementById("dateReservation").value = "";
-    document.getElementById("heureReservation").value = "";
-    document.getElementById("personnesReservation").value = "";
+    });
 
 }
 
 
-/* =========================
-   FERMER POPUP
-========================= */
+// ================= POPUP =================
 
-function fermerPopup() {
+function showPopup(titre, message) {
 
-    const popup = document.getElementById("popup");
+    const oldPopup = document.querySelector(".popup");
 
-    popup.classList.remove("active");
-
-}
-
-
-/* =========================
-   FERMER LE POPUP EN CLIQUANT
-   À L'EXTÉRIEUR
-========================= */
-
-window.addEventListener("click", function (event) {
-
-    const popup = document.getElementById("popup");
-
-    if (event.target === popup) {
-
-        popup.classList.remove("active");
-
+    if (oldPopup) {
+        oldPopup.remove();
     }
 
-});
+    const popup = document.createElement("div");
+
+    popup.className = "popup";
+
+    popup.innerHTML = `
+        <h3>${titre}</h3>
+        <p>${message}</p>
+        <button onclick="this.parentElement.remove()">
+            Fermer
+        </button>
+    `;
+
+    document.body.appendChild(popup);
+
+
+    setTimeout(function () {
+
+        if (popup) {
+            popup.remove();
+        }
+
+    }, 6000);
+
+}
