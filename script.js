@@ -4,7 +4,10 @@ window.addEventListener("scroll", function () {
 
     const header = document.querySelector("header");
 
-    header.classList.toggle("sticky", window.scrollY > 0);
+    header.classList.toggle(
+        "sticky",
+        window.scrollY > 0
+    );
 
 });
 
@@ -13,10 +16,8 @@ window.addEventListener("scroll", function () {
 
 function toggleMenu() {
 
-    const menutoogle = document.querySelector(".menutoogle");
     const navbar = document.querySelector(".navbar");
 
-    menutoogle.classList.toggle("active");
     navbar.classList.toggle("active");
 
 }
@@ -24,101 +25,41 @@ function toggleMenu() {
 
 // ================= RESERVATION =================
 
-function faireReservation() {
+const reservationForm =
+    document.getElementById("reservationForm");
 
-    const nom = document.getElementById("nomReservation").value.trim();
-
-    const nombre = document.getElementById("nombrePersonnes").value;
-
-    const plat = document.getElementById("platReservation").value;
-
-    const message = document.getElementById("messageReservation").value.trim();
-
-    // Vérification des champs obligatoires
-
-    if (nom === "") {
-
-        alert("Veuillez entrer votre nom.");
-
-        return;
-
-    }
-
-    if (nombre === "" || nombre < 1) {
-
-        alert("Veuillez entrer un nombre de personnes valide.");
-
-        return;
-
-    }
-
-    if (plat === "") {
-
-        alert("Veuillez choisir un plat.");
-
-        return;
-
-    }
+const successMessage =
+    document.getElementById("successMessage");
 
 
-    // Message de confirmation
+reservationForm.addEventListener("submit", function (event) {
 
-    const popup = document.getElementById("popup");
+    event.preventDefault();
 
-    const popupMessage = document.getElementById("popupMessage");
+    successMessage.classList.add("show");
 
-    popupMessage.innerHTML =
-        "Merci <strong>" + nom + "</strong> !<br><br>" +
-        "Votre réservation pour <strong>" + nombre +
-        " personne(s)</strong> avec le plat <strong>" +
-        plat + "</strong> a été enregistrée.";
-
-    popup.style.display = "flex";
-
-
-    // Effacer le formulaire
-
-    document.getElementById("nomReservation").value = "";
-
-    document.getElementById("nombrePersonnes").value = "";
-
-    document.getElementById("platReservation").value = "";
-
-    document.getElementById("messageReservation").value = "";
-
-}
-
-
-// ================= FERMER POPUP =================
-
-function fermerPopup() {
-
-    document.getElementById("popup").style.display = "none";
-
-}
-
-
-// Fermer la popup si on clique en dehors
-
-window.addEventListener("click", function (event) {
-
-    const popup = document.getElementById("popup");
-
-    if (event.target === popup) {
-
-        popup.style.display = "none";
-
-    }
+    reservationForm.reset();
 
 });
 
 
-// ================= CONTACT =================
+// ================= FERMER MESSAGE =================
 
-function envoyerMessage() {
+function closeSuccessMessage() {
 
-    alert(
-        "Votre message a bien été pris en compte. Merci de nous avoir contactés !"
-    );
+    successMessage.classList.remove("show");
 
 }
+
+
+// ================= FERMER EN CLIQUANT A COTE =================
+
+successMessage.addEventListener("click", function (event) {
+
+    if (event.target === successMessage) {
+
+        closeSuccessMessage();
+
+    }
+
+});
