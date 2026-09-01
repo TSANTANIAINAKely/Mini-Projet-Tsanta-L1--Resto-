@@ -1,6 +1,5 @@
-// ================= HEADER STICKY =================
-
-window.addEventListener("scroll", function () {
+// HEADER STICKY
+window.addEventListener("scroll", function(){
 
     const header = document.querySelector("header");
 
@@ -12,54 +11,97 @@ window.addEventListener("scroll", function () {
 });
 
 
-// ================= MENU MOBILE =================
+// MENU MOBILE
+function toggleMenu(){
 
-function toggleMenu() {
+    const menutoogle =
+        document.querySelector(".menutoogle");
 
-    const navbar = document.querySelector(".navbar");
+    const navbar =
+        document.querySelector(".navbar");
+
+    menutoogle.classList.toggle("active");
 
     navbar.classList.toggle("active");
 
 }
 
 
-// ================= RESERVATION =================
+// ENVOI DU MESSAGE CONTACT
+function sendMessage(){
 
-const reservationForm =
-    document.getElementById("reservationForm");
-
-const successMessage =
-    document.getElementById("successMessage");
-
-
-reservationForm.addEventListener("submit", function (event) {
-
-    event.preventDefault();
-
-    successMessage.classList.add("show");
-
-    reservationForm.reset();
-
-});
-
-
-// ================= FERMER MESSAGE =================
-
-function closeSuccessMessage() {
-
-    successMessage.classList.remove("show");
+    alert("Votre message a bien été envoyé !");
 
 }
 
 
-// ================= FERMER EN CLIQUANT A COTE =================
+// RESERVATION
+function reserver(){
 
-successMessage.addEventListener("click", function (event) {
+    const nom =
+        document.getElementById("nom").value.trim();
 
-    if (event.target === successMessage) {
+    const date =
+        document.getElementById("date").value;
 
-        closeSuccessMessage();
+    const heure =
+        document.getElementById("heure").value;
 
+    const plat =
+        document.getElementById("plat").value;
+
+    const personnes =
+        document.getElementById("personnes").value;
+
+
+    // VERIFICATION
+    if(
+        nom === "" ||
+        date === "" ||
+        heure === "" ||
+        plat === "" ||
+        personnes === ""
+    ){
+
+        alert(
+            "Veuillez remplir tous les champs avant de confirmer."
+        );
+
+        return;
     }
 
-});
+
+    // MESSAGE DE CONFIRMATION
+    const message =
+        "Merci " + nom +
+        " ! Votre réservation pour " +
+        personnes +
+        " personne(s), le " +
+        date +
+        " à " +
+        heure +
+        " pour « " +
+        plat +
+        " » a bien été enregistrée.";
+
+
+    document.getElementById(
+        "messageConfirmation"
+    ).textContent = message;
+
+
+    document.getElementById(
+        "confirmation"
+    ).style.display = "flex";
+
+}
+
+
+// FERMER LA FENETRE
+function fermerConfirmation(){
+
+    document.getElementById(
+        "confirmation"
+    ).style.display = "none";
+
+}
