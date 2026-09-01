@@ -4,7 +4,10 @@ window.addEventListener("scroll", function () {
 
     const header = document.querySelector("header");
 
-    header.classList.toggle("sticky", window.scrollY > 0);
+    header.classList.toggle(
+        "sticky",
+        window.scrollY > 0
+    );
 
 });
 
@@ -20,42 +23,29 @@ function toggleMenu() {
 }
 
 
-// ================= POPUP =================
-
-function showPopup(title, message) {
-
-    const popup = document.getElementById("popup");
-
-    document.getElementById("popup-title").textContent = title;
-
-    document.getElementById("popup-message").textContent = message;
-
-    popup.classList.add("show");
-
-}
-
-
-function closePopup() {
-
-    const popup = document.getElementById("popup");
-
-    popup.classList.remove("show");
-
-}
-
-
-// ================= RESERVATION =================
+// ================= RÉSERVATION =================
 
 function makeReservation(event) {
 
     event.preventDefault();
 
-    showPopup(
-        "Réservation réussie !",
-        "Votre demande de réservation a bien été enregistrée. Ceci est une démonstration."
-    );
+    const confirmation = document.getElementById("confirmation");
 
+    confirmation.classList.add("active");
+
+    // Réinitialiser le formulaire
     event.target.reset();
+
+}
+
+
+// ================= FERMER LA CONFIRMATION =================
+
+function closeConfirmation() {
+
+    const confirmation = document.getElementById("confirmation");
+
+    confirmation.classList.remove("active");
 
 }
 
@@ -66,22 +56,8 @@ function sendMessage(event) {
 
     event.preventDefault();
 
-    showPopup(
-        "Message envoyé !",
-        "Votre message a bien été enregistré. Ceci est une démonstration."
-    );
+    alert("Votre message a bien été envoyé. Merci pour votre contact !");
 
     event.target.reset();
 
 }
-
-
-// ================= FERMER POPUP =================
-
-document.getElementById("popup").addEventListener("click", function (event) {
-
-    if (event.target === this) {
-        closePopup();
-    }
-
-});
