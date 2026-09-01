@@ -1,6 +1,6 @@
 // ================= HEADER STICKY =================
 
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
 
     const header = document.querySelector("header");
 
@@ -14,7 +14,7 @@ window.addEventListener("scroll", function(){
 
 // ================= MENU MOBILE =================
 
-function toggleMenu(){
+function toggleMenu() {
 
     const menutoogle =
         document.querySelector(".menutoogle");
@@ -31,89 +31,85 @@ function toggleMenu(){
 
 // ================= RESERVATION =================
 
-function faireReservation(){
+function faireReservation() {
 
     const nom =
         document.getElementById("nomReservation").value.trim();
 
-    const nombre =
-        document.getElementById("nombrePersonnes").value;
-
     const plat =
         document.getElementById("platReservation").value;
+
+    const nombre =
+        document.getElementById("nombrePersonnes").value;
 
     const date =
         document.getElementById("dateReservation").value;
 
+    const heure =
+        document.getElementById("heureReservation").value;
 
-    if(
+
+    if (
         nom === "" ||
-        nombre === "" ||
         plat === "" ||
-        date === ""
-    ){
+        nombre === "" ||
+        date === "" ||
+        heure === ""
+    ) {
 
         alert(
-            "Veuillez remplir les informations nécessaires avant de réserver."
+            "Veuillez remplir tous les champs obligatoires."
         );
 
         return;
     }
 
 
-    if(Number(nombre) < 1){
+    const popup =
+        document.getElementById("popup");
 
-        alert(
-            "Le nombre de personnes doit être supérieur à 0."
-        );
-
-        return;
-    }
+    popup.classList.add("active");
 
 
-    // Afficher la fenêtre de confirmation
+    // Réinitialisation du formulaire
 
-    document
-        .getElementById("notification")
-        .classList.add("show");
+    document.getElementById("nomReservation").value = "";
 
-}
+    document.getElementById("platReservation").value = "";
 
+    document.getElementById("nombrePersonnes").value = "";
 
-// ================= FERMER NOTIFICATION =================
+    document.getElementById("dateReservation").value = "";
 
-function fermerNotification(){
+    document.getElementById("heureReservation").value = "";
 
-    document
-        .getElementById("notification")
-        .classList.remove("show");
+    document.getElementById("messageReservation").value = "";
 
 }
 
 
-// ================= CONTACT =================
+// ================= FERMER POPUP =================
 
-function sendMessage(){
+function fermerPopup() {
 
-    alert(
-        "Votre message a bien été envoyé. Merci pour votre contact !"
-    );
+    const popup =
+        document.getElementById("popup");
+
+    popup.classList.remove("active");
 
 }
 
 
-// ================= FERMETURE NOTIFICATION EN CLIQUANT DEHORS =================
+// Fermer le popup en cliquant à l'extérieur
 
-document.addEventListener("click", function(event){
+document.addEventListener("click", function (event) {
 
-    const notification =
-        document.getElementById("notification");
+    const popup =
+        document.getElementById("popup");
 
-    if(
-        event.target === notification
-    ){
+    if (event.target === popup) {
 
-        fermerNotification();
+        popup.classList.remove("active");
 
     }
 
