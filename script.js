@@ -4,10 +4,7 @@ window.addEventListener("scroll", function () {
 
     const header = document.querySelector("header");
 
-    header.classList.toggle(
-        "sticky",
-        window.scrollY > 0
-    );
+    header.classList.toggle("sticky", window.scrollY > 0);
 
 });
 
@@ -16,8 +13,10 @@ window.addEventListener("scroll", function () {
 
 function toggleMenu() {
 
+    const menutoogle = document.querySelector(".menutoogle");
     const navbar = document.querySelector(".navbar");
 
+    menutoogle.classList.toggle("active");
     navbar.classList.toggle("active");
 
 }
@@ -25,69 +24,101 @@ function toggleMenu() {
 
 // ================= RESERVATION =================
 
-const reservationForm = document.getElementById("reservationForm");
+function faireReservation() {
 
-if (reservationForm) {
+    const nom = document.getElementById("nomReservation").value.trim();
 
-    reservationForm.addEventListener("submit", function (event) {
+    const nombre = document.getElementById("nombrePersonnes").value;
 
-        event.preventDefault();
+    const plat = document.getElementById("platReservation").value;
 
-        const nom = document.getElementById("nom").value;
-        const date = document.getElementById("date").value;
-        const heure = document.getElementById("heure").value;
-        const personnes = document.getElementById("personnes").value;
+    const message = document.getElementById("messageReservation").value.trim();
 
-        showPopup(
-            "Réservation réussie !",
-            "Merci " + nom +
-            " ! Votre demande de réservation pour " +
-            personnes +
-            " personne(s), le " +
-            date +
-            " à " +
-            heure +
-            " a bien été enregistrée."
-        );
+    // Vérification des champs obligatoires
 
-        reservationForm.reset();
+    if (nom === "") {
 
-    });
+        alert("Veuillez entrer votre nom.");
+
+        return;
+
+    }
+
+    if (nombre === "" || nombre < 1) {
+
+        alert("Veuillez entrer un nombre de personnes valide.");
+
+        return;
+
+    }
+
+    if (plat === "") {
+
+        alert("Veuillez choisir un plat.");
+
+        return;
+
+    }
+
+
+    // Message de confirmation
+
+    const popup = document.getElementById("popup");
+
+    const popupMessage = document.getElementById("popupMessage");
+
+    popupMessage.innerHTML =
+        "Merci <strong>" + nom + "</strong> !<br><br>" +
+        "Votre réservation pour <strong>" + nombre +
+        " personne(s)</strong> avec le plat <strong>" +
+        plat + "</strong> a été enregistrée.";
+
+    popup.style.display = "flex";
+
+
+    // Effacer le formulaire
+
+    document.getElementById("nomReservation").value = "";
+
+    document.getElementById("nombrePersonnes").value = "";
+
+    document.getElementById("platReservation").value = "";
+
+    document.getElementById("messageReservation").value = "";
 
 }
 
 
-// ================= POPUP =================
+// ================= FERMER POPUP =================
 
-function showPopup(titre, message) {
+function fermerPopup() {
 
-    const oldPopup = document.querySelector(".popup");
+    document.getElementById("popup").style.display = "none";
 
-    if (oldPopup) {
-        oldPopup.remove();
+}
+
+
+// Fermer la popup si on clique en dehors
+
+window.addEventListener("click", function (event) {
+
+    const popup = document.getElementById("popup");
+
+    if (event.target === popup) {
+
+        popup.style.display = "none";
+
     }
 
-    const popup = document.createElement("div");
-
-    popup.className = "popup";
-
-    popup.innerHTML = `
-        <h3>${titre}</h3>
-        <p>${message}</p>
-        <button onclick="this.parentElement.remove()">
-            Fermer
-        </button>
-    `;
-
-    document.body.appendChild(popup);
+});
 
 
-    setTimeout(function () {
+// ================= CONTACT =================
 
-        if (popup) {
-            popup.remove();
-        }
+function envoyerMessage() {
 
-    }, 6000);
+    alert(
+        "Votre message a bien été pris en compte. Merci de nous avoir contactés !"
+    );
 
 }
