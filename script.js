@@ -1,157 +1,161 @@
-/* =========================
-   HEADER STICKY
-========================= */
+/* ================= HEADER STICKY ================= */
 
 window.addEventListener("scroll", function () {
 
     const header = document.querySelector("header");
 
-    if (window.scrollY > 0) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
-    }
+    header.classList.toggle("sticky", window.scrollY > 0);
 
 });
 
 
-/* =========================
-   MENU MOBILE
-========================= */
+/* ================= MENU MOBILE ================= */
 
 function toggleMenu() {
 
-    const menuToggle = document.querySelector(".menutoogle");
     const navbar = document.querySelector(".navbar");
 
-    menuToggle.classList.toggle("active");
     navbar.classList.toggle("active");
 
 }
 
 
-/* =========================
-   FERMER MENU APRÈS CLIC
-========================= */
+/* Fermer le menu après avoir cliqué sur un lien */
 
 document.querySelectorAll(".navbar a").forEach(function (link) {
 
     link.addEventListener("click", function () {
 
-        const menuToggle = document.querySelector(".menutoogle");
-        const navbar = document.querySelector(".navbar");
-
-        menuToggle.classList.remove("active");
-        navbar.classList.remove("active");
+        document.querySelector(".navbar").classList.remove("active");
 
     });
 
 });
 
 
-/* =========================
-   RESERVATION
-========================= */
+/* ================= RESERVATION ================= */
 
-const reservationForm = document.getElementById("reservationForm");
-
-if (reservationForm) {
-
-    reservationForm.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-        const nom =
-            document.querySelector('[name="nom"]').value;
-
-        const date =
-            document.querySelector('[name="date"]').value;
-
-        const heure =
-            document.querySelector('[name="heure"]').value;
-
-        const personnes =
-            document.querySelector('[name="personnes"]').value;
-
-        const plat =
-            document.querySelector('[name="plat"]').value;
-
-        const popupMessage =
-            document.getElementById("popupMessage");
-
-        popupMessage.innerHTML =
-            "Merci <strong>" + nom + "</strong> !<br><br>" +
-            "Votre réservation a été enregistrée " +
-            "dans cette démonstration.<br><br>" +
-            "🍽️ Plat : <strong>" + plat + "</strong><br>" +
-            "👥 Personnes : <strong>" + personnes + "</strong><br>" +
-            "📅 Date : <strong>" + date + "</strong><br>" +
-            "⏰ Heure : <strong>" + heure + "</strong>";
-
-        document
-            .getElementById("reservationPopup")
-            .classList.add("active");
-
-        reservationForm.reset();
-
-    });
-
-}
+const reservationForm =
+    document.getElementById("reservationForm");
 
 
-/* =========================
-   FERMER POPUP
-========================= */
+reservationForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+
+    const nom =
+        document.getElementById("nom").value;
+
+    const date =
+        document.getElementById("date").value;
+
+    const heure =
+        document.getElementById("heure").value;
+
+    const personnes =
+        document.getElementById("personnes").value;
+
+    const plat =
+        document.getElementById("plat").value;
+
+
+    const reservationDetails =
+        document.getElementById("reservationDetails");
+
+
+    reservationDetails.innerHTML =
+        `
+        Merci <strong>${nom}</strong> !<br><br>
+
+        Votre réservation a bien été enregistrée.<br><br>
+
+        <strong>Plat :</strong> ${plat}<br>
+
+        <strong>Nombre de personnes :</strong>
+        ${personnes}<br>
+
+        <strong>Date :</strong> ${date}<br>
+
+        <strong>Heure :</strong> ${heure}
+        `;
+
+
+    document
+        .getElementById("reservationPopup")
+        .classList.add("show");
+
+
+    reservationForm.reset();
+
+});
+
+
+/* ================= FERMER POPUP RESERVATION ================= */
 
 function closeReservationPopup() {
 
     document
         .getElementById("reservationPopup")
-        .classList.remove("active");
+        .classList.remove("show");
 
 }
 
 
-/* =========================
-   FERMER POPUP EN CLIQUANT
-   EN DEHORS
-========================= */
-
-const reservationPopup =
-    document.getElementById("reservationPopup");
-
-if (reservationPopup) {
-
-    reservationPopup.addEventListener("click", function (event) {
-
-        if (event.target === reservationPopup) {
-
-            closeReservationPopup();
-
-        }
-
-    });
-
-}
-
-
-/* =========================
-   CONTACT DEMO
-========================= */
+/* ================= CONTACT ================= */
 
 const contactForm =
     document.getElementById("contactForm");
 
-if (contactForm) {
 
-    contactForm.addEventListener("submit", function (event) {
+contactForm.addEventListener("submit", function (event) {
 
-        event.preventDefault();
+    event.preventDefault();
 
-        alert("Merci ! Votre message a bien été envoyé dans cette démonstration.");
 
-        contactForm.reset();
+    document
+        .getElementById("contactPopup")
+        .classList.add("show");
 
-    });
+
+    contactForm.reset();
+
+});
+
+
+/* ================= FERMER POPUP CONTACT ================= */
+
+function closeContactPopup() {
+
+    document
+        .getElementById("contactPopup")
+        .classList.remove("show");
 
 }
+
+
+/* ================= FERMER EN CLIQUANT À L'EXTÉRIEUR ================= */
+
+window.addEventListener("click", function (event) {
+
+    const reservationPopup =
+        document.getElementById("reservationPopup");
+
+    const contactPopup =
+        document.getElementById("contactPopup");
+
+
+    if (event.target === reservationPopup) {
+
+        reservationPopup.classList.remove("show");
+
+    }
+
+
+    if (event.target === contactPopup) {
+
+        contactPopup.classList.remove("show");
+
+    }
+
+});
