@@ -65,6 +65,7 @@ reservationForm.addEventListener("submit", function (event) {
 
 
     reservationDetails.innerHTML =
+
         `
         Merci <strong>${nom}</strong> !<br><br>
 
@@ -134,7 +135,7 @@ function closeContactPopup() {
 }
 
 
-/* ================= FERMER EN CLIQUANT À L'EXTÉRIEUR ================= */
+/* ================= FERMER POPUP EN CLIQUANT DEHORS ================= */
 
 window.addEventListener("click", function (event) {
 
