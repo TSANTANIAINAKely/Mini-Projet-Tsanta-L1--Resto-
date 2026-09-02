@@ -1,1007 +1,939 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Resto-Snack | Restaurant</title>
+```
+<title>Resto-Snack | Restaurant</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
+```
+
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+```
+<!-- ================= HEADER ================= -->
 
-    <header>
+<header>
 
-        <a href="#Accueil" class="logo">
-            <span>R</span>esto-Snack
-        </a>
+    <a href="#Accueil" class="logo">
+        <span>R</span>esto-Snack
+    </a>
 
-        <div class="menutoogle" onclick="toggleMenu()">☰</div>
+    <div class="menutoogle" onclick="toggleMenu()">☰</div>
 
-        <ul class="navbar">
+    <ul class="navbar">
 
-            <li>
-                <a href="#Accueil">Accueil</a>
-            </li>
+        <li><a href="#Accueil">Accueil</a></li>
 
-            <li>
-                <a href="#Apropos">À propos</a>
-            </li>
+        <li><a href="#Apropos">À propos</a></li>
 
-            <li>
-                <a href="#Menu">Menu</a>
-            </li>
+        <li><a href="#Menu">Menu</a></li>
 
-            <li>
-                <a href="#Expert">Expert</a>
-            </li>
+        <li><a href="#Expert">Expert</a></li>
 
-            <li>
-                <a href="#Temoignages">Témoignages</a>
-            </li>
+        <li><a href="#Temoignages">Témoignages</a></li>
 
-            <li>
-                <a href="#Contact">Contact</a>
-            </li>
+        <li><a href="#Contact">Contact</a></li>
 
-            <li>
-                <a href="#Reservation" class="btn-reserve">
-                    Reservation
-                </a>
-            </li>
+        <li>
+            <a href="#Reservation" class="btn-reserve">
+                Réservation
+            </a>
+        </li>
 
-        </ul>
+    </ul>
 
-    </header>
+</header>
 
 
-    <!-- ================= HERO ================= -->
+<!-- ================= HERO / ACCUEIL ================= -->
 
-    <section class="hero" id="Accueil">
+<section class="hero" id="Accueil">
 
-        <div class="hero-overlay"></div>
+    <div class="hero-overlay"></div>
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <p class="hero-small">
-                BIENVENUE CHEZ RESTO-SNACK
-            </p>
+        <p class="hero-small">
+            BIENVENUE CHEZ RESTO-SNACK
+        </p>
 
-            <h1>
-                QUE DES PLATS<br>
-                <span>DÉLICIEUX</span>
-            </h1>
+        <h1>
+            QUE DES PLATS<br>
+            <span>DÉLICIEUX</span>
+        </h1>
 
-            <p class="hero-text">
-                Découvrez des plats savoureux préparés avec passion
-                et des ingrédients soigneusement sélectionnés.
-            </p>
+        <p class="hero-text">
+            Découvrez des plats savoureux préparés avec passion
+            et des ingrédients soigneusement sélectionnés.
+        </p>
 
-            <div class="hero-buttons">
+        <div class="hero-buttons">
 
-                <a href="#Menu" class="btn1">
-                    Notre Menu
-                </a>
+            <a href="#Menu" class="btn1">
+                Notre Menu
+            </a>
 
-                <a href="#Reservation" class="btn2">
-                    Reservation
-                </a>
-
-            </div>
+            <a href="#Reservation" class="btn2">
+                Réservation
+            </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ================= ABOUT ================= -->
+<!-- ================= ABOUT ================= -->
 
-    <section class="about" id="Apropos">
+<section class="about" id="Apropos">
 
-        <div class="section-title">
-            <h2>
-                À <span>propos</span>
-            </h2>
+    <div class="section-title">
+
+        <h2>
+            À <span>propos</span>
+        </h2>
+
+        <p>
+            Découvrez notre histoire et notre passion.
+        </p>
+
+    </div>
+
+    <div class="about-container">
+
+        <div class="about-image">
+
+            <img
+                src="images/1712067915861 - Copie.jpg"
+                alt="Restaurant">
+
+        </div>
+
+        <div class="about-text">
+
+            <h3>
+                Une cuisine faite avec passion
+            </h3>
 
             <p>
-                Découvrez notre histoire et notre passion.
+                Chez Resto-Snack, nous avons à cœur de proposer
+                une cuisine savoureuse, généreuse et accessible
+                à tous.
             </p>
-        </div>
-
-        <div class="about-container">
-
-            <div class="about-image">
-
-                <img
-                    src="images/1712067915861 - Copie.jpg"
-                    alt="Restaurant">
-
-            </div>
-
-            <div class="about-text">
-
-                <h3>
-                    Une cuisine faite avec passion
-                </h3>
-
-                <p>
-                    Chez Resto-Snack, nous avons à cœur de proposer
-                    une cuisine savoureuse, généreuse et accessible
-                    à tous.
-                </p>
-
-                <p>
-                    Chaque plat est préparé avec soin afin de vous
-                    offrir une expérience gourmande et agréable.
-                </p>
-
-                <a href="#Menu" class="btn1">
-                    Découvrir notre menu
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= MENU ================= -->
-
-    <section class="menu" id="Menu">
-
-        <div class="section-title">
-
-            <h2>
-                Notre <span>Menu</span>
-            </h2>
 
             <p>
-                Découvrez quelques-unes de nos spécialités.
+                Chaque plat est préparé avec soin afin de vous
+                offrir une expérience gourmande et agréable.
             </p>
 
-        </div>
-
-
-        <div class="menu-container">
-
-            <!-- CARD 1 -->
-
-            <div class="menu-card">
-
-                <div class="menu-image">
-
-                    <img
-                        src="images/Screenshot_20240412_083057 (9).jpg"
-                        alt="Crevettes">
-
-                </div>
-
-                <div class="menu-content">
-
-                    <h3>
-                        Crevettes Sautées
-                    </h3>
-
-                    <p>
-                        De délicieuses crevettes préparées
-                        avec une sauce savoureuse.
-                    </p>
-
-                    <span class="price">
-                        18 000 Ar
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <!-- CARD 2 -->
-
-            <div class="menu-card">
-
-                <div class="menu-image">
-
-                    <img
-                        src="images/Screenshot_20240412_082621 (9).jpg"
-                        alt="Frites maison">
-
-                </div>
-
-                <div class="menu-content">
-
-                    <h3>
-                        Frites Maison
-                    </h3>
-
-                    <p>
-                        Des frites croustillantes préparées
-                        avec soin.
-                    </p>
-
-                    <span class="price">
-                        8 000 Ar
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <!-- CARD 3 -->
-
-            <div class="menu-card">
-
-                <div class="menu-image">
-
-                    <img
-                        src="images/Screenshot_20240412_082745 (5).jpg"
-                        alt="Poulet grillé">
-
-                </div>
-
-                <div class="menu-content">
-
-                    <h3>
-                        Poulet Grillé
-                    </h3>
-
-                    <p>
-                        Poulet tendre et grillé accompagné
-                        d'une garniture savoureuse.
-                    </p>
-
-                    <span class="price">
-                        15 000 Ar
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <!-- CARD 4 -->
-
-            <div class="menu-card">
-
-                <div class="menu-image">
-
-                    <img
-                        src="images/Screenshot_20240403_165154 (5).jpg"
-                        alt="Plat gourmand">
-
-                </div>
-
-                <div class="menu-content">
-
-                    <h3>
-                        Plat Gourmand
-                    </h3>
-
-                    <p>
-                        Une assiette généreuse pour les
-                        amateurs de bonne cuisine.
-                    </p>
-
-                    <span class="price">
-                        20 000 Ar
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <!-- CARD 5 -->
-
-            <div class="menu-card">
-
-                <div class="menu-image">
-
-                    <img
-                        src="images/Screenshot_20240403_165315 (4).jpg"
-                        alt="Spécialité maison">
-
-                </div>
-
-                <div class="menu-content">
-
-                    <h3>
-                        Spécialité Maison
-                    </h3>
-
-                    <p>
-                        Une recette maison préparée avec
-                        des ingrédients frais.
-                    </p>
-
-                    <span class="price">
-                        17 000 Ar
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <!-- CARD 6 -->
-
-            <div class="menu-card">
-
-                <div class="menu-image">
-
-                    <img
-                        src="images/1712067916840 (4).jpg"
-                        alt="Saveur locale">
-
-                </div>
-
-                <div class="menu-content">
-
-                    <h3>
-                        Saveur Locale
-                    </h3>
-
-                    <p>
-                        Une spécialité inspirée des saveurs
-                        locales.
-                    </p>
-
-                    <span class="price">
-                        16 000 Ar
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <!-- CARD 7 -->
-
-            <div class="menu-card">
-
-                <div class="menu-image">
-
-                    <img
-                        src="images/Screenshot_20240403_165516 (5).jpg"
-                        alt="Plat traditionnel">
-
-                </div>
-
-                <div class="menu-content">
-
-                    <h3>
-                        Plat Traditionnel
-                    </h3>
-
-                    <p>
-                        Une recette traditionnelle pleine
-                        de goût.
-                    </p>
-
-                    <span class="price">
-                        18 000 Ar
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <!-- CARD 8 -->
-
-            <div class="menu-card">
-
-                <div class="menu-image">
-
-                    <img
-                        src="images/Screenshot_20240412_082922 (7).jpg"
-                        alt="Délice maison">
-
-                </div>
-
-                <div class="menu-content">
-
-                    <h3>
-                        Délice Maison
-                    </h3>
-
-                    <p>
-                        Une préparation généreuse et
-                        délicieuse.
-                    </p>
-
-                    <span class="price">
-                        19 000 Ar
-                    </span>
-
-                </div>
-
-            </div>
+            <a href="#Menu" class="btn1">
+                Découvrir notre menu
+            </a>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ================= EXPERT ================= -->
+<!-- ================= MENU ================= -->
 
-    <section class="expert" id="Expert">
+<section class="menu" id="Menu">
 
-        <div class="section-title">
+    <div class="section-title">
 
-            <h2>
-                Nos <span>Experts</span>
-            </h2>
+        <h2>
+            Notre <span>Menu</span>
+        </h2>
 
-            <p>
-                Une équipe passionnée par la cuisine.
-            </p>
+        <p>
+            Découvrez quelques-unes de nos spécialités.
+        </p>
 
-        </div>
+    </div>
 
+    <div class="menu-container">
 
-        <div class="expert-container">
+        <div class="menu-card">
 
-            <div class="expert-card">
+            <div class="menu-image">
 
                 <img
-                    src="images/Capture d'écran 2026-08-27 092514.png"
-                    alt="Chef">
-
-                <h3>
-                    Chef Principal
-                </h3>
-
-                <p>
-                    Chef cuisinier
-                </p>
+                    src="images/Screenshot_20240412_083057 (9).jpg"
+                    alt="Crevettes">
 
             </div>
 
+            <div class="menu-content">
 
-            <div class="expert-card">
-
-                <img
-                    src="images/Capture d'écran 2026-08-27 092938.png"
-                    alt="Cuisinier">
-
-                <h3>
-                    Chef Cuisine
-                </h3>
+                <h3>Crevettes Sautées</h3>
 
                 <p>
-                    Spécialiste cuisine
+                    De délicieuses crevettes préparées
+                    avec une sauce savoureuse.
                 </p>
 
-            </div>
-
-
-            <div class="expert-card">
-
-                <img
-                    src="images/Capture d'écran 2026-08-27 093620.png"
-                    alt="Chef">
-
-                <h3>
-                    Chef Pâtissier
-                </h3>
-
-                <p>
-                    Expert en desserts
-                </p>
-
-            </div>
-
-
-            <div class="expert-card">
-
-                <img
-                    src="images/Capture d'écran 2026-08-27 092144.png"
-                    alt="Cuisinier">
-
-                <h3>
-                    Chef Assistant
-                </h3>
-
-                <p>
-                    Cuisine & service
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= TEMOIGNAGES ================= -->
-
-    <section class="temoignages" id="Temoignages">
-
-        <div class="temoignages-overlay"></div>
-
-        <div class="section-title light">
-
-            <h2>
-                Témoignages
-            </h2>
-
-            <p>
-                Ce que nos clients pensent de nous.
-            </p>
-
-        </div>
-
-
-        <div class="testimonial-container">
-
-            <div class="testimonial-card">
-
-                <div class="client-image">
-
-                    <img
-                        src="images/1712067919047 (2).jpg"
-                        alt="Sarah">
-
-                </div>
-
-                <p>
-                    "Les plats sont vraiment délicieux.
-                    Le service est également excellent."
-                </p>
-
-                <h3>
-                    Sarah
-                </h3>
-
-                <span>
-                    Cliente
-                </span>
-
-            </div>
-
-
-            <div class="testimonial-card">
-
-                <div class="client-image">
-
-                     <img
-                        src="images/Capture d'écran 2026-08-27 063959.png"
-                        alt="Client">
-
-                </div>
-
-                <p>
-                    "Une très bonne expérience.
-                    Je recommande vivement ce restaurant."
-                </p>
-
-                <h3>
-                    Jean
-                </h3>
-
-                <span>
-                    Client
-                </span>
-
-            </div>
-
-
-            <div class="testimonial-card">
-
-                <div class="client-image">
-                     <img
-                        src="images/Capture d'écran 2026-08-27 063608.png"
-                        alt="Client">
-
-                </div>
-
-                <p>
-                    "Des plats savoureux et une ambiance
-                    très agréable."
-                </p>
-
-                <h3>
-                    Marie
-                </h3>
-
-                <span>
-                    Cliente
+                <span class="price">
+                    18 000 Ar
                 </span>
 
             </div>
 
         </div>
 
-    </section>
 
+        <div class="menu-card">
 
-    <!-- ================= CONTACT ================= -->
+            <div class="menu-image">
 
-    <section class="contact" id="Contact">
+                <img
+                    src="images/Screenshot_20240412_082621 (9).jpg"
+                    alt="Frites maison">
 
-        <div class="section-title">
+            </div>
 
-            <h2>
-                <span>Contactez</span>-nous
-            </h2>
+            <div class="menu-content">
 
-            <p>
-                Une question ? Écrivez-nous.
-            </p>
+                <h3>Frites Maison</h3>
+
+                <p>
+                    Des frites croustillantes préparées
+                    avec soin.
+                </p>
+
+                <span class="price">
+                    8 000 Ar
+                </span>
+
+            </div>
 
         </div>
 
 
-        <div class="contact-container">
+        <div class="menu-card">
 
-            <div class="contact-info">
+            <div class="menu-image">
 
-                <h3>
-                    Parlons avec nous
-                </h3>
+                <img
+                    src="images/Screenshot_20240412_082745 (5).jpg"
+                    alt="Poulet grillé">
+
+            </div>
+
+            <div class="menu-content">
+
+                <h3>Poulet Grillé</h3>
 
                 <p>
-                    Nous sommes heureux de recevoir vos messages,
-                    vos questions et vos suggestions.
+                    Poulet tendre et grillé accompagné
+                    d'une garniture savoureuse.
                 </p>
 
+                <span class="price">
+                    15 000 Ar
+                </span>
 
-                <div class="contact-item">
+            </div>
 
-                    <strong>📍 Adresse</strong>
-
-                    <p>
-                        Antananarivo, Madagascar
-                    </p>
-
-                </div>
+        </div>
 
 
-                <div class="contact-item">
+        <div class="menu-card">
 
-                    <strong>📞 Téléphone</strong>
+            <div class="menu-image">
 
-                    <p>
-                        +261 34 00 000 00
-                    </p>
+                <img
+                    src="images/Screenshot_20240403_165154 (5).jpg"
+                    alt="Plat gourmand">
 
-                </div>
+            </div>
+
+            <div class="menu-content">
+
+                <h3>Plat Gourmand</h3>
+
+                <p>
+                    Une assiette généreuse pour les
+                    amateurs de bonne cuisine.
+                </p>
+
+                <span class="price">
+                    20 000 Ar
+                </span>
+
+            </div>
+
+        </div>
 
 
-                <div class="contact-item">
+        <div class="menu-card">
 
-                    <strong>🕐 Horaires</strong>
+            <div class="menu-image">
 
-                    <p>
-                        Lundi - Dimanche : 08h00 - 22h00
-                    </p>
+                <img
+                    src="images/Screenshot_20240403_165315 (4).jpg"
+                    alt="Spécialité maison">
 
-                </div>
+            </div>
+
+            <div class="menu-content">
+
+                <h3>Spécialité Maison</h3>
+
+                <p>
+                    Une recette maison préparée avec
+                    des ingrédients frais.
+                </p>
+
+                <span class="price">
+                    17 000 Ar
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="menu-image">
+
+                <img
+                    src="images/1712067916840 (4).jpg"
+                    alt="Saveur locale">
+
+            </div>
+
+            <div class="menu-content">
+
+                <h3>Saveur Locale</h3>
+
+                <p>
+                    Une spécialité inspirée des saveurs
+                    locales.
+                </p>
+
+                <span class="price">
+                    16 000 Ar
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="menu-image">
+
+                <img
+                    src="images/Screenshot_20240403_165516 (5).jpg"
+                    alt="Plat traditionnel">
+
+            </div>
+
+            <div class="menu-content">
+
+                <h3>Plat Traditionnel</h3>
+
+                <p>
+                    Une recette traditionnelle pleine
+                    de goût.
+                </p>
+
+                <span class="price">
+                    18 000 Ar
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="menu-card">
+
+            <div class="menu-image">
+
+                <img
+                    src="images/Screenshot_20240412_082922 (7).jpg"
+                    alt="Délice maison">
+
+            </div>
+
+            <div class="menu-content">
+
+                <h3>Délice Maison</h3>
+
+                <p>
+                    Une préparation généreuse et
+                    délicieuse.
+                </p>
+
+                <span class="price">
+                    19 000 Ar
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXPERT ================= -->
+
+<section class="expert" id="Expert">
+
+    <div class="section-title">
+
+        <h2>
+            Nos <span>Experts</span>
+        </h2>
+
+        <p>
+            Une équipe passionnée par la cuisine.
+        </p>
+
+    </div>
+
+    <div class="expert-container">
+
+        <div class="expert-card">
+
+            <img
+                src="images/Capture d'écran 2026-08-27 092514.png"
+                alt="Chef Principal">
+
+            <h3>Chef Principal</h3>
+
+            <p>Chef cuisinier</p>
+
+        </div>
+
+
+        <div class="expert-card">
+
+            <img
+                src="images/Capture d'écran 2026-08-27 092938.png"
+                alt="Chef Cuisine">
+
+            <h3>Chef Cuisine</h3>
+
+            <p>Spécialiste cuisine</p>
+
+        </div>
+
+
+        <div class="expert-card">
+
+            <img
+                src="images/Capture d'écran 2026-08-27 093620.png"
+                alt="Chef Pâtissier">
+
+            <h3>Chef Pâtissier</h3>
+
+            <p>Expert en desserts</p>
+
+        </div>
+
+
+        <div class="expert-card">
+
+            <img
+                src="images/Capture d'écran 2026-08-27 092144.png"
+                alt="Chef Assistant">
+
+            <h3>Chef Assistant</h3>
+
+            <p>Cuisine & service</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TEMOIGNAGES ================= -->
+
+<section class="temoignages" id="Temoignages">
+
+    <div class="temoignages-overlay"></div>
+
+    <div class="section-title light">
+
+        <h2>
+            Témoignages
+        </h2>
+
+        <p>
+            Ce que nos clients pensent de nous.
+        </p>
+
+    </div>
+
+
+    <div class="testimonial-container">
+
+        <!-- SARAH -->
+
+        <div class="testimonial-card">
+
+            <div class="client-image">
+
+                <img
+                    src="images/1712067919047 (2).jpg"
+                    alt="Sarah">
+
+            </div>
+
+            <p>
+                "Les plats sont vraiment délicieux.
+                Le service est également excellent."
+            </p>
+
+            <h3>
+                Sarah
+            </h3>
+
+            <span>
+                Cliente
+            </span>
+
+        </div>
+
+
+        <!-- JEAN : HOMME -->
+
+        <div class="testimonial-card">
+
+            <div class="client-image">
+
+                <img
+                    src="images/Capture d'écran 2026-08-27 063608.png"
+                    alt="Jean">
+
+            </div>
+
+            <p>
+                "Une très bonne expérience.
+                Je recommande vivement ce restaurant."
+            </p>
+
+            <h3>
+                Jean
+            </h3>
+
+            <span>
+                Client
+            </span>
+
+        </div>
+
+
+        <!-- MARIE : FEMME -->
+
+        <div class="testimonial-card">
+
+            <div class="client-image">
+
+                <img
+                    src="images/Capture d'écran 2026-08-27 063959.png"
+                    alt="Marie">
+
+            </div>
+
+            <p>
+                "Des plats savoureux et une ambiance
+                très agréable."
+            </p>
+
+            <h3>
+                Marie
+            </h3>
+
+            <span>
+                Cliente
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="Contact">
+
+    <div class="section-title">
+
+        <h2>
+            <span>Contactez</span>-nous
+        </h2>
+
+        <p>
+            Une question ? Écrivez-nous.
+        </p>
+
+    </div>
+
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <h3>
+                Parlons avec nous
+            </h3>
+
+            <p>
+                Nous sommes heureux de recevoir vos messages,
+                vos questions et vos suggestions.
+            </p>
+
+
+            <div class="contact-item">
+
+                <strong>📍 Adresse</strong>
+
+                <p>
+                    Antananarivo, Madagascar
+                </p>
 
             </div>
 
 
-            <form id="contactForm" class="contact-form">
+            <div class="contact-item">
+
+                <strong>📞 Téléphone</strong>
+
+                <p>
+                    +261 34 00 000 00
+                </p>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>🕐 Horaires</strong>
+
+                <p>
+                    Lundi - Dimanche : 08h00 - 22h00
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form id="contactForm" class="contact-form">
+
+            <input
+                type="text"
+                id="contactNom"
+                placeholder="Votre nom"
+                required>
+
+            <input
+                type="email"
+                id="contactEmail"
+                placeholder="Votre adresse email"
+                required>
+
+            <textarea
+                id="contactMessage"
+                rows="6"
+                placeholder="Votre message"
+                required></textarea>
+
+            <button type="submit" class="btn1">
+                Envoyer le message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RESERVATION ================= -->
+
+<section class="reservation" id="Reservation">
+
+    <div class="section-title">
+
+        <h2>
+            Faites une <span>Réservation</span>
+        </h2>
+
+        <p>
+            Réservez votre table en quelques secondes.
+        </p>
+
+    </div>
+
+
+    <div class="reservation-container">
+
+
+        <!-- IMAGE FRITES -->
+
+        <div class="reservation-image">
+
+            <img
+                src="images/Screenshot_20240412_082621 (9).jpg"
+                alt="Frites Maison">
+
+            <div class="reservation-image-text">
+
+                <h3>
+                    Une table vous attend
+                </h3>
+
+                <p>
+                    Venez découvrir nos plats délicieux.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORMULAIRE -->
+
+        <form id="reservationForm" class="reservation-form">
+
+            <h3>
+                Réserver une table
+            </h3>
+
+            <div class="form-row">
 
                 <input
                     type="text"
-                    id="contactNom"
+                    id="nom"
                     placeholder="Votre nom"
                     required>
 
                 <input
-                    type="email"
-                    id="contactEmail"
-                    placeholder="Votre adresse email"
+                    type="tel"
+                    id="telephone"
+                    placeholder="Téléphone"
                     required>
 
-                <textarea
-                    id="contactMessage"
-                    rows="6"
-                    placeholder="Votre message"
-                    required></textarea>
-
-                <button type="submit" class="btn1">
-                    Envoyer le message
-                </button>
-
-            </form>
-
-        </div>
-
-    </section>
+            </div>
 
 
-    <!-- ================= RESERVATION ================= -->
+            <div class="form-row">
 
-    <section class="reservation" id="Reservation">
+                <input
+                    type="date"
+                    id="date"
+                    required>
 
-        <div class="section-title">
-
-            <h2>
-                Faites une <span>Réservation</span>
-            </h2>
-
-            <p>
-                Réservez votre table en quelques secondes.
-            </p>
-
-        </div>
-
-
-        <div class="reservation-container">
-
-
-            <!-- IMAGE -->
-
-            <div class="reservation-image">
-
-                <img
-                        src="images/Screenshot_20240412_083057 (9).jpg"
-                        alt="Crevettes">
-
-                <div class="reservation-image-text">
-
-                    <h3>
-                        Une table vous attend
-                    </h3>
-
-                    <p>
-                        Venez découvrir nos plats délicieux.
-                    </p>
-
-                </div>
+                <input
+                    type="time"
+                    id="heure"
+                    required>
 
             </div>
 
 
-            <!-- FORMULAIRE -->
+            <select id="personnes" required>
 
-            <form id="reservationForm" class="reservation-form">
+                <option value="">
+                    Nombre de personnes
+                </option>
 
-                <h3>
-                    Réserver une table
-                </h3>
+                <option value="1 personne">1 personne</option>
+                <option value="2 personnes">2 personnes</option>
+                <option value="3 personnes">3 personnes</option>
+                <option value="4 personnes">4 personnes</option>
+                <option value="5 personnes">5 personnes</option>
+                <option value="6 personnes">6 personnes</option>
+                <option value="Plus de 6 personnes">
+                    Plus de 6 personnes
+                </option>
 
-                <div class="form-row">
-
-                    <input
-                        type="text"
-                        id="nom"
-                        placeholder="Votre nom"
-                        required>
-
-                    <input
-                        type="tel"
-                        id="telephone"
-                        placeholder="Téléphone"
-                        required>
-
-                </div>
+            </select>
 
 
-                <div class="form-row">
+            <select id="plat" required>
 
-                    <input
-                        type="date"
-                        id="date"
-                        required>
+                <option value="">
+                    Choisissez votre plat
+                </option>
 
-                    <input
-                        type="time"
-                        id="heure"
-                        required>
+                <option value="Crevettes Sautées">
+                    Crevettes Sautées
+                </option>
 
-                </div>
+                <option value="Frites Maison">
+                    Frites Maison
+                </option>
 
+                <option value="Poulet Grillé">
+                    Poulet Grillé
+                </option>
 
-                <select id="personnes" required>
+                <option value="Plat Gourmand">
+                    Plat Gourmand
+                </option>
 
-                    <option value="">
-                        Nombre de personnes
-                    </option>
+                <option value="Spécialité Maison">
+                    Spécialité Maison
+                </option>
 
-                    <option value="1 personne">
-                        1 personne
-                    </option>
+                <option value="Saveur Locale">
+                    Saveur Locale
+                </option>
 
-                    <option value="2 personnes">
-                        2 personnes
-                    </option>
+                <option value="Plat Traditionnel">
+                    Plat Traditionnel
+                </option>
 
-                    <option value="3 personnes">
-                        3 personnes
-                    </option>
+                <option value="Délice Maison">
+                    Délice Maison
+                </option>
 
-                    <option value="4 personnes">
-                        4 personnes
-                    </option>
-
-                    <option value="5 personnes">
-                        5 personnes
-                    </option>
-
-                    <option value="6 personnes">
-                        6 personnes
-                    </option>
-
-                    <option value="Plus de 6 personnes">
-                        Plus de 6 personnes
-                    </option>
-
-                </select>
+            </select>
 
 
-                <select id="plat" required>
+            <textarea
+                id="message"
+                rows="5"
+                placeholder="Message ou demande particulière (facultatif)">
+            </textarea>
 
-                    <option value="">
-                        Choisissez votre plat
-                    </option>
-
-                    <option value="Crevettes Sautées">
-                        Crevettes Sautées
-                    </option>
-
-                    <option value="Frites Maison">
-                        Frites Maison
-                    </option>
-
-                    <option value="Poulet Grillé">
-                        Poulet Grillé
-                    </option>
-
-                    <option value="Plat Gourmand">
-                        Plat Gourmand
-                    </option>
-
-                    <option value="Spécialité Maison">
-                        Spécialité Maison
-                    </option>
-
-                    <option value="Saveur Locale">
-                        Saveur Locale
-                    </option>
-
-                    <option value="Plat Traditionnel">
-                        Plat Traditionnel
-                    </option>
-
-                    <option value="Délice Maison">
-                        Délice Maison
-                    </option>
-
-                </select>
-
-
-                <textarea
-                    id="message"
-                    rows="5"
-                    placeholder="Message ou demande particulière (facultatif)"></textarea>
-
-
-                <button
-                    type="submit"
-                    class="reservation-button">
-
-                    Confirmer la réservation
-
-                </button>
-
-            </form>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= POPUP RESERVATION ================= -->
-
-    <div
-        id="reservationPopup"
-        class="popup">
-
-        <div class="popup-box">
-
-            <div class="success-icon">
-                ✓
-            </div>
-
-            <h2>
-                Réservation effectuée !
-            </h2>
-
-            <p id="reservationDetails"></p>
 
             <button
-                onclick="closeReservationPopup()"
-                class="popup-button">
+                type="submit"
+                class="reservation-button">
 
-                OK
+                Confirmer la réservation
 
             </button>
 
-        </div>
+        </form>
 
     </div>
 
+</section>
 
-    <!-- ================= POPUP CONTACT ================= -->
 
-    <div
-        id="contactPopup"
-        class="popup">
+<!-- ================= POPUP RESERVATION ================= -->
 
-        <div class="popup-box">
+<div id="reservationPopup" class="popup">
 
-            <div class="success-icon">
-                ✓
-            </div>
+    <div class="popup-box">
 
-            <h2>
-                Message envoyé !
-            </h2>
-
-            <p>
-                Merci pour votre message.
-                <br>
-                Nous vous remercions pour votre confiance.
-            </p>
-
-            <button
-                onclick="closeContactPopup()"
-                class="popup-button">
-
-                OK
-
-            </button>
-
+        <div class="success-icon">
+            ✓
         </div>
+
+        <h2>
+            Réservation effectuée !
+        </h2>
+
+        <p id="reservationDetails"></p>
+
+        <button
+            onclick="closeReservationPopup()"
+            class="popup-button">
+
+            OK
+
+        </button>
 
     </div>
 
+</div>
 
-    <!-- ================= FOOTER ================= -->
 
-    <footer>
+<!-- ================= POPUP CONTACT ================= -->
 
-        <div class="footer-content">
+<div id="contactPopup" class="popup">
 
-            <h2>
-                <span>R</span>esto-Snack
-            </h2>
+    <div class="popup-box">
 
-            <p>
-                Des plats délicieux, préparés avec passion.
-            </p>
-
+        <div class="success-icon">
+            ✓
         </div>
 
-        <div class="footer-bottom">
+        <h2>
+            Message envoyé !
+        </h2>
 
-            © 2026
-            <span>Resto-Snack</span>
-            - Tous droits réservés.
+        <p>
+            Merci pour votre message.
+            <br>
+            Nous vous remercions pour votre confiance.
+        </p>
 
-        </div>
+        <button
+            onclick="closeContactPopup()"
+            class="popup-button">
 
-    </footer>
+            OK
+
+        </button>
+
+    </div>
+
+</div>
 
 
-    <script src="script.js"></script>
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>
+            <span>R</span>esto-Snack
+        </h2>
+
+        <p>
+            Des plats délicieux, préparés avec passion.
+        </p>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026
+        <span>Resto-Snack</span>
+        - Tous droits réservés.
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+```
 
 </body>
 
