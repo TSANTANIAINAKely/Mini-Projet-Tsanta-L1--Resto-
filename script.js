@@ -1,15 +1,19 @@
-/* ================= HEADER STICKY ================= */
+/* ================= HEADER ================= */
 
 window.addEventListener("scroll", function () {
 
     const header = document.querySelector("header");
 
-    header.classList.toggle("sticky", window.scrollY > 0);
+    if (window.scrollY > 0) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
 
 });
 
 
-/* ================= MENU MOBILE ================= */
+/* ================= MOBILE MENU ================= */
 
 function toggleMenu() {
 
@@ -20,13 +24,13 @@ function toggleMenu() {
 }
 
 
-/* Fermer le menu après avoir cliqué sur un lien */
-
 document.querySelectorAll(".navbar a").forEach(function (link) {
 
     link.addEventListener("click", function () {
 
-        document.querySelector(".navbar").classList.remove("active");
+        document
+            .querySelector(".navbar")
+            .classList.remove("active");
 
     });
 
@@ -71,14 +75,20 @@ reservationForm.addEventListener("submit", function (event) {
 
         Votre réservation a bien été enregistrée.<br><br>
 
-        <strong>Plat :</strong> ${plat}<br>
+        <strong>Plat :</strong>
+        ${plat}
+        <br>
 
         <strong>Nombre de personnes :</strong>
-        ${personnes}<br>
+        ${personnes}
+        <br>
 
-        <strong>Date :</strong> ${date}<br>
+        <strong>Date :</strong>
+        ${date}
+        <br>
 
-        <strong>Heure :</strong> ${heure}
+        <strong>Heure :</strong>
+        ${heure}
         `;
 
 
@@ -91,8 +101,6 @@ reservationForm.addEventListener("submit", function (event) {
 
 });
 
-
-/* ================= FERMER POPUP RESERVATION ================= */
 
 function closeReservationPopup() {
 
@@ -124,8 +132,6 @@ contactForm.addEventListener("submit", function (event) {
 });
 
 
-/* ================= FERMER POPUP CONTACT ================= */
-
 function closeContactPopup() {
 
     document
@@ -135,7 +141,7 @@ function closeContactPopup() {
 }
 
 
-/* ================= FERMER POPUP EN CLIQUANT DEHORS ================= */
+/* ================= CLOSE POPUP ================= */
 
 window.addEventListener("click", function (event) {
 
