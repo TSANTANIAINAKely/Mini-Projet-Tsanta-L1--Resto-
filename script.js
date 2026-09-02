@@ -10,7 +10,7 @@ function toggleMenu() {
 }
 
 
-/* Sticky Header */
+/* ================= STICKY HEADER ================= */
 
 window.addEventListener("scroll", function () {
 
@@ -25,7 +25,7 @@ window.addEventListener("scroll", function () {
 });
 
 
-/* Reservation */
+/* ================= RESERVATION ================= */
 
 const reservationForm = document.getElementById("reservationForm");
 
@@ -44,7 +44,7 @@ if (reservationForm) {
 }
 
 
-/* Contact */
+/* ================= CONTACT ================= */
 
 const contactForm = document.querySelector(".contact-form");
 
@@ -61,4 +61,4 @@ if (contactForm) {
     });
 
 }
-```
+
