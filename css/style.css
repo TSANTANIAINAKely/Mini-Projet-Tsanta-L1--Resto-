@@ -1,22 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* ================= RESET ================= */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
 body {
     background: #fff;
-    color: #111;
-}
-
-p {
-    font-weight: 300;
-    color: #111;
-    line-height: 1.7;
+    color: #222;
 }
 
 section {
@@ -24,43 +21,7 @@ section {
 }
 
 
-/* =========================
-   TITRE
-========================= */
-
-.titre {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.titre h2 {
-    font-size: 2.5em;
-    font-weight: 600;
-    color: #111;
-}
-
-.titre h2 span {
-    color: #fb911f;
-}
-
-.titre p {
-    max-width: 850px;
-    margin: 15px auto 0;
-    color: #555;
-}
-
-.titre-texte {
-    color: #111;
-}
-
-.titre-texte span {
-    color: #fb911f;
-}
-
-
-/* =========================
-   HEADER
-========================= */
+/* ================= HEADER ================= */
 
 header {
     position: fixed;
@@ -68,23 +29,21 @@ header {
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 0.5s;
+    z-index: 1000;
+    transition: 0.4s;
 }
 
 header.sticky {
     background: #fff;
-    padding: 15px 10%;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    padding: 12px 10%;
 }
 
 
-/* =========================
-   LOGO
-========================= */
+/* LOGO */
 
 .logo {
     color: #fff;
@@ -99,34 +58,31 @@ header.sticky {
 }
 
 header.sticky .logo {
-    color: #111;
+    color: #222;
 }
 
 
-/* =========================
-   NAVIGATION
-========================= */
+/* NAVBAR */
 
 .navbar {
     display: flex;
     align-items: center;
-    gap: 5px;
+    list-style: none;
 }
 
 .navbar li {
-    list-style: none;
+    margin-left: 20px;
 }
 
 .navbar li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    padding: 10px 15px;
     transition: 0.3s;
 }
 
 header.sticky .navbar li a {
-    color: #111;
+    color: #222;
 }
 
 .navbar li a:hover {
@@ -134,9 +90,7 @@ header.sticky .navbar li a {
 }
 
 
-/* =========================
-   RESERVATION HEADER
-========================= */
+/* RESERVATION HEADER BUTTON */
 
 .btn-reserve {
     display: inline-block;
@@ -157,152 +111,153 @@ header.sticky .navbar li a {
     transform: translateY(-1px);
 }
 
-header.sticky .btn-reserve {
-    background: #fb911f !important;
-    color: #fff !important;
+
+/* MOBILE MENU */
+
+.menutoogle {
+    display: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
 }
 
-header.sticky .btn-reserve:hover {
-    background: #d9770f !important;
-    color: #fff !important;
+header.sticky .menutoogle {
+    color: #222;
 }
 
 
-/* =========================
-   ACCUEIL
-========================= */
+/* ================= ACCUEIL ================= */
 
 .banniere {
     min-height: 100vh;
-
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.45),
-            rgba(0, 0, 0, 0.45)
-        ),
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)),
         url("../images/Screenshot_20240402_143913_com.facebook.lite.jpg");
 
     background-size: cover;
     background-position: center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .banniere .contenu {
     max-width: 900px;
     text-align: center;
-    color: #fff;
 }
 
 .banniere h2 {
-    font-size: 4em;
     color: #fff;
-    margin-bottom: 10px;
+    font-size: 3.5em;
+    font-weight: 700;
 }
 
 .banniere p {
     color: #fff;
     font-size: 1.1em;
-    margin-bottom: 30px;
+    margin: 20px 0;
 }
 
-
-/* =========================
-   BOUTON NOTRE MENU
-========================= */
-
-.btn1 {
+.btn1,
+.btn2 {
     display: inline-block;
     padding: 12px 25px;
-    background: #fb911f;
-    color: #fff;
+    margin: 5px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
-    margin: 5px;
     border-radius: 3px;
     transition: 0.3s;
+}
+
+
+/* ORANGE BUTTON */
+
+.btn1 {
+    background: #fb911f;
+    color: #fff;
+    border: 2px solid #fb911f;
 }
 
 .btn1:hover {
     background: #d9770f;
+    border-color: #d9770f;
 }
 
 
-/* =========================
-   RESERVATION ACCUEIL
-   BLEU FONCE
-========================= */
+/* BLUE BUTTON */
 
-.banniere .btn2 {
-    display: inline-block;
-    padding: 12px 25px;
-
+.btn2 {
     background: #0056b3;
     border: 2px solid #0056b3;
-
     color: #fff;
-
-    text-decoration: none;
-    text-transform: uppercase;
-
-    font-weight: 600;
-
-    margin: 5px;
-
-    border-radius: 3px;
-
-    transition: 0.3s;
 }
 
-.banniere .btn2:hover {
+.btn2:hover {
     background: #fff;
     border-color: #fff;
     color: #0056b3;
 }
 
 
-/* =========================
-   A PROPOS
-========================= */
+/* ================= TITRES ================= */
+
+.titre {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titre-text {
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+.titre-text span {
+    color: #fb911f;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.titre p {
+    margin-top: 10px;
+}
+
+
+/* ================= À PROPOS ================= */
+
+.apropos {
+    background: #fff;
+}
 
 .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
 }
 
 .col50 {
     width: 48%;
 }
 
-.col50 h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
 .col50 p {
-    color: #555;
+    line-height: 1.8;
 }
 
-.img {
+.col50 .img {
     width: 100%;
 }
 
-.img img {
+.col50 .img img {
     width: 100%;
-    max-height: 450px;
+    max-height: 400px;
     object-fit: cover;
     border-radius: 5px;
 }
 
 
-/* =========================
-   MENU
-========================= */
+/* ================= MENU ================= */
 
 .menu {
     background: #f7f7f7;
@@ -318,9 +273,9 @@ header.sticky .btn-reserve:hover {
 .menu .box {
     width: 250px;
     background: #fff;
-    padding: 15px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     border-radius: 5px;
+    overflow: hidden;
     transition: 0.3s;
 }
 
@@ -330,42 +285,32 @@ header.sticky .btn-reserve:hover {
 
 .menu .imbox {
     width: 100%;
-    height: 190px;
-    overflow: hidden;
-    border-radius: 4px;
+    height: 210px;
 }
 
 .menu .imbox img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: 0.4s;
-}
-
-.menu .box:hover .imbox img {
-    transform: scale(1.05);
 }
 
 .menu .text {
-    padding: 15px 5px 5px;
+    padding: 15px;
+    text-align: center;
 }
 
 .menu .text h3 {
-    color: #111;
-    font-size: 1.1em;
-    margin-bottom: 7px;
+    color: #333;
+    margin-bottom: 8px;
 }
 
 .menu .text p {
-    color: #666;
     font-size: 0.9em;
-    line-height: 1.5;
+    color: #666;
 }
 
 
-/* =========================
-   EXPERT
-========================= */
+/* ================= EXPERT ================= */
 
 .expert {
     background: #fff;
@@ -375,27 +320,19 @@ header.sticky .btn-reserve:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
 }
 
 .expert .box {
-    width: 250px;
-    padding: 15px;
-    background: #fff;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.expert .box:hover {
-    transform: translateY(-5px);
+    width: 230px;
+    text-align: center;
 }
 
 .expert .imbox {
     width: 100%;
-    height: 280px;
+    height: 270px;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 .expert .imbox img {
@@ -405,310 +342,337 @@ header.sticky .btn-reserve:hover {
 }
 
 .expert .text {
-    padding: 15px 5px 5px;
-    text-align: center;
-}
-
-.expert .text h3 {
-    color: #111;
-    font-size: 1.1em;
+    padding: 15px;
 }
 
 
-/* =========================
-   TEMOIGNAGES
-========================= */
+/* ================= TÉMOIGNAGES ================= */
 
-.temoignage {
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.45),
-            rgba(0, 0, 0, 0.45)
-        ),
+.temoignages {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)),
         url("../images/Screenshot_20240405_151224.jpg");
 
     background-size: cover;
     background-position: center;
 }
 
-.temoignage .titre h2 {
+.blanc {
     color: #fff;
 }
 
-.temoignage .titre p {
-    color: #fff;
-}
-
-.temoignage .contenu {
+.temoignages .contenu {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.temoignage .box {
+.temoignages .box {
     width: 300px;
-    padding: 35px 25px;
+    padding: 30px;
     background: #fff;
-    border-radius: 5px;
     text-align: center;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
 }
 
-.temoignage .imbox {
-    width: 90px;
-    height: 90px;
+.temoignages .imbox {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto 20px;
-    background: #fff;
 }
 
-.temoignage .imbox img {
+.temoignages .imbox img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     opacity: 1;
     filter: none;
 }
 
-.temoignage .box .text {
-    text-align: center;
-}
-
-.temoignage .box .text p {
-    color: #555;
+.temoignages .text p {
     font-style: italic;
-    margin-bottom: 15px;
+    line-height: 1.7;
 }
 
-.temoignage .box .text h3 {
+.temoignages .text h3 {
+    margin-top: 15px;
     color: #fb911f;
-    font-weight: 600;
 }
 
 
-/* =========================
-   CONTACT
-========================= */
+/* ================= CONTACT ================= */
 
 .Contact {
-    padding: 80px 10%;
     background: #f7f7f7;
     background-image: none;
 }
 
-.Contact .titre {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.Contact .titre h2 {
-    color: #111;
-}
-
-.Contact .titre h2 span {
-    color: #fb911f;
-}
-
 .Contact .titre p {
-    color: #111;
-    max-width: 850px;
-    margin: auto;
+    color: #333;
 }
 
 .contactform {
-    max-width: 550px;
-    margin: 40px auto 0;
-    padding: 35px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contactform form {
     background: #fff;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+    padding: 35px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
     border-radius: 5px;
 }
 
 .contactform h3 {
-    color: #111;
-    margin-bottom: 20px;
-}
-
-.contactform .inputbox {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.contactform .inputbox input,
-.contactform .inputbox textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    outline: none;
-    font-size: 15px;
-    color: #111;
-    background: #fff;
-}
-
-.contactform .inputbox textarea {
-    height: 120px;
-    resize: vertical;
-}
-
-.contactform .inputbox input:focus,
-.contactform .inputbox textarea:focus {
-    border-color: #fb911f;
-}
-
-.contactform .btn1 {
-    border: none;
-    cursor: pointer;
-}
-
-
-/* =========================
-   RESERVATION
-========================= */
-
-.reservation {
-    padding: 80px 10%;
-    background: #fff;
-}
-
-.reservation .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-}
-
-.reservation .img-reservation {
-    width: 48%;
-    overflow: hidden;
-    border-radius: 5px;
-}
-
-.reservation .img-reservation img {
-    width: 100%;
-    height: 430px;
-    object-fit: cover;
-    display: block;
-}
-
-.reservation .form-reservation {
-    width: 48%;
-    padding: 35px;
-    background: #f7f7f7;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.10);
-    border-radius: 5px;
-}
-
-.reservation .form-reservation h3 {
-    color: #111;
-    font-size: 1.6em;
+    text-align: center;
     margin-bottom: 25px;
+    font-size: 1.4em;
 }
 
-.reservation .form-reservation input,
-.reservation .form-reservation select,
-.reservation .form-reservation textarea {
+.contactform input,
+.contactform textarea {
     width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 18px;
+    padding: 13px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     outline: none;
-    background: #fff;
-    color: #111;
     font-size: 15px;
     border-radius: 3px;
 }
 
-.reservation .form-reservation input:focus,
-.reservation .form-reservation select:focus,
-.reservation .form-reservation textarea:focus {
-    border-color: #fb911f;
+.contactform textarea {
+    height: 130px;
+    resize: vertical;
 }
 
-.reservation .form-reservation textarea {
+.contactform input[type="submit"] {
+    background: #fb911f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.contactform input[type="submit"]:hover {
+    background: #d9770f;
+}
+
+
+/* ================= RESERVATION ================= */
+
+.reservation {
+    background: #fff;
+}
+
+.reservation-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 45px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* IMAGE */
+
+.reservation-image {
+    width: 48%;
+    min-height: 500px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.reservation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* FORM */
+
+.reservation-form {
+    width: 48%;
+}
+
+.reservation-form form {
+    background: #f7f7f7;
+    padding: 35px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+}
+
+.reservation-form h3 {
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 25px;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    outline: none;
+    border-radius: 3px;
+    font-size: 15px;
+    background: #fff;
+}
+
+.reservation-form textarea {
     height: 100px;
     resize: vertical;
 }
 
-.reservation .form-reservation button {
+.reservation-form input[type="submit"] {
+    background: #fb911f;
+    color: #fff;
     border: none;
     cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.reservation-form input[type="submit"]:hover {
+    background: #d9770f;
 }
 
 
-/* =========================
-   POPUP
-========================= */
+/* ================= POPUP ================= */
 
-.reservation-popup {
+.popup {
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.65);
 
     display: none;
 
     justify-content: center;
     align-items: center;
 
-    z-index: 2000;
-
-    padding: 20px;
+    z-index: 3000;
 }
 
-.reservation-popup.active {
+.popup.show {
     display: flex;
 }
 
-.reservation-popup .popup-content {
-    width: 100%;
-    max-width: 400px;
-
+.popup-content {
+    position: relative;
+    width: 90%;
+    max-width: 430px;
     background: #fff;
-
-    padding: 30px;
-
-    border-radius: 5px;
-
+    padding: 35px 30px;
+    border-radius: 8px;
     text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
 
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    animation: popupAnimation 0.3s ease;
 }
 
-.reservation-popup .popup-content h3 {
-    color: #fb911f;
-    margin-bottom: 15px;
+@keyframes popupAnimation {
+
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
-.reservation-popup .popup-content p {
-    color: #444;
-    margin-bottom: 20px;
-}
 
-.reservation-popup .popup-close {
-    padding: 10px 25px;
+/* CLOSE */
 
-    background: #fb911f;
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
 
-    color: #fff;
-
+    background: none;
     border: none;
 
-    border-radius: 3px;
+    font-size: 28px;
+    color: #555;
 
     cursor: pointer;
 }
 
+.close-popup:hover {
+    color: #fb911f;
+}
 
-/* =========================
-   FOOTER NOIR
-========================= */
+
+/* SUCCESS ICON */
+
+.success-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #28a745;
+    color: #fff;
+
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.popup-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    line-height: 1.7;
+    color: #555;
+}
+
+
+/* POPUP BUTTON */
+
+.popup-btn {
+    margin-top: 20px;
+
+    padding: 10px 30px;
+
+    background: #0056b3;
+    color: #fff;
+
+    border: none;
+    border-radius: 3px;
+
+    cursor: pointer;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.popup-btn:hover {
+    background: #003d80;
+}
+
+
+/* ================= FOOTER ================= */
 
 footer {
     background: #111;
@@ -726,25 +690,11 @@ footer p span {
 }
 
 
-/* =========================
-   MENU MOBILE
-========================= */
+/* ================= RESPONSIVE ================= */
 
-.menutoogle {
-    display: none;
-}
+@media (max-width: 991px) {
 
-
-/* =========================
-   RESPONSIVE 991px
-========================= */
-
-@media screen and (max-width: 991px) {
-
-    header {
-        padding: 20px 5%;
-    }
-
+    header,
     header.sticky {
         padding: 15px 5%;
     }
@@ -753,25 +703,27 @@ footer p span {
         padding: 70px 5%;
     }
 
+    .menutoogle {
+        display: block;
+    }
+
     .navbar {
         display: none;
 
         position: absolute;
-
         top: 100%;
-        right: 5%;
+        left: 0;
 
-        width: 250px;
+        width: 100%;
 
         background: #fff;
 
         flex-direction: column;
+        align-items: center;
 
-        align-items: stretch;
+        padding: 20px 0;
 
-        padding: 15px 0;
-
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .navbar.active {
@@ -779,52 +731,19 @@ footer p span {
     }
 
     .navbar li {
-        width: 100%;
+        margin: 12px 0;
     }
 
     .navbar li a {
-        display: block;
-        color: #111 !important;
-        padding: 12px 20px;
+        color: #222 !important;
     }
 
-    .navbar .btn-reserve {
-        margin: 8px 20px;
-        text-align: center;
+    .btn-reserve {
+        margin-left: 0;
     }
 
-    .menutoogle {
-        display: block;
-
-        width: 35px;
-        height: 35px;
-
-        cursor: pointer;
-
-        position: relative;
-    }
-
-    .menutoogle::before {
-        content: "☰";
-
-        position: absolute;
-
-        top: 0;
-        left: 0;
-
-        font-size: 30px;
-
-        color: #fff;
-
-        line-height: 35px;
-    }
-
-    header.sticky .menutoogle::before {
-        color: #111;
-    }
-
-    .menutoogle.active::before {
-        content: "✕";
+    .banniere h2 {
+        font-size: 2.6em;
     }
 
     .row {
@@ -833,120 +752,65 @@ footer p span {
 
     .col50 {
         width: 100%;
+        margin-bottom: 30px;
     }
 
-    .reservation .row {
+    .reservation-container {
         flex-direction: column;
     }
 
-    .reservation .img-reservation,
-    .reservation .form-reservation {
+    .reservation-image,
+    .reservation-form {
         width: 100%;
     }
 
-    .reservation .img-reservation img {
-        height: 300px;
+    .reservation-image {
+        min-height: 300px;
+        max-height: 350px;
     }
 }
 
 
-/* =========================
-   RESPONSIVE 768px
-========================= */
-
-@media screen and (max-width: 768px) {
+@media (max-width: 600px) {
 
     .logo {
         font-size: 1.7em;
     }
 
     .banniere h2 {
-        font-size: 2.7em;
-    }
-
-    .banniere p {
-        font-size: 1em;
-    }
-
-    .titre h2 {
         font-size: 2em;
     }
 
-    .menu .box,
-    .expert .box {
-        width: 280px;
-    }
-
-    .temoignage .box {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .contactform {
-        padding: 25px;
-    }
-
-    .reservation .form-reservation {
-        padding: 30px;
-    }
-}
-
-
-/* =========================
-   RESPONSIVE 480px
-========================= */
-
-@media screen and (max-width: 480px) {
-
-    section {
-        padding: 60px 5%;
-    }
-
-    header {
-        padding: 15px 5%;
-    }
-
-    header.sticky {
-        padding: 12px 5%;
-    }
-
-    .logo {
-        font-size: 1.5em;
-    }
-
-    .banniere h2 {
-        font-size: 2.1em;
-    }
-
     .banniere p {
-        font-size: 0.9em;
+        font-size: 0.95em;
     }
 
-    .btn1,
-    .banniere .btn2 {
-        padding: 10px 18px;
-        font-size: 0.9em;
+    .titre-text {
+        font-size: 2em;
     }
 
-    .menu .box,
+    .menu .box {
+        width: 100%;
+        max-width: 330px;
+    }
+
     .expert .box {
         width: 100%;
         max-width: 300px;
     }
 
-    .menu .imbox {
-        height: 180px;
+    .temoignages .box {
+        width: 100%;
+        max-width: 330px;
     }
 
-    .reservation .form-reservation {
+    .contactform form,
+    .reservation-form form {
         padding: 25px 20px;
     }
 
-    .reservation-popup .popup-content {
-        padding: 25px 20px;
+    .popup-content {
+        padding: 30px 20px;
     }
 
-    .contactform {
-        padding: 25px 20px;
-    }
 }
