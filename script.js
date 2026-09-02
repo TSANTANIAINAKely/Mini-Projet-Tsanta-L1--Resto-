@@ -1,179 +1,64 @@
-/* ================= HEADER ================= */
+```javascript
+function toggleMenu() {
+    const navbar = document.querySelector(".navbar");
+
+    if (navbar.style.display === "flex") {
+        navbar.style.display = "none";
+    } else {
+        navbar.style.display = "flex";
+    }
+}
+
+
+/* Sticky Header */
 
 window.addEventListener("scroll", function () {
 
-```
-const header = document.querySelector("header");
+    const header = document.querySelector("header");
 
-if (window.scrollY > 0) {
-
-    header.classList.add("sticky");
-
-} else {
-
-    header.classList.remove("sticky");
-
-}
-```
+    if (window.scrollY > 50) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
 
 });
 
-/* ================= MOBILE MENU ================= */
 
-function toggleMenu() {
+/* Reservation */
 
-```
-const navbar = document.querySelector(".navbar");
+const reservationForm = document.getElementById("reservationForm");
 
-navbar.classList.toggle("active");
-```
+if (reservationForm) {
 
-}
+    reservationForm.addEventListener("submit", function (e) {
 
-document.querySelectorAll(".navbar a").forEach(function (link) {
+        e.preventDefault();
 
-```
-link.addEventListener("click", function () {
+        alert("Votre réservation a été envoyée avec succès !");
 
-    document
-        .querySelector(".navbar")
-        .classList.remove("active");
+        reservationForm.reset();
 
-});
-```
-
-});
-
-/* ================= RESERVATION ================= */
-
-const reservationForm =
-document.getElementById("reservationForm");
-
-reservationForm.addEventListener("submit", function (event) {
-
-```
-event.preventDefault();
-
-
-const nom =
-    document.getElementById("nom").value;
-
-const date =
-    document.getElementById("date").value;
-
-const heure =
-    document.getElementById("heure").value;
-
-const personnes =
-    document.getElementById("personnes").value;
-
-const plat =
-    document.getElementById("plat").value;
-
-
-const reservationDetails =
-    document.getElementById("reservationDetails");
-
-
-reservationDetails.innerHTML =
-
-    `
-    Merci <strong>${nom}</strong> !<br><br>
-
-    Votre réservation a bien été enregistrée.<br><br>
-
-    <strong>Plat :</strong>
-    ${plat}
-    <br>
-
-    <strong>Nombre de personnes :</strong>
-    ${personnes}
-    <br>
-
-    <strong>Date :</strong>
-    ${date}
-    <br>
-
-    <strong>Heure :</strong>
-    ${heure}
-    `;
-
-
-document
-    .getElementById("reservationPopup")
-    .classList.add("show");
-
-
-reservationForm.reset();
-```
-
-});
-
-function closeReservationPopup() {
-
-```
-document
-    .getElementById("reservationPopup")
-    .classList.remove("show");
-```
-
-}
-
-/* ================= CONTACT ================= */
-
-const contactForm =
-document.getElementById("contactForm");
-
-contactForm.addEventListener("submit", function (event) {
-
-```
-event.preventDefault();
-
-
-document
-    .getElementById("contactPopup")
-    .classList.add("show");
-
-
-contactForm.reset();
-```
-
-});
-
-function closeContactPopup() {
-
-```
-document
-    .getElementById("contactPopup")
-    .classList.remove("show");
-```
-
-}
-
-/* ================= CLOSE POPUP ================= */
-
-window.addEventListener("click", function (event) {
-
-```
-const reservationPopup =
-    document.getElementById("reservationPopup");
-
-const contactPopup =
-    document.getElementById("contactPopup");
-
-
-if (event.target === reservationPopup) {
-
-    reservationPopup.classList.remove("show");
+    });
 
 }
 
 
-if (event.target === contactPopup) {
+/* Contact */
 
-    contactPopup.classList.remove("show");
+const contactForm = document.querySelector(".contact-form");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        alert("Votre message a été envoyé avec succès !");
+
+        contactForm.reset();
+
+    });
 
 }
 ```
-
-});
