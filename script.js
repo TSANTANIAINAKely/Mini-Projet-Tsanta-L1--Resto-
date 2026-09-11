@@ -1,23 +1,20 @@
-/* ================= MOBILE MENU ================= */
+/* ================= MENU MOBILE ================= */
 
 function toggleMenu() {
 
-    const navbar = document.querySelector(".navbar");
+    const nav = document.querySelector("nav");
 
-    navbar.classList.toggle("active");
-
+    nav.classList.toggle("active");
 }
 
 
-/* Fermer le menu après avoir cliqué */
+/* Fermer le menu après un clic */
 
 document.querySelectorAll(".navbar a").forEach(function(link) {
 
     link.addEventListener("click", function() {
 
-        document
-            .querySelector(".navbar")
-            .classList.remove("active");
+        document.querySelector("nav").classList.remove("active");
 
     });
 
@@ -29,13 +26,12 @@ document.querySelectorAll(".navbar a").forEach(function(link) {
 const reservationForm =
     document.getElementById("reservationForm");
 
-
 reservationForm.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
     const nom =
-        document.getElementById("nom").value;
+        document.getElementById("nom").value.trim();
 
     const date =
         document.getElementById("date").value;
@@ -50,22 +46,19 @@ reservationForm.addEventListener("submit", function(event) {
         document.getElementById("plat").value;
 
 
-    document.getElementById("reservationDetails").innerHTML = `
+    document.getElementById("reservationDetails").innerHTML =
+        "Merci <strong>" + nom + "</strong> !<br><br>" +
 
-        Merci <strong>${nom}</strong> !<br><br>
+        "Votre réservation a bien été enregistrée.<br><br>" +
 
-        Votre réservation a bien été enregistrée.<br><br>
+        "<strong>Plat :</strong> " + plat + "<br>" +
 
-        <strong>Plat :</strong> ${plat}<br>
+        "<strong>Nombre de personnes :</strong> " +
+        personnes + "<br>" +
 
-        <strong>Nombre de personnes :</strong>
-        ${personnes}<br>
+        "<strong>Date :</strong> " + date + "<br>" +
 
-        <strong>Date :</strong> ${date}<br>
-
-        <strong>Heure :</strong> ${heure}
-
-    `;
+        "<strong>Heure :</strong> " + heure;
 
 
     document
@@ -92,16 +85,13 @@ function closeReservationPopup() {
 const contactForm =
     document.getElementById("contactForm");
 
-
 contactForm.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
-
     document
         .getElementById("contactPopup")
         .classList.add("show");
-
 
     contactForm.reset();
 
@@ -117,7 +107,7 @@ function closeContactPopup() {
 }
 
 
-/* ================= FERME POPUP EN CLIQUANT DEHORS ================= */
+/* ================= FERMER POPUP EN DEHORS ================= */
 
 window.addEventListener("click", function(event) {
 
