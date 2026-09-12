@@ -1,495 +1,803 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Resto-Snack</title>
+    <link rel="stylesheet" href="css/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <title>Resto-Snack</title>
 </head>
 
 <body>
 
-<header>
-    <a href="#Accueil" class="logo">
-        <span>R</span>esto-Snack
-    </a>
+    <!-- HEADER -->
+    <header>
 
-    <nav>
-        <ul>
-            <li><a href="#Accueil">Accueil</a></li>
-            <li><a href="#Apropos">À propos</a></li>
-            <li><a href="#Menu">Menu</a></li>
-            <li><a href="#Expert">Expert</a></li>
-            <li><a href="#Temoignages">Témoignages</a></li>
-            <li><a href="#Contact">Contact</a></li>
-            <li><a href="#Reservation" class="reservation-top">Réservation</a></li>
+        <a href="#" class="logo">
+            <span>R</span>esto-Snack
+        </a>
+
+        <div class="menutoogle" onclick="toggleMenu();"></div>
+
+        <ul class="navbar">
+
+            <li>
+                <a href="#banniere" onclick="toggleMenu();">Accueil</a>
+            </li>
+
+            <li>
+                <a href="#apropos" onclick="toggleMenu();">A propos</a>
+            </li>
+
+            <li>
+                <a href="#menu" onclick="toggleMenu();">Menu</a>
+            </li>
+
+            <li>
+                <a href="#expert" onclick="toggleMenu();">Expert</a>
+            </li>
+
+            <li>
+                <a href="#temoignage" onclick="toggleMenu();">Témoignage</a>
+            </li>
+
+            <li>
+                <a href="#Contact" onclick="toggleMenu();">Contact</a>
+            </li>
+
+            <li>
+                <a href="#Reservation" class="btn-reserve" onclick="toggleMenu();">
+                    Réservation
+                </a>
+            </li>
+
         </ul>
-    </nav>
-</header>
 
+    </header>
 
-<!-- ACCUEIL -->
 
-<section class="accueil" id="Accueil">
+    <!-- ACCUEIL -->
+    <section class="banniere" id="banniere">
 
-    <div class="accueil-content">
+        <div class="contenu">
 
-        <p class="small-title">BIENVENUE CHEZ RESTO-SNACK</p>
-
-        <h1>
-            QUE DES PLATS<br>
-            <span>DÉLICIEUX</span>
-        </h1>
-
-        <p>
-            Découvrez des plats savoureux préparés avec passion
-            et des ingrédients soigneusement sélectionnés.
-        </p>
-
-        <div class="buttons">
-            <a href="#Menu" class="btn-orange">Notre Menu</a>
-            <a href="#Reservation" class="btn-blue">Réservation</a>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- A PROPOS -->
-
-<section class="apropos" id="Apropos">
-
-    <div class="about-image">
-        <img src="images/1712067915861 - Copie.jpg" alt="Restaurant">
-    </div>
-
-    <div class="about-text">
-
-        <h2>À <span>propos</span></h2>
-
-        <p class="subtitle">
-            Découvrez notre histoire et notre passion.
-        </p>
-
-        <p>
-            Chez Resto-Snack, nous avons à cœur de proposer
-            une cuisine savoureuse, généreuse et accessible à tous.
-        </p>
-
-        <p>
-            Chaque plat est préparé avec soin afin de vous offrir
-            une expérience gourmande et agréable.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- MENU -->
-
-<section class="menu" id="Menu">
-
-    <div class="title">
-
-        <h2>Notre <span>Menu</span></h2>
-
-        <p>
-            Découvrez quelques-unes de nos spécialités.
-        </p>
-
-    </div>
-
-    <div class="menu-box">
-
-        <div class="menu-card">
-            <img src="images/Screenshot_20240403_165154 (5).jpg" alt="Spécialité Maison">
-            <h3>Spécialité Maison</h3>
-            <p>Une recette maison préparée avec des ingrédients frais.</p>
-            <strong>17 000 Ar</strong>
-        </div>
-
-        <div class="menu-card">
-            <img src="images/Screenshot_20240403_165315 (4).jpg" alt="Saveur Locale">
-            <h3>Saveur Locale</h3>
-            <p>Une spécialité inspirée des saveurs locales.</p>
-            <strong>16 000 Ar</strong>
-        </div>
-
-        <div class="menu-card">
-            <img src="images/Screenshot_20240403_165516 (5).jpg" alt="Plat Traditionnel">
-            <h3>Plat Traditionnel</h3>
-            <p>Une recette traditionnelle pleine de goût.</p>
-            <strong>18 000 Ar</strong>
-        </div>
-
-        <div class="menu-card">
-            <img src="images/1712067916840 (4).jpg" alt="Délice Maison">
-            <h3>Délice Maison</h3>
-            <p>Une préparation généreuse et délicieuse.</p>
-            <strong>19 000 Ar</strong>
-        </div>
-
-        <div class="menu-card">
-            <img src="images/Screenshot_20240405_151224.jpg" alt="Plat Gourmand">
-            <h3>Plat Gourmand</h3>
-            <p>Une assiette généreuse et pleine de saveurs.</p>
-            <strong>20 000 Ar</strong>
-        </div>
-
-        <div class="menu-card">
-            <img src="images/Screenshot_20240412_082745 (5).jpg" alt="Poulet Grillé">
-            <h3>Poulet Grillé</h3>
-            <p>Un poulet tendre grillé avec une garniture savoureuse.</p>
-            <strong>15 000 Ar</strong>
-        </div>
-
-        <div class="menu-card">
-            <img src="images/Screenshot_20240412_082922 (7).jpg" alt="Plat Maison">
-            <h3>Plat Maison</h3>
-            <p>Une préparation maison pleine de goût.</p>
-            <strong>18 000 Ar</strong>
-        </div>
-
-        <div class="menu-card">
-            <img src="images/Screenshot_20240412_083057 (9).jpg" alt="Spécialité du Chef">
-            <h3>Spécialité du Chef</h3>
-            <p>Une spécialité préparée avec passion.</p>
-            <strong>19 000 Ar</strong>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- EXPERT -->
-
-<section class="expert" id="Expert">
-
-    <div class="title dark">
-
-        <h2>Nos <span>Experts</span></h2>
-
-        <p>Une équipe passionnée par la cuisine.</p>
-
-    </div>
-
-    <div class="expert-box">
-
-        <div class="expert-card">
-            <img src="images/Capture d'écran 2026-08-27 092514.png" alt="Chef Principal">
-            <h3>Chef Principal</h3>
-            <p>Chef cuisinier</p>
-        </div>
-
-        <div class="expert-card">
-            <img src="images/Capture d'écran 2026-08-27 092938.png" alt="Chef Cuisine">
-            <h3>Chef Cuisine</h3>
-            <p>Spécialiste cuisine</p>
-        </div>
-
-        <div class="expert-card">
-            <img src="images/Capture d'écran 2026-08-27 093620.png" alt="Chef Pâtissier">
-            <h3>Chef Pâtissier</h3>
-            <p>Expert en desserts</p>
-        </div>
-
-        <div class="expert-card">
-            <img src="images/Capture d'écran 2026-08-27 092144.png" alt="Chef Assistant">
-            <h3>Chef Assistant</h3>
-            <p>Cuisine & service</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- TEMOIGNAGES -->
-
-<section class="temoignages" id="Temoignages">
-
-    <div class="title">
-
-        <h2><span>Témoignages</span></h2>
-
-        <p class="client-title">
-            Ce que nos clients pensent de nous.
-        </p>
-
-    </div>
-
-    <div class="clients">
-
-        <div class="client">
-
-            <div class="client-img">
-                <img src="images/Capture d'écran 2026-08-27 063608.png" alt="Jean">
-            </div>
-
-            <div class="stars">★★★★★</div>
+            <h2>Que Des Plats Délicieux</h2>
 
             <p>
-                "Les plats sont vraiment délicieux.
-                Le service est également excellent."
+                Bienvenue sur notre site qui est basée sur la restauration.
+                En faite, les clients peuvent choisir et commander ses besoins
+                et ses désirs en rejoignant le bouton NOTRE MENU au-dessous;
+                et ils peuvent aussi réserver les plats selon leurs préférés,
+                donc pour se faire veuillez cliquer sur le bouton RESERVATION.
             </p>
 
-            <h3>Jean</h3>
-            <span>Client</span>
+            <a href="#menu" class="btn1">
+                Notre Menu
+            </a>
+
+            <a href="#Reservation" class="btn2">
+                Réservation
+            </a>
 
         </div>
 
+    </section>
 
-        <div class="client">
 
-            <div class="client-img">
-                <img src="images/Capture d'écran 2026-08-27 063959.png" alt="Marie">
+    <!-- A PROPOS -->
+    <section class="apropos" id="apropos">
+
+        <div class="row">
+
+            <div class="col50">
+
+                <h2 class="titre-texte">
+                    <span>A</span> Propos De Nous
+                </h2>
+
+                <p>
+                    D'abord, nous avons un Menu, là où les clients peuvent choisir
+                    ses nourritures; Ensuite, nos cuisines sont faites par des
+                    personnes bien expérimentés et qui ont déjà survécu des nombreux
+                    défis; De plus, il y a aussi nos clients ViP, fidèles ou les
+                    habitués qui apprécient l'expérience proposée par notre
+                    retaurant; Enfin, pour plus de renseignement, nous avons un
+                    contact et vous pouvez le rejoindre.
+                </p>
+
             </div>
 
-            <div class="stars">★★★★★</div>
+            <div class="col50">
 
-            <p>
-                "Une très bonne expérience.
-                Je recommande vivement ce restaurant."
-            </p>
+                <div class="img">
 
-            <h3>Marie</h3>
-            <span>Cliente</span>
+                    <img
+                        src="./images/1712067915861 - Copie.jpg"
+                        alt="Restaurant">
 
-        </div>
+                </div>
 
-
-        <div class="client">
-
-            <div class="client-img">
-                <img src="images/1712067919047 (2).jpg" alt="Sarah">
             </div>
 
-            <div class="stars">★★★★★</div>
+        </div>
+
+    </section>
+
+
+    <!-- MENU -->
+    <section class="menu" id="menu">
+
+        <div class="titre">
+
+            <h2 class="titre-texte">
+                <span>M</span>enu
+            </h2>
 
             <p>
-                "Des plats savoureux et une ambiance
-                très agréable."
+                Voici notre liste détaillée des plats servis à un repas.
             </p>
 
-            <h3>Sarah</h3>
-            <span>Cliente</span>
+        </div>
+
+
+        <div class="contenu">
+
+            <div class="box">
+
+                <div class="imbox">
+                    <img
+                        src="./images/Screenshot_20240403_165154 (5).jpg"
+                        alt="Spécialité Maison">
+                </div>
+
+                <div class="text">
+                    <h3>Spécialité Maison</h3>
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <div class="imbox">
+                    <img
+                        src="./images/Screenshot_20240403_165315 (4).jpg"
+                        alt="Saveur Locale">
+                </div>
+
+                <div class="text">
+                    <h3>Saveur Locale</h3>
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <div class="imbox">
+                    <img
+                        src="./images/Screenshot_20240403_165516 (5).jpg"
+                        alt="Plat Traditionnel">
+                </div>
+
+                <div class="text">
+                    <h3>Plat Traditionnel</h3>
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <div class="imbox">
+                    <img
+                        src="./images/1712067916840 (4).jpg"
+                        alt="Délice Maison">
+                </div>
+
+                <div class="text">
+                    <h3>Délice Maison</h3>
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <div class="imbox">
+                    <img
+                        src="./images/Screenshot_20240412_082621 (9).jpg"
+                        alt="Frites Maison">
+                </div>
+
+                <div class="text">
+                    <h3>Frites Maison</h3>
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <div class="imbox">
+                    <img
+                        src="./images/Screenshot_20240412_082745 (5).jpg"
+                        alt="Fruit de mer">
+                </div>
+
+                <div class="text">
+                    <h3>Fruit de Mer</h3>
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <div class="imbox">
+                    <img
+                        src="./images/Screenshot_20240412_082922 (7).jpg"
+                        alt="Plat Gourmand">
+                </div>
+
+                <div class="text">
+                    <h3>Plat Gourmand</h3>
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <div class="imbox">
+                    <img
+                        src="./images/Screenshot_20240412_083057 (9).jpg"
+                        alt="Dessert">
+                </div>
+
+                <div class="text">
+                    <h3>Délice</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="titre">
+
+            <a href="#" class="btn1">
+                Voir Plus
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERTS -->
+    <section class="expert" id="expert">
+
+        <div class="titre">
+
+            <h2 class="titre-texte">
+                Nos <span>E</span>xperts
+            </h2>
+
+            <p>
+                Voici les personnes qui ont une parfaite connaissance
+                ou encore bien expérimentés sur nos cuisines.
+            </p>
+
+        </div>
+
+
+        <div class="contenu">
+
+            <div class="box">
+
+                <div class="imbox">
+                    <img
+                        src="./images/Capture d'écran 2026-08-27 092514.png"
+                        alt="Chef Nicolas">
+                </div>
+
+                <div class="text">
+                    <h3>Chef Nicolas</h3>
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <div class="imbox">
+                    <img
+                        src="./images/Capture d'écran 2026-08-27 092938.png"
+                        alt="Chef Xavier">
+                </div>
+
+                <div class="text">
+                    <h3>Chef Xavier</h3>
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <div class="imbox">
+                    <img
+                        src="./images/Capture d'écran 2026-08-27 093620.png"
+                        alt="Chef Cécilia">
+                </div>
+
+                <div class="text">
+                    <h3>Chef Cécilia</h3>
+                </div>
+
+            </div>
+
+
+            <div class="box">
+
+                <div class="imbox">
+                    <img
+                        src="./images/Capture d'écran 2026-08-27 092144.png"
+                        alt="Chef Claude">
+                </div>
+
+                <div class="text">
+                    <h3>Chef Claude</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TEMOIGNAGES -->
+    <section class="temoignage" id="temoignage">
+
+        <div class="titre blanc">
+
+            <h2 class="titre-texte">
+                Que Disent Nos <span>C</span>lients
+            </h2>
+
+            <p>
+                Puisque notre resto avait déjà existé depuis longtemps,
+                alors on possède des clients privilégiés et habitués.
+            </p>
+
+        </div>
+
+
+        <div class="contenu">
+
+            <!-- JEAN -->
+            <div class="box">
+
+                <div class="imbox">
+
+                    <img
+                        src="./images/Capture d'écran 2026-08-27 063608.png"
+                        alt="Jean">
+
+                </div>
+
+                <div class="text">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Bonjour, je m'appelle Jean, je suis l'un des clients
+                        fidèles dans ce resto et je participe toujours sur
+                        ces nouveautés. J'ai ressenti que ces plats sont
+                        merveilleux, savoureux et délicieux grâce à leurs
+                        chefs cuisiniers et cuisinières qui sont bien
+                        expérimentés.
+                    </p>
+
+                    <h3>Jean</h3>
+
+                    <span>Client</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MARIE -->
+            <div class="box">
+
+                <div class="imbox">
+
+                    <img
+                        src="./images/Capture d'écran 2026-08-27 063959.png"
+                        alt="Marie">
+
+                </div>
+
+                <div class="text">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Salut, je suis Marie, je passe toujours mon week-end
+                        dans ce resto en mangeant mes plats préférés.
+                        La qualité de leurs plats est bonne ainsi leurs
+                        services sont rapides.
+                    </p>
+
+                    <h3>Marie</h3>
+
+                    <span>Cliente</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SARAH -->
+            <div class="box">
+
+                <div class="imbox">
+
+                    <img
+                        src="./images/1712067919047 (2).jpg"
+                        alt="Sarah">
+
+                </div>
+
+                <div class="text">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        Bonjour tout le monde, je suis Sarah.
+                        J'achète toujours mon goûter dans ce resto.
+                        L'accueil est respectueux et joyeux, et leurs menus
+                        sont moins chers alors que leurs plats sont tellement
+                        délicieux avec un service rapide.
+                    </p>
+
+                    <h3>Sarah</h3>
+
+                    <span>Cliente</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="Contact" id="Contact">
+
+        <div class="titre noir">
+
+            <h2 class="titre-texte">
+                <span>C</span>ontact
+            </h2>
+
+            <p>
+                Pour plus de renseignement, de relation ou encore en cas
+                de besoin, veuillez nous contacter en entrant votre nom,
+                votre email ainsi vos messages et puis l'envoyer vers nous.
+            </p>
+
+        </div>
+
+
+        <div class="contact-wrapper">
+
+            <div class="contact-info">
+
+                <h3>Resto-Snack</h3>
+
+                <p>
+                    Des plats délicieux, préparés avec passion.
+                </p>
+
+                <p>📍 Antananarivo, Madagascar</p>
+
+                <p>📞 +261 34 00 000 00</p>
+
+                <p>🕐 Lundi - Dimanche : 08h00 - 22h00</p>
+
+            </div>
+
+
+            <form class="contactform" id="contactForm">
+
+                <h3>Envoyer un message</h3>
+
+                <div class="inputboite">
+
+                    <input
+                        type="text"
+                        placeholder="Votre nom"
+                        required>
+
+                </div>
+
+                <div class="inputboite">
+
+                    <input
+                        type="email"
+                        placeholder="Votre email"
+                        required>
+
+                </div>
+
+                <div class="inputboite">
+
+                    <textarea
+                        placeholder="Votre message"
+                        required></textarea>
+
+                </div>
+
+                <div class="inputboite">
+
+                    <input
+                        type="submit"
+                        value="Envoyer">
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESERVATION -->
+    <section class="Reservation" id="Reservation">
+
+        <div class="reservation-container">
+
+            <!-- SARY FRITE -->
+            <div class="reservation-image">
+
+                <img
+                    src="./images/Screenshot_20240412_082621 (9).jpg"
+                    alt="Frites Maison">
+
+            </div>
+
+
+            <!-- FORMULAIRE -->
+            <form
+                class="reservationform"
+                id="reservationForm">
+
+                <h2>
+                    Faites une <span>Réservation</span>
+                </h2>
+
+                <p>
+                    Réservez votre table en quelques secondes.
+                </p>
+
+
+                <div class="inputboite">
+
+                    <input
+                        type="text"
+                        id="reservationNom"
+                        placeholder="Votre nom"
+                        required>
+
+                </div>
+
+
+                <div class="inputboite">
+
+                    <input
+                        type="tel"
+                        id="reservationTelephone"
+                        placeholder="Votre téléphone"
+                        required>
+
+                </div>
+
+
+                <div class="inputboite">
+
+                    <input
+                        type="date"
+                        id="reservationDate"
+                        required>
+
+                </div>
+
+
+                <div class="inputboite">
+
+                    <input
+                        type="time"
+                        id="reservationHeure"
+                        required>
+
+                </div>
+
+
+                <div class="inputboite">
+
+                    <select
+                        id="nombrePersonnes"
+                        required>
+
+                        <option value="">
+                            Nombre de personnes
+                        </option>
+
+                        <option>1 personne</option>
+                        <option>2 personnes</option>
+                        <option>3 personnes</option>
+                        <option>4 personnes</option>
+                        <option>5 personnes</option>
+                        <option>6 personnes</option>
+                        <option>Plus de 6 personnes</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="inputboite">
+
+                    <select
+                        id="platReservation"
+                        required>
+
+                        <option value="">
+                            Choisissez votre plat
+                        </option>
+
+                        <option>Crevettes Sautées</option>
+                        <option>Frites Maison</option>
+                        <option>Poulet Grillé</option>
+                        <option>Plat Gourmand</option>
+                        <option>Spécialité Maison</option>
+                        <option>Saveur Locale</option>
+                        <option>Plat Traditionnel</option>
+                        <option>Délice Maison</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="inputboite">
+
+                    <textarea
+                        id="reservationMessage"
+                        placeholder="Message ou demande particulière"></textarea>
+
+                </div>
+
+
+                <div class="inputboite">
+
+                    <input
+                        type="submit"
+                        value="Confirmer la réservation">
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- POPUP RESERVATION -->
+    <div
+        class="popup"
+        id="reservationPopup">
+
+        <div class="popup-box">
+
+            <div class="popup-icon">
+                ✓
+            </div>
+
+            <h2>
+                Réservation réussie !
+            </h2>
+
+            <p id="reservationConfirmation">
+                Votre réservation a bien été enregistrée.
+            </p>
+
+            <button onclick="fermerReservation()">
+                OK
+            </button>
 
         </div>
 
     </div>
 
-</section>
 
+    <!-- POPUP MESSAGE -->
+    <div
+        class="popup"
+        id="messagePopup">
 
-<!-- CONTACT -->
+        <div class="popup-box">
 
-<section class="contact" id="Contact">
+            <div class="popup-icon">
+                ✓
+            </div>
 
-    <div class="contact-text">
+            <h2>
+                Message envoyé !
+            </h2>
 
-        <h2>Contactez<span>-nous</span></h2>
+            <p>
+                Merci pour votre message.
+                Nous vous répondrons dès que possible.
+            </p>
 
-        <p class="subtitle">Une question ? Écrivez-nous.</p>
+            <button onclick="fermerMessage()">
+                OK
+            </button>
 
-        <p>
-            Nous sommes heureux de recevoir vos messages,
-            vos questions et vos suggestions.
-        </p>
-
-        <div class="contact-info">
-            <h4>📍 Adresse</h4>
-            <p>Antananarivo, Madagascar</p>
-        </div>
-
-        <div class="contact-info">
-            <h4>📞 Téléphone</h4>
-            <p>+261 34 00 000 00</p>
-        </div>
-
-        <div class="contact-info">
-            <h4>🕐 Horaires</h4>
-            <p>Lundi - Dimanche : 08h00 - 22h00</p>
         </div>
 
     </div>
 
 
-    <form id="contactForm">
+    <!-- FOOTER -->
+    <footer>
 
-        <input type="text" placeholder="Votre nom" required>
+        <div class="footer-content">
 
-        <input type="email" placeholder="Votre email" required>
+            <a href="#" class="footer-logo">
+                <span>R</span>esto-Snack
+            </a>
 
-        <textarea rows="6" placeholder="Votre message" required></textarea>
+            <p>
+                Des plats délicieux, préparés avec passion.
+            </p>
 
-        <button type="submit" class="btn-orange">
-            Envoyer le message
-        </button>
+        </div>
 
-    </form>
 
-</section>
+        <div class="footer-bottom">
 
+            <p>
+                © 2026 Resto-Snack - Tous droits réservés.
+            </p>
 
-<!-- RESERVATION -->
+        </div>
 
-<section class="reservation" id="Reservation">
+    </footer>
 
-    <div class="reservation-image">
 
-        <img src="images/Screenshot_20240412_082621 (9).jpg"
-             alt="Frites Maison">
-
-    </div>
-
-
-    <form id="reservationForm">
-
-        <h2>Faites une <span>Réservation</span></h2>
-
-        <p class="subtitle">
-            Réservez votre table en quelques secondes.
-        </p>
-
-        <input type="text"
-               id="nom"
-               placeholder="Votre nom"
-               required>
-
-        <input type="tel"
-               id="telephone"
-               placeholder="Votre téléphone"
-               required>
-
-        <input type="date"
-               id="date"
-               required>
-
-        <input type="time"
-               id="heure"
-               required>
-
-        <select id="personnes" required>
-
-            <option value="">Nombre de personnes</option>
-
-            <option>1 personne</option>
-            <option>2 personnes</option>
-            <option>3 personnes</option>
-            <option>4 personnes</option>
-            <option>5 personnes</option>
-            <option>6 personnes</option>
-            <option>Plus de 6 personnes</option>
-
-        </select>
-
-
-        <select id="plat" required>
-
-            <option value="">Choisissez votre plat</option>
-
-            <option>Crevettes Sautées</option>
-            <option>Frites Maison</option>
-            <option>Poulet Grillé</option>
-            <option>Plat Gourmand</option>
-            <option>Spécialité Maison</option>
-            <option>Saveur Locale</option>
-            <option>Plat Traditionnel</option>
-            <option>Délice Maison</option>
-
-        </select>
-
-
-        <textarea id="message"
-                  rows="4"
-                  placeholder="Message ou demande particulière">
-        </textarea>
-
-
-        <button type="submit">
-            Confirmer la réservation
-        </button>
-
-    </form>
-
-</section>
-
-
-<!-- POPUP RESERVATION -->
-
-<div class="popup" id="reservationPopup">
-
-    <div class="popup-box">
-
-        <div class="check">✓</div>
-
-        <h2>Réservation effectuée !</h2>
-
-        <p id="reservationDetails"></p>
-
-        <button onclick="closeReservationPopup()">
-            OK
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- POPUP CONTACT -->
-
-<div class="popup" id="contactPopup">
-
-    <div class="popup-box">
-
-        <div class="check">✓</div>
-
-        <h2>Message envoyé !</h2>
-
-        <p>
-            Merci pour votre message.
-        </p>
-
-        <button onclick="closeContactPopup()">
-            OK
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <div class="footer-content">
-
-        <h2><span>R</span>esto-Snack</h2>
-
-        <p>
-            Des plats délicieux, préparés avec passion.
-        </p>
-
-    </div>
-
-    <div class="footer-bottom">
-        © 2026 Resto-Snack - Tous droits réservés.
-    </div>
-
-</footer>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
