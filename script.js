@@ -1,97 +1,50 @@
-/* ================= MENU MOBILE ================= */
+// ================= RESERVATION =================
 
-function toggleMenu() {
-
-    const nav = document.querySelector("nav");
-
-    nav.classList.toggle("active");
-}
-
-
-/* Fermer le menu après un clic */
-
-document.querySelectorAll(".navbar a").forEach(function(link) {
-
-    link.addEventListener("click", function() {
-
-        document.querySelector("nav").classList.remove("active");
-
-    });
-
-});
-
-
-/* ================= RESERVATION ================= */
-
-const reservationForm =
-    document.getElementById("reservationForm");
+const reservationForm = document.getElementById("reservationForm");
+const reservationPopup = document.getElementById("reservationPopup");
+const reservationDetails = document.getElementById("reservationDetails");
 
 reservationForm.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
-    const nom =
-        document.getElementById("nom").value.trim();
+    const nom = document.getElementById("nom").value;
+    const date = document.getElementById("date").value;
+    const heure = document.getElementById("heure").value;
+    const personnes = document.getElementById("personnes").value;
+    const plat = document.getElementById("plat").value;
 
-    const date =
-        document.getElementById("date").value;
-
-    const heure =
-        document.getElementById("heure").value;
-
-    const personnes =
-        document.getElementById("personnes").value;
-
-    const plat =
-        document.getElementById("plat").value;
-
-
-    document.getElementById("reservationDetails").innerHTML =
+    reservationDetails.innerHTML =
         "Merci <strong>" + nom + "</strong> !<br><br>" +
-
         "Votre réservation a bien été enregistrée.<br><br>" +
-
         "<strong>Plat :</strong> " + plat + "<br>" +
-
-        "<strong>Nombre de personnes :</strong> " +
-        personnes + "<br>" +
-
+        "<strong>Nombre :</strong> " + personnes + "<br>" +
         "<strong>Date :</strong> " + date + "<br>" +
-
         "<strong>Heure :</strong> " + heure;
 
-
-    document
-        .getElementById("reservationPopup")
-        .classList.add("show");
-
+    reservationPopup.classList.add("show");
 
     reservationForm.reset();
-
 });
 
 
 function closeReservationPopup() {
 
-    document
-        .getElementById("reservationPopup")
-        .classList.remove("show");
+    reservationPopup.classList.remove("show");
 
 }
 
 
-/* ================= CONTACT ================= */
+// ================= CONTACT =================
 
-const contactForm =
-    document.getElementById("contactForm");
+const contactForm = document.getElementById("contactForm");
+const contactPopup = document.getElementById("contactPopup");
 
 contactForm.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
-    document
-        .getElementById("contactPopup")
-        .classList.add("show");
+    contactPopup.classList.add("show");
 
     contactForm.reset();
 
@@ -100,35 +53,21 @@ contactForm.addEventListener("submit", function(event) {
 
 function closeContactPopup() {
 
-    document
-        .getElementById("contactPopup")
-        .classList.remove("show");
+    contactPopup.classList.remove("show");
 
 }
 
 
-/* ================= FERMER POPUP EN DEHORS ================= */
+// ================= FERMER POPUP =================
 
 window.addEventListener("click", function(event) {
 
-    const reservationPopup =
-        document.getElementById("reservationPopup");
-
-    const contactPopup =
-        document.getElementById("contactPopup");
-
-
     if (event.target === reservationPopup) {
-
         reservationPopup.classList.remove("show");
-
     }
 
-
     if (event.target === contactPopup) {
-
         contactPopup.classList.remove("show");
-
     }
 
 });
