@@ -1,145 +1,156 @@
-// ===============================
-// MENU MOBILE
-// ===============================
+document.addEventListener("DOMContentLoaded", function () {
 
-function toggleMenu() {
+    /* ================= RESERVATION ================= */
 
-    const menu = document.querySelector(".navbar");
+    const reservationForm = document.getElementById("reservationForm");
+    const reservationModal = document.getElementById("reservationModal");
+    const closeReservation = document.getElementById("closeReservation");
+    const reservationOk = document.getElementById("reservationOk");
 
-    if (menu) {
-        menu.classList.toggle("active");
-    }
+    const reservationSummary =
+        document.getElementById("reservationSummary");
 
-}
-
-
-// ===============================
-// POPUP RESERVATION
-// ===============================
-
-const reservationForm =
-    document.getElementById("reservationForm");
-
-const reservationPopup =
-    document.getElementById("reservationPopup");
-
-const reservationConfirmation =
-    document.getElementById("reservationConfirmation");
+    const reservationThanks =
+        document.getElementById("reservationThanks");
 
 
-if (reservationForm) {
-
-    reservationForm.addEventListener("submit", function(event) {
+    reservationForm.addEventListener("submit", function (event) {
 
         event.preventDefault();
 
-
-        const nom =
-            document.getElementById("reservationNom").value;
-
-        const date =
-            document.getElementById("reservationDate").value;
-
-        const heure =
-            document.getElementById("reservationHeure").value;
-
-        const personnes =
-            document.getElementById("nombrePersonnes").value;
-
-        const plat =
-            document.getElementById("platReservation").value;
+        const nom = document.getElementById("nom").value;
+        const telephone = document.getElementById("telephone").value;
+        const date = document.getElementById("date").value;
+        const heure = document.getElementById("heure").value;
+        const personnes = document.getElementById("personnes").value;
+        const plat = document.getElementById("plat").value;
+        const message = document.getElementById("reservationMessage").value;
 
 
-        reservationConfirmation.innerHTML =
-
-            "Merci <strong>" + nom + "</strong> !<br><br>" +
-
-            "Votre réservation a bien été enregistrée.<br><br>" +
-
-            "<strong>Plat :</strong> " + plat + "<br>" +
-
-            "<strong>Personnes :</strong> " + personnes + "<br>" +
-
-            "<strong>Date :</strong> " + date + "<br>" +
-
-            "<strong>Heure :</strong> " + heure;
+        reservationThanks.textContent = "Merci " + nom + " !";
 
 
-        reservationPopup.classList.add("active");
+        reservationSummary.innerHTML = `
+            <p><strong>👤 Nom :</strong> ${nom}</p>
+            <p><strong>📞 Téléphone :</strong> ${telephone}</p>
+            <p><strong>🍽️ Plat :</strong> ${plat}</p>
+            <p><strong>👥 Personnes :</strong> ${personnes}</p>
+            <p><strong>📅 Date :</strong> ${date}</p>
+            <p><strong>🕐 Heure :</strong> ${heure}</p>
+            ${message ? `<p><strong>💬 Message :</strong> ${message}</p>` : ""}
+        `;
 
 
-        reservationForm.reset();
+        reservationModal.classList.add("active");
 
+        document.body.style.overflow = "hidden";
     });
 
-}
+
+    function closeReservationModal() {
+        reservationModal.classList.remove("active");
+        document.body.style.overflow = "";
+    }
 
 
-// ===============================
-// FERMER RESERVATION
-// ===============================
-
-function fermerReservation() {
-
-    reservationPopup.classList.remove("active");
-
-}
+    closeReservation.addEventListener(
+        "click",
+        closeReservationModal
+    );
 
 
-// ===============================
-// POPUP MESSAGE
-// ===============================
-
-const contactForm =
-    document.getElementById("contactForm");
-
-const messagePopup =
-    document.getElementById("messagePopup");
+    reservationOk.addEventListener(
+        "click",
+        closeReservationModal
+    );
 
 
-if (contactForm) {
+    /* ================= CONTACT ================= */
 
-    contactForm.addEventListener("submit", function(event) {
+    const contactForm = document.getElementById("contactForm");
+    const messageModal = document.getElementById("messageModal");
+
+    const closeMessage = document.getElementById("closeMessage");
+    const messageOk = document.getElementById("messageOk");
+
+
+    contactForm.addEventListener("submit", function (event) {
 
         event.preventDefault();
 
-        messagePopup.classList.add("active");
+        messageModal.classList.add("active");
+
+        document.body.style.overflow = "hidden";
 
         contactForm.reset();
+    });
+
+
+    function closeMessageModal() {
+        messageModal.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+
+    closeMessage.addEventListener(
+        "click",
+        closeMessageModal
+    );
+
+
+    messageOk.addEventListener(
+        "click",
+        closeMessageModal
+    );
+
+
+    /* ================= FERMER EN CLIQUANT À L'EXTÉRIEUR ================= */
+
+    reservationModal.addEventListener("click", function (event) {
+
+        if (event.target === reservationModal) {
+            closeReservationModal();
+        }
 
     });
 
-}
+
+    messageModal.addEventListener("click", function (event) {
+
+        if (event.target === messageModal) {
+            closeMessageModal();
+        }
+
+    });
 
 
-// ===============================
-// FERMER MESSAGE
-// ===============================
+    /* ================= NAVIGATION ================= */
 
-function fermerMessage() {
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
-    messagePopup.classList.remove("active");
+        link.addEventListener("click", function (event) {
 
-}
+            const targetId = this.getAttribute("href");
 
+            if (targetId === "#") {
+                return;
+            }
 
-// ===============================
-// FERMER POPUP EN CLIQUANT DEHORS
-// ===============================
+            const target = document.querySelector(targetId);
 
-window.addEventListener("click", function(event) {
+            if (target) {
 
-    if (event.target === reservationPopup) {
+                event.preventDefault();
 
-        reservationPopup.classList.remove("active");
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
 
-    }
+            }
 
+        });
 
-    if (event.target === messagePopup) {
-
-        messagePopup.classList.remove("active");
-
-    }
+    });
 
 });
