@@ -1,73 +1,145 @@
-// ================= RESERVATION =================
+// ===============================
+// MENU MOBILE
+// ===============================
 
-const reservationForm = document.getElementById("reservationForm");
-const reservationPopup = document.getElementById("reservationPopup");
-const reservationDetails = document.getElementById("reservationDetails");
+function toggleMenu() {
 
-reservationForm.addEventListener("submit", function(event) {
+    const menu = document.querySelector(".navbar");
 
-    event.preventDefault();
-
-    const nom = document.getElementById("nom").value;
-    const date = document.getElementById("date").value;
-    const heure = document.getElementById("heure").value;
-    const personnes = document.getElementById("personnes").value;
-    const plat = document.getElementById("plat").value;
-
-    reservationDetails.innerHTML =
-        "Merci <strong>" + nom + "</strong> !<br><br>" +
-        "Votre réservation a bien été enregistrée.<br><br>" +
-        "<strong>Plat :</strong> " + plat + "<br>" +
-        "<strong>Nombre :</strong> " + personnes + "<br>" +
-        "<strong>Date :</strong> " + date + "<br>" +
-        "<strong>Heure :</strong> " + heure;
-
-    reservationPopup.classList.add("show");
-
-    reservationForm.reset();
-});
-
-
-function closeReservationPopup() {
-
-    reservationPopup.classList.remove("show");
+    if (menu) {
+        menu.classList.toggle("active");
+    }
 
 }
 
 
-// ================= CONTACT =================
+// ===============================
+// POPUP RESERVATION
+// ===============================
 
-const contactForm = document.getElementById("contactForm");
-const contactPopup = document.getElementById("contactPopup");
+const reservationForm =
+    document.getElementById("reservationForm");
 
-contactForm.addEventListener("submit", function(event) {
+const reservationPopup =
+    document.getElementById("reservationPopup");
 
-    event.preventDefault();
-
-    contactPopup.classList.add("show");
-
-    contactForm.reset();
-
-});
+const reservationConfirmation =
+    document.getElementById("reservationConfirmation");
 
 
-function closeContactPopup() {
+if (reservationForm) {
 
-    contactPopup.classList.remove("show");
+    reservationForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const nom =
+            document.getElementById("reservationNom").value;
+
+        const date =
+            document.getElementById("reservationDate").value;
+
+        const heure =
+            document.getElementById("reservationHeure").value;
+
+        const personnes =
+            document.getElementById("nombrePersonnes").value;
+
+        const plat =
+            document.getElementById("platReservation").value;
+
+
+        reservationConfirmation.innerHTML =
+
+            "Merci <strong>" + nom + "</strong> !<br><br>" +
+
+            "Votre réservation a bien été enregistrée.<br><br>" +
+
+            "<strong>Plat :</strong> " + plat + "<br>" +
+
+            "<strong>Personnes :</strong> " + personnes + "<br>" +
+
+            "<strong>Date :</strong> " + date + "<br>" +
+
+            "<strong>Heure :</strong> " + heure;
+
+
+        reservationPopup.classList.add("active");
+
+
+        reservationForm.reset();
+
+    });
 
 }
 
 
-// ================= FERMER POPUP =================
+// ===============================
+// FERMER RESERVATION
+// ===============================
+
+function fermerReservation() {
+
+    reservationPopup.classList.remove("active");
+
+}
+
+
+// ===============================
+// POPUP MESSAGE
+// ===============================
+
+const contactForm =
+    document.getElementById("contactForm");
+
+const messagePopup =
+    document.getElementById("messagePopup");
+
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        messagePopup.classList.add("active");
+
+        contactForm.reset();
+
+    });
+
+}
+
+
+// ===============================
+// FERMER MESSAGE
+// ===============================
+
+function fermerMessage() {
+
+    messagePopup.classList.remove("active");
+
+}
+
+
+// ===============================
+// FERMER POPUP EN CLIQUANT DEHORS
+// ===============================
 
 window.addEventListener("click", function(event) {
 
     if (event.target === reservationPopup) {
-        reservationPopup.classList.remove("show");
+
+        reservationPopup.classList.remove("active");
+
     }
 
-    if (event.target === contactPopup) {
-        contactPopup.classList.remove("show");
+
+    if (event.target === messagePopup) {
+
+        messagePopup.classList.remove("active");
+
     }
 
 });
