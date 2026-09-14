@@ -64,7 +64,7 @@ header {
 }
 
 .navbar li a {
-    color: #fff;
+    color: white;
     font-size: 15px;
     font-weight: 600;
     transition: 0.3s;
@@ -112,7 +112,7 @@ header {
 }
 
 .banniere h2 {
-    color: #fff;
+    color: black;
     font-size: 52px;
     text-transform: uppercase;
     font-weight: 800;
@@ -121,11 +121,11 @@ header {
 }
 
 .banniere h2::first-line {
-    color: #fff;
+    color: black;
 }
 
 .banniere p {
-    color: #fff;
+    color:black;
     font-size: 17px;
     line-height: 1.8;
     margin-bottom: 35px;
